@@ -1,0 +1,49 @@
+[
+  {
+    "id": "H1",
+    "source_name": "1-bromo-3-nitrobenzene",
+    "candidate": "Brc1cccc([N+](=O)[O-])c1",
+    "aliases": [],
+    "expected_operation": "SUPPORTED",
+    "expected_dimension": "SUPPORTED",
+    "justification": "Public frozen different substitution pattern.",
+    "review": "CHEMICAL_REVIEW_PENDING",
+    "references": [
+      "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+      "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+      "https://iupac.qmul.ac.uk/BlueBook/P5.html"
+    ]
+  },
+  {
+    "id": "H2",
+    "source_name": "1-bromo-3-nitrobenzene",
+    "candidate": "Brc1cccc([N+](=O)[O-])c1",
+    "aliases": [
+      "bromonitrobenzene"
+    ],
+    "expected_operation": "SUPPORTED",
+    "expected_dimension": "UNKNOWN",
+    "justification": "Unclosed alias scope.",
+    "review": "CHEMICAL_REVIEW_PENDING",
+    "references": [
+      "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+      "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+      "https://iupac.qmul.ac.uk/BlueBook/P5.html"
+    ]
+  },
+  {
+    "id": "H3",
+    "source_name": "1-bromo-3-nitrobenzene",
+    "candidate": "Brc1cccc([N+](=O)[O-])c1.[Na+]",
+    "aliases": [],
+    "expected_operation": "UNKNOWN",
+    "expected_dimension": "UNKNOWN",
+    "justification": "Unsupported charged extra component.",
+    "review": "CHEMICAL_REVIEW_PENDING",
+    "references": [
+      "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+      "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+      "https://iupac.qmul.ac.uk/BlueBook/P5.html"
+    ]
+  }
+]

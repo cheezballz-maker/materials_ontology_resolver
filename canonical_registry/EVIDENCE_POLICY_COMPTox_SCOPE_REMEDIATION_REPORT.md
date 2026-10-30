@@ -1,0 +1,70 @@
+# Evidence policy, CompTox and scope remediation
+
+**Result: partial.** Provider failure is neutral, and the resolver now supports a source-structure path without external corroboration and a name-derived path requiring one documented independent, form-discriminating lineage. The authenticated EPA adapter works on a limited live probe. However, the existing provider records do not yet carry the reviewed correspondence, form-preservation and independence metadata needed to qualify as corroborators; the offline development replay therefore admitted **zero** names. The element and carbon-based capability guards also remain as conservative implementation boundaries. Feature development should not resume until those grounding gaps are addressed.
+
+## Evidence model and admission
+
+[`evidence_model.py`](evidence_model.py) distinguishes `CORROBORATES`, `CONTRADICTS`, `NO_MATCH`, `UNAVAILABLE` and `NON_DISCRIMINATING`. An unavailable provider or a successful lookup with no usable match supplies neither positive nor negative evidence. An incomplete or invalid provider structure is non-discriminating; a key, formula or name alone is not structural corroboration. A record can corroborate only after local structure/identifier validation, an exact identity comparison, documented correspondence to the source claim, documented preservation of applicable form dimensions, and a documented independent lineage. A conflicting provider record is a contradiction only when correspondence and preservation of the disputed dimensions are documented and the source itself is sufficiently specific. These qualifications are deliberately separate from provider count.
+
+The source hierarchy is implemented in [`policy.py`](policy.py) and [`resolver.py`](resolver.py):
+
+1. **Typed source structure:** after deterministic validation and source/form checks, no external corroborator is required. A genuine source-linked contradiction still blocks acceptance.
+2. **Complete deterministic source name:** an `ESTABLISHED` source interpretation and complete form checks require at least one qualifying independent exact-form lineage. One qualifying lineage is sufficient; provider counts and majority voting are not used.
+3. **Partial, unknown or conflicting source:** external records cannot create missing stereo, protonation, tautomer, isotope, component or other source specificity.
+
+The earlier blanket failure veto was removed. `ERROR`, `NOT_QUERIED`, cache misses and rate limiting are reported as `UNAVAILABLE`; they are not contradictions. A different independent qualifying record may still satisfy admission. Unknown source correspondence or unknown normalization behavior is not promoted to a contradiction or a corroborator. Multiple databases with unknown shared provenance are not counted as independent votes. The public status schema and five-table registry schema were not changed.
+
+## EPA CompTox / DSSTox
+
+[`comptox.py`](comptox.py) uses the EPA CTX API base `https://comptox.epa.gov/ctx-api/`, exact `chemical/search/equal/…` and `chemical/detail/search/by-dtxsid/…` or `by-dtxcid/…` routes. It supports exact source name, CASRN, full InChIKey, DTXSID and DTXCID retrieval; fuzzy and formula searches do not corroborate. Results retain DSSTox lineage, record IDs and request origin; independence remains `UNDETERMINED`. Returned SMILES is validated locally and compared with EPA InChI/InChIKey when present. A case-only name match, inconsistent identifiers, a missing structure or undocumented form preservation remains non-discriminating. Provider-generated InChI values are identified as locally generated when EPA has not supplied both identifiers. It does not normalize to a parent or select an identity.
+
+The implementation follows the [EPA CTX API overview](https://www.epa.gov/comptox-tools/computational-toxicology-and-exposure-apis-about), [EPA chemical-data description](https://www.epa.gov/comptox-tools/computational-toxicology-and-exposure-apis-data-domains), and EPA's official client documentation for [exact search and detail projections](https://github.com/USEPA/ctx-python/blob/main/src/ctxpy/chemical.py) and [base URL and `x-api-key` header](https://github.com/USEPA/ctx-python/blob/main/src/ctxpy/base.py). HTTP 404 is treated as no match; 429 as unavailable/rate-limited; authentication, transport and service errors are unavailable. Requests have a timeout, bounded budget, a minimum delay and local cache. EPA's current rate-limit threshold was not independently established, so the delay is an operational bound, not a claim of guaranteed compliance.
+
+CompTox API key location: `C:\Users\IT PatsnapSG\OneDrive - Patsnap\13. PatSnap\12. Normalization\main\canonical_registry\.env.local`  
+Variable: `CTX_API_KEY`  
+Template: [`.env.example`](.env.example) contains `CTX_API_KEY=`. **CTX_API_KEY configured: yes.** The adapter reads the local file or environment variable, sends the key only in the request header, redacts response/cache strings and records only sanitized error categories. No key value is in this report.
+
+The selected file is covered by [`canonical_registry/.gitignore`](.gitignore); `git check-ignore` confirmed the rule in a separate temporary Git repository. This workspace has **no active Git repository**, so there are no tracked files here and the rule cannot currently be verified against a live project index. The rule will apply if this directory is incorporated into a Git repository. A targeted scan of 1,317 source, test, report, log and task-artifact text files found no occurrence of the configured key outside `.env.local`; historical cache directories and files above 10 MB were not exhaustively scanned. The live response cache was included in the scan.
+
+### CompTox evaluation
+
+The frozen replay issued **284 adapter-level CompTox queries**, all `NOT_QUERIED` / `UNAVAILABLE` because it deliberately ran offline with no prior CompTox cache. It made **0 CompTox HTTP requests**, returned **0 records**, and therefore has 0 assessed CompTox `CORROBORATES`, `CONTRADICTS`, `NO_MATCH`, or `NON_DISCRIMINATING` records. It cannot measure provider contribution or agreement.
+
+Separately, the authenticated live probe made **three successful HTTP requests**: two exact-search requests and one detail request. Two earlier sandbox DNS attempts were unavailable and did not reach EPA. The exact `Toluene` query returned **DTXSID7021360 / DTXCID501360** and its SMILES, InChI and InChIKey agreed after trimming the API's trailing InChI newline. Its evidence state is **NON_DISCRIMINATING** because independent lineage and source-form preservation are not documented. A lower-case search returned a case-only record and is also non-discriminating, not a no-match or exact corroboration. There were no assessed cross-provider agreements, shared-lineage conclusions, sole-CompTox admissions or structural normalization disagreements in this single-record probe. [Sanitized probe summary](evidence_scope_remediation/live_probe_summary.json). This is connectivity and adapter smoke testing, not evidence of provider-wide performance.
+
+## Scope capability remediation
+
+[`form_characterizer.py`](form_characterizer.py) now reports `UNSUPPORTED_ELEMENT_CAPABILITY`, `UNSUPPORTED_DISCRETE_STRUCTURE_CAPABILITY`, `UNSUPPORTED_COORDINATION_CAPABILITY` and `UNSUPPORTED_MULTICOMPONENT_CAPABILITY` instead of presenting these bounded tool limits as chemical ontology classifications. A successfully parsed structure whose InChI generation cannot represent its bond type now returns `UNRESOLVED / UNSUPPORTED_STRUCTURE_CAPABILITY`, rather than declaring it malformed. Explicit excluded material-family names still use the existing `OUT_OF_SCOPE` status.
+
+The prior tested-element envelope remains a conservative capability gate; its members are not asserted to define organic chemistry or Substance ontology. The old carbon-free, multicomponent safety hold also remains active under a capability reason. Removing either without an independently validated structural capability boundary could admit untested chemistry, and building that classifier is outside this task. Consequently these heuristics remain **weakly grounded admission-relevant limitations**. The [updated grounding matrix](resolver_grounding_matrix.json) records that residual. The scope tests include ethanol, water, sodium chloride, an unsupported iron ion, a copper coordination structure, an organomagnesium example and a silicon dioxide graph; they test holds and representation behavior, not broad chemical classification.
+
+## Tests and frozen development replay
+
+All **161 tests passed**, including the new [evidence-state](test_evidence_model.py), [CompTox](test_comptox.py) and [scope-capability](test_scope_capability.py) tests. They cover a qualified corroborator plus an unavailable provider or no-match; a typed source with all providers unavailable; a partial source with agreeing providers; a genuinely verified contradiction; normalized or undocumented form evidence; API key redaction, exact search/detail handling and unsupported fuzzy/formula queries. Synthetic documented-lineage fixtures are test-only and are not used by the real providers. Older tests were adjusted where they had assumed any database hit or provider failure automatically determined identity. [Test log](evidence_scope_remediation_result/tests.log).
+
+The following uses the same frozen 400 source records and reference adjudications; it is a **development replay, not a fresh blinded holdout**. PubChem, ChEBI and GSRS used copied prior caches, and CompTox was offline. No external requests were made during the replay. [Frozen implementation](evidence_scope_remediation_result/IMPLEMENTATION_FROZEN.json), [metrics](evidence_scope_remediation_result/metrics.json), [case and provider-failure analysis](evidence_scope_remediation_result/analysis.json).
+
+| Status | Pre-grounding stable baseline | Prior partial remediation | This replay |
+| --- | ---: | ---: | ---: |
+| EXACT | 152 | 11 | 0 |
+| UNRESOLVED | 206 | 353 | 378 |
+| CONFLICT | 20 | 14 | 0 |
+| OUT_OF_SCOPE | 22 | 22 | 22 |
+
+No prior UNRESOLVED record or prior CONFLICT record became EXACT; all 11 prior EXACT records are now UNRESOLVED. There were **no new or recovered admissions**, so the required per-admission list is empty. Automatic EXACT precision and false-merge rate are **not estimable**: no records were admitted and no merged pairs were assessable. No aliases were promoted. These results do not demonstrate that the provider policy is safe at scale.
+
+Among the **122** records identified in the previous analysis as `SOURCE_PROVIDER_FAILURE_HOLD`, **122 are UNRESOLVED**, 0 are EXACT and 0 are CONFLICT. Of these, 118 now report `NO_INDEPENDENT_CORROBORATION` and four report `SOURCE_INTERPRETATION_INCOMPLETE`. Provider unavailability did not itself trigger the hold; no actual cached record in these cases had the documented lineage, source correspondence and form-preservation qualifications needed for a positive corroborator. No recovered case can be labelled correct merely from its earlier outcome. The complete cohort is in [analysis.json](evidence_scope_remediation_result/analysis.json).
+
+Capability reason counts are non-exclusive: unsupported element 18, unsupported multicomponent 11, unsupported coordination 2 and unsupported discrete structure 2. They describe this tool's current holds, not a census of inorganic or coordination substances.
+
+## Historical cases and integrity
+
+The four prior unsafe admissions remain non-EXACT. The previously sulfate-specific case 5684, relative-stereo cases 5997 and 23839, and glucose-form case 30142 are all UNRESOLVED in the replay; no index-specific or name-specific admission rule was added. The former exact-name dithiazole fixture is still absent from runtime. In a separate offline probe, its preferred-name parser returned provisional `ESTABLISHED` and the preliminary source-form check returned `SUPPORTED`; these are internal interpretations, not independent tautomer proof. PubChem's available record was `NON_DISCRIMINATING` because source-claim correspondence and form preservation were unverified; ChEBI and CompTox were `UNAVAILABLE`. RDKit's bounded diagnostic identifies the candidate as tautomer-sensitive, and Standard InChI alone does not distinguish every tautomer. The result is `UNRESOLVED / NO_INDEPENDENT_CORROBORATION`, **not** a provider-error veto or proof that the tautomer disagreement was resolved. [Probe](evidence_scope_remediation_result/case5_probe.json).
+
+The production OPSIN jar hash and actual class-loading sources match the original artifact, with no diagnostic instrumentation loaded. [Classpath evidence](evidence_scope_remediation_result/classpath.json). The ontology, five-table schema, framework and prior frozen registry/candidate databases are unchanged. Registry verification returned **PASS**, with zero duplicates or orphans; because the snapshot has **zero canonical graphs**, this integrity check is vacuous with respect to accepted identities. [Verification](evidence_scope_remediation_result/run/verification.json).
+
+## Remaining work
+
+The resolver needs independently reviewed, provider-specific evidence qualifications and lineage information before real PubChem, ChEBI, GSRS or DSSTox records can satisfy the new name-based corroboration requirement. The current element allowlist, carbon-free multicomponent and coordination capability holds need an independently grounded capability boundary; this task deliberately did not expand them. The CompTox live check covers one simple chemical only, and no provider-specific form-discrimination or independence study was performed. The 400-record replay is reused development data and produced no assessable automatic admissions or merges. **Do not resume broader feature development until these evidence and scope limitations have been remediated and independently evaluated.**
+
+EVIDENCE_AND_SCOPE_REMEDIATION_PARTIAL

@@ -1,0 +1,237 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ChargeDimensionEvidence v1",
+  "type": "object",
+  "required": [
+    "evidence_id",
+    "version",
+    "source_claim_ids",
+    "nomenclature_rule_ids",
+    "semantic_owner",
+    "source_scope",
+    "candidate_correspondence",
+    "structural_observations",
+    "relevant_sites",
+    "site_coverage",
+    "unresolved_dependencies",
+    "source_assertions",
+    "dimension_result",
+    "operation_result",
+    "reason_codes"
+  ],
+  "properties": {
+    "evidence_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "const": "1.0"
+    },
+    "source_claim_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "nomenclature_rule_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "semantic_owner": {
+      "type": "string"
+    },
+    "source_scope": {
+      "type": "object",
+      "required": [
+        "claims",
+        "checks",
+        "binding"
+      ],
+      "properties": {
+        "claims": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "claim_id",
+              "source_span",
+              "source_text",
+              "original",
+              "rule_id",
+              "semantic_owner"
+            ],
+            "properties": {
+              "claim_id": {
+                "type": "string"
+              },
+              "source_text": {
+                "type": "string"
+              },
+              "original": {
+                "type": "string"
+              },
+              "rule_id": {
+                "type": "string"
+              },
+              "semantic_owner": {
+                "type": "string"
+              },
+              "source_span": {
+                "type": "object",
+                "required": [
+                  "start",
+                  "end"
+                ],
+                "properties": {
+                  "start": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "end": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "binding": {
+          "type": "object",
+          "required": [
+            "source_names",
+            "candidate"
+          ],
+          "properties": {
+            "source_names": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "candidate": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "candidate_correspondence": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "SUPPORTED",
+            "UNKNOWN"
+          ]
+        }
+      }
+    },
+    "structural_observations": {
+      "type": "object"
+    },
+    "relevant_sites": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "site_coverage": {
+      "type": "object",
+      "required": [
+        "complete",
+        "basis",
+        "all_other_sites_excluded"
+      ],
+      "properties": {
+        "complete": {
+          "type": "boolean"
+        },
+        "basis": {
+          "type": "string"
+        },
+        "all_other_sites_excluded": {
+          "type": "boolean"
+        }
+      }
+    },
+    "unresolved_dependencies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source_assertions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_claim_id",
+          "source_claim_ids",
+          "meaning",
+          "rule",
+          "provenance"
+        ],
+        "properties": {
+          "source_claim_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "source_claim_id": {
+            "type": "string"
+          },
+          "meaning": {
+            "type": "string"
+          },
+          "rule": {
+            "type": "string"
+          },
+          "provenance": {
+            "enum": [
+              "SOURCE_EXPLICIT",
+              "NOMENCLATURE_ESTABLISHED"
+            ]
+          }
+        }
+      }
+    },
+    "dimension_result": {
+      "enum": [
+        "SUPPORTED",
+        "DIFFERENT",
+        "UNKNOWN",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "operation_result": {
+      "enum": [
+        "SUPPORTED",
+        "UNKNOWN"
+      ]
+    },
+    "reason_codes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "description": "Cross-reference, exact source-span, binding and SUPPORTED proof requirements are additionally checked by charge_evidence_models.py and the consumer. This schema does not constitute chemical proof."
+}

@@ -1,0 +1,69 @@
+{
+  "rules": [
+    {
+      "rule_id": "R1",
+      "construction": "Formal H-for-group substitution",
+      "authoritative_reference": {
+        "title": "IUPAC Blue Book P-13.1: substitutive operation",
+        "url": "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1"
+      },
+      "meaning": "A parent H is exchanged for the substituent, forming its attachment bond.",
+      "structural_implications": "A parent H is exchanged for the substituent, forming its attachment bond.",
+      "applicability_boundaries": "Only one N1 substitution; no suffix or additional operations.",
+      "independent_example": "1-methyl-1H-pyrazole",
+      "known_limitations": "Does not establish complete identity or all mobile-H states."
+    },
+    {
+      "rule_id": "R2",
+      "construction": "Locant placement",
+      "authoritative_reference": {
+        "title": "IUPAC Blue Book P-14.3.2: placement of locants",
+        "url": "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-14.3.2"
+      },
+      "meaning": "A locant immediately precedes the naming unit it modifies.",
+      "structural_implications": "A locant immediately precedes the naming unit it modifies.",
+      "applicability_boundaries": "Only numeric 1 and unambiguous single parent ownership.",
+      "independent_example": "1-methyl-1H-imidazole",
+      "known_limitations": "Does not establish complete identity or all mobile-H states."
+    },
+    {
+      "rule_id": "R3",
+      "construction": "Indicated hydrogen",
+      "authoritative_reference": {
+        "title": "IUPAC Blue Book P-14.7.1: indicated hydrogen",
+        "url": "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-14.7"
+      },
+      "meaning": "The source descriptor specifies a parent mancude-ring state; it is not a final hydrogen-count instruction.",
+      "structural_implications": "The source descriptor specifies a parent mancude-ring state; it is not a final hydrogen-count instruction.",
+      "applicability_boundaries": "One explicit 1H; added H and other H locants excluded.",
+      "independent_example": "1-methyl-1H-pyrazole",
+      "known_limitations": "Does not establish complete identity or all mobile-H states."
+    },
+    {
+      "rule_id": "R4",
+      "construction": "Retained heteromonocyclic parent",
+      "authoritative_reference": {
+        "title": "IUPAC Blue Book P-22.2, Table 2.2: retained parent hydrides and numbering",
+        "url": "https://iupac.qmul.ac.uk/BlueBook/P2.html"
+      },
+      "meaning": "The defined parent and its numbering determine which atom is N1.",
+      "structural_implications": "The defined parent and its numbering determine which atom is N1.",
+      "applicability_boundaries": "Only 1H-pyrazole and 1H-imidazole; extensions require independently reviewed numbered templates.",
+      "independent_example": "1-methyl-1H-imidazole",
+      "known_limitations": "Does not establish complete identity or all mobile-H states."
+    },
+    {
+      "rule_id": "R5",
+      "construction": "Normal alkyl groups",
+      "authoritative_reference": {
+        "title": "IUPAC Blue Book P-29: substituent-group names",
+        "url": "https://iupac.qmul.ac.uk/BlueBook/P2.html#P-29"
+      },
+      "meaning": "A methyl, ethyl, propyl or butyl prefix provides a terminal single attachment of a straight carbon chain.",
+      "structural_implications": "A methyl, ethyl, propyl or butyl prefix provides a terminal single attachment of a straight carbon chain.",
+      "applicability_boundaries": "Unbranched C1-C4 only; no unsupported alkyl naming variants.",
+      "independent_example": "1-ethyl-1H-imidazole",
+      "known_limitations": "Does not establish complete identity or all mobile-H states."
+    }
+  ]
+}

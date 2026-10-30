@@ -1,0 +1,36 @@
+{
+  "title": "Experimental Nomenclature Semantic Trace",
+  "version": 1,
+  "status": "DIAGNOSTIC_ONLY",
+  "fields": {
+    "source_span": "original ASCII source offsets or null",
+    "source_text": "original token or null",
+    "semantic_type": [
+      "INDICATED_HYDROGEN",
+      "ADDED_INDICATED_HYDROGEN",
+      "UNKNOWN"
+    ],
+    "fragment": "OPSIN fragment token; temporary",
+    "fragment_id": "temporary per-process OPSIN object identity",
+    "locant": "fragment-local locant",
+    "cml_atom": "same-result CML atom identifier",
+    "operation_stage": "PARENT_LOCANTED_FEATURE",
+    "explicit_or_generated": [
+      "EXPLICIT",
+      "GENERATED_OR_UNMAPPED"
+    ],
+    "mapping_status": [
+      "MAPPED_BOUNDED",
+      "UNRESOLVED"
+    ],
+    "operations": "NOT_CAPTURED",
+    "constraint": "UNKNOWN",
+    "reason": "abstention reason"
+  },
+  "limitations": [
+    "No operation composition",
+    "No CML-to-production-graph correspondence",
+    "No mobile-H completeness",
+    "No admission support"
+  ]
+}

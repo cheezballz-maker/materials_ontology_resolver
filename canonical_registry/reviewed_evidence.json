@@ -1,0 +1,10 @@
+[
+  {
+    "names": ["5-Amino-3H-1,2,4-dithiazole-3-thione"],
+    "context": "Previously detected source contradiction explicitly requested as an upgrade regression. These are preserved source structures, not a reference outcome label. No new provider adapter is used.",
+    "claims": [
+      {"source": "PubChem/Fisher amino-thione evidence", "url": "https://pubchem.ncbi.nlm.nih.gov/compound/2735329", "smiles": "Nc1nc(=S)ss1"},
+      {"source": "Previously audited Wiley spectrum record", "url": "https://spectrabase.com/spectrum/LHSxszxMwZO", "smiles": "N=C1N=C(SS1)S"}
+    ]
+  }
+]

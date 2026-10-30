@@ -1,0 +1,18 @@
+{
+  "status": "INVESTIGATIVE_ONLY",
+  "fields": {
+    "source_locant_span": "original locant token span",
+    "substituent_source_span": "contiguous surviving group stem and inline suffix token spans, where verified",
+    "parse_node": "OPSIN substituent XML",
+    "substituent_fragment": "parsed group and attachment atom",
+    "parent_target_atom": "same-result OPSIN atom",
+    "indicated_h_parent": "same-object H trace when present",
+    "structural_operation": "locanted join and resulting final CML bond",
+    "mapping_status": "observational only",
+    "operation_lineage_complete": "NOT_PROVEN",
+    "mobile_h_completeness": "UNKNOWN",
+    "operation_state": "UNKNOWN",
+    "identity_dimension_state": "UNKNOWN"
+  },
+  "note": "No admission result or confidence is produced."
+}

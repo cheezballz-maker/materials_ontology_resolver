@@ -1,0 +1,4 @@
+# Ontology alignment
+SourceConcept is an operational source referent, distinct from Substance. Its key distinguishes system, record type, record ID and individual referent. Ingredient concepts can be domain-specific semantic views of such referents; this does not classify all source concepts as IngredientConcept.
+
+EXACT associations are evidence-backed resolution assertions, never owl:sameAs or Substance aliases. Revision, status, events and provenance remain relational operational data. Unresolved concepts exist without exact links. The current ontology provides IngredientConcept/CosmeticsIngredientConcept and Substance distinctions but no generic operational resolution event contract. A future qualified resolves-to property and optional source-referent/event vocabulary may be proposed after persistence review; none is added here. No production ontology changes.

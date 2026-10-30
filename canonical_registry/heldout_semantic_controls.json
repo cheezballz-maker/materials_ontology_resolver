@@ -1,0 +1,116 @@
+{
+  "version": "1.0",
+  "status": "FROZEN_NOT_EXECUTED",
+  "selection": "Different parent/substituent combination and negative, scope, component, symmetry/traversal and missing-evidence checks. Public specification, not secret blind adjudication.",
+  "cases": [
+    {
+      "id": "H01",
+      "input_name": "1-ethyl-1H-imidazole",
+      "candidate_structure": "CCN1C=CN=C1",
+      "candidate_format": "SMILES",
+      "expected_grammar_classification": "IN_CONTRACT",
+      "expected_source_constraints": [
+        "1H-imidazole parent",
+        "N1-ethyl"
+      ],
+      "expected_comparison_result": "SUPPORTED",
+      "scientific_justification": "N1 ethyl group replaces the indicated parent H.",
+      "references": [
+        "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+        "https://pubchem.ncbi.nlm.nih.gov/compound/1-Ethyl-1H-imidazole"
+      ],
+      "evaluation_context": {}
+    },
+    {
+      "id": "H02",
+      "input_name": "1-ethyl-1H-imidazole",
+      "candidate_structure": "CN1C=CN=C1",
+      "candidate_format": "SMILES",
+      "expected_grammar_classification": "IN_CONTRACT",
+      "expected_source_constraints": [
+        "1H-imidazole parent",
+        "N1-ethyl"
+      ],
+      "expected_comparison_result": "DIFFERENT",
+      "scientific_justification": "Methyl and ethyl groups have different substituent connectivity; both candidate and source claim are explicit.",
+      "references": [
+        "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+        "https://pubchem.ncbi.nlm.nih.gov/compound/MCTWTZJPVLRJOU-UHFFFAOYSA-N"
+      ],
+      "evaluation_context": {}
+    },
+    {
+      "id": "H03",
+      "input_name": "1-ethyl-1H-imidazole",
+      "candidate_structure": "CCN1C=CN=C1.Cl",
+      "candidate_format": "SMILES",
+      "expected_grammar_classification": "IN_CONTRACT",
+      "expected_source_constraints": [
+        "1H-imidazole parent",
+        "N1-ethyl"
+      ],
+      "expected_comparison_result": "UNKNOWN",
+      "scientific_justification": "The candidate has an additional component; salt composition is outside the pilot.",
+      "references": [
+        "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+        "https://pubchem.ncbi.nlm.nih.gov/compound/1-Ethyl-1H-imidazole"
+      ],
+      "evaluation_context": {}
+    },
+    {
+      "id": "H04",
+      "input_name": "1-ethyl-1H-imidazole",
+      "candidate_structure": "CCN1C=CN=C1",
+      "candidate_format": "SMILES",
+      "expected_grammar_classification": "IN_CONTRACT",
+      "expected_source_constraints": [
+        "1H-imidazole parent",
+        "N1-ethyl"
+      ],
+      "expected_comparison_result": "UNKNOWN",
+      "scientific_justification": "Insufficient structural mapping cannot establish a result.",
+      "references": [
+        "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+        "https://pubchem.ncbi.nlm.nih.gov/compound/1-Ethyl-1H-imidazole"
+      ],
+      "evaluation_context": {
+        "correspondence": "UNAVAILABLE"
+      }
+    },
+    {
+      "id": "H05",
+      "input_name": "1-ethylimidazole",
+      "candidate_structure": "CCN1C=CN=C1",
+      "candidate_format": "SMILES",
+      "expected_grammar_classification": "OUT_OF_CONTRACT",
+      "expected_source_constraints": [],
+      "expected_comparison_result": "UNKNOWN",
+      "scientific_justification": "A conventional name without explicit 1H is outside this deliberately narrow grammar, even if it is chemically valid.",
+      "references": [
+        "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+        "https://pubchem.ncbi.nlm.nih.gov/compound/1-Ethyl-1H-imidazole"
+      ],
+      "evaluation_context": {}
+    },
+    {
+      "id": "H06",
+      "input_name": "1-ethyl-1H-imidazole",
+      "candidate_structure": "CCN1C=CN=C1",
+      "candidate_format": "SMILES",
+      "expected_grammar_classification": "IN_CONTRACT",
+      "expected_source_constraints": [
+        "1H-imidazole parent",
+        "N1-ethyl"
+      ],
+      "expected_comparison_result": "SUPPORTED",
+      "scientific_justification": "Equivalent atom traversal must not generate a false difference.",
+      "references": [
+        "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+        "https://pubchem.ncbi.nlm.nih.gov/compound/1-Ethyl-1H-imidazole"
+      ],
+      "evaluation_context": {
+        "alternate_candidate": "CCN1C=NC=C1"
+      }
+    }
+  ]
+}

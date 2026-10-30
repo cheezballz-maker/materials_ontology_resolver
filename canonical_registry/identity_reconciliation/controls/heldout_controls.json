@@ -1,0 +1,312 @@
+{
+  "review": "CHEMICAL_REVIEW_PENDING",
+  "visibility": "PUBLIC_FROZEN_NOT_BLINDED",
+  "cases": [
+    {
+      "id": "H01",
+      "description": "positional isomers",
+      "claims": [
+        {
+          "id": "a",
+          "name": "explicit meta bromochlorobenzene graph",
+          "dimension": "constitution",
+          "state": "EXACT",
+          "smiles": "Brc1cccc(Cl)c1",
+          "framework": "Brc1cccc(Cl)c1",
+          "role": "IDENTITY_ASSERTION",
+          "role_established": true,
+          "origin": "SOURCE_PROVIDED",
+          "dependencies": [],
+          "basis": "RULE_ESTABLISHED"
+        }
+      ],
+      "candidate": "Brc1ccc(Cl)cc1",
+      "required_dimensions": [
+        "constitution"
+      ],
+      "expected_relationships": [
+        "EXACT_INCOMPATIBLE"
+      ],
+      "expected_result": "RECONCILIATION_CONFLICT",
+      "chemical_justification": "Different ring substitution.",
+      "references": [
+        "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+        "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+        "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+        "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-14.7"
+      ],
+      "review_status": "CHEMICAL_REVIEW_PENDING",
+      "evidence_note": "Name-to-graph semantics are explicitly annotated provisional rule-grounded inputs, not inferred by the reconciliation engine."
+    },
+    {
+      "id": "H02",
+      "description": "acetic acid / acetate",
+      "claims": [
+        {
+          "id": "a",
+          "name": "acetate",
+          "dimension": "protonation_charge",
+          "state": "EXACT",
+          "smiles": "CC(=O)[O-]",
+          "framework": "CC(=O)[O-]",
+          "role": "IDENTITY_ASSERTION",
+          "role_established": true,
+          "origin": "SOURCE_PROVIDED",
+          "dependencies": [],
+          "basis": "RULE_ESTABLISHED"
+        }
+      ],
+      "candidate": "CC(=O)O",
+      "required_dimensions": [
+        "protonation_charge"
+      ],
+      "expected_relationships": [
+        "EXACT_INCOMPATIBLE"
+      ],
+      "expected_result": "RECONCILIATION_CONFLICT",
+      "chemical_justification": "Proton/charge distinction.",
+      "references": [
+        "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+        "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+        "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+        "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-14.7"
+      ],
+      "review_status": "CHEMICAL_REVIEW_PENDING",
+      "evidence_note": "Name-to-graph semantics are explicitly annotated provisional rule-grounded inputs, not inferred by the reconciliation engine."
+    },
+    {
+      "id": "H03",
+      "description": "unspecified stereo on different scaffold",
+      "claims": [
+        {
+          "id": "a",
+          "name": "pentan-2-ol unspecified",
+          "dimension": "stereochemistry",
+          "state": "UNSPECIFIED",
+          "smiles": null,
+          "framework": "CCCC(O)C",
+          "role": "IDENTITY_ASSERTION",
+          "role_established": true,
+          "origin": "SOURCE_PROVIDED",
+          "dependencies": [],
+          "basis": "RULE_ESTABLISHED"
+        }
+      ],
+      "candidate": "CCC[C@H](O)C",
+      "required_dimensions": [
+        "stereochemistry"
+      ],
+      "expected_relationships": [
+        "BROADER_THAN_CANDIDATE"
+      ],
+      "expected_result": "RECONCILIATION_UNRESOLVED",
+      "chemical_justification": "Broad source not exact.",
+      "references": [
+        "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+        "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+        "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+        "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-14.7"
+      ],
+      "review_status": "CHEMICAL_REVIEW_PENDING",
+      "evidence_note": "Name-to-graph semantics are explicitly annotated provisional rule-grounded inputs, not inferred by the reconciliation engine."
+    },
+    {
+      "id": "H04",
+      "description": "equivalent traversal",
+      "claims": [
+        {
+          "id": "a",
+          "name": "explicit propan-1-ol graph",
+          "dimension": "constitution",
+          "state": "EXACT",
+          "smiles": "CCCO",
+          "framework": "CCCO",
+          "role": "IDENTITY_ASSERTION",
+          "role_established": true,
+          "origin": "SOURCE_PROVIDED",
+          "dependencies": [],
+          "basis": "RULE_ESTABLISHED"
+        }
+      ],
+      "candidate": "OCCC",
+      "required_dimensions": [
+        "constitution"
+      ],
+      "expected_relationships": [
+        "EXACT_COMPATIBLE"
+      ],
+      "expected_result": "RECONCILED_COMPATIBLE",
+      "chemical_justification": "Equivalent graph traversal.",
+      "references": [
+        "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+        "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+        "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+        "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-14.7"
+      ],
+      "review_status": "CHEMICAL_REVIEW_PENDING",
+      "evidence_note": "Name-to-graph semantics are explicitly annotated provisional rule-grounded inputs, not inferred by the reconciliation engine."
+    },
+    {
+      "id": "H05",
+      "description": "unknown family scope",
+      "claims": [
+        {
+          "id": "a",
+          "name": "fatty alcohols",
+          "dimension": "constitution",
+          "state": "UNKNOWN",
+          "smiles": null,
+          "framework": null,
+          "role": "IDENTITY_ASSERTION",
+          "role_established": true,
+          "origin": "SOURCE_PROVIDED",
+          "dependencies": [],
+          "basis": "UNVERIFIED"
+        }
+      ],
+      "candidate": "CCCCO",
+      "required_dimensions": [
+        "constitution"
+      ],
+      "expected_relationships": [
+        "UNKNOWN"
+      ],
+      "expected_result": "RECONCILIATION_UNRESOLVED",
+      "chemical_justification": "Family label does not select a member.",
+      "references": [
+        "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+        "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+        "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+        "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-14.7"
+      ],
+      "review_status": "CHEMICAL_REVIEW_PENDING",
+      "evidence_note": "Name-to-graph semantics are explicitly annotated provisional rule-grounded inputs, not inferred by the reconciliation engine."
+    },
+    {
+      "id": "H06",
+      "description": "component stoichiometry",
+      "claims": [
+        {
+          "id": "a",
+          "name": "explicit two-water composition",
+          "dimension": "component_stoichiometry",
+          "state": "EXACT",
+          "smiles": "CCO.O.O",
+          "framework": "CCO.O.O",
+          "role": "IDENTITY_ASSERTION",
+          "role_established": true,
+          "origin": "SOURCE_PROVIDED",
+          "dependencies": [],
+          "basis": "RULE_ESTABLISHED"
+        }
+      ],
+      "candidate": "CCO.O",
+      "required_dimensions": [
+        "component_stoichiometry"
+      ],
+      "expected_relationships": [
+        "EXACT_INCOMPATIBLE"
+      ],
+      "expected_result": "RECONCILIATION_CONFLICT",
+      "chemical_justification": "Defined component multiplicity differs.",
+      "references": [
+        "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+        "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+        "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+        "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-14.7"
+      ],
+      "review_status": "CHEMICAL_REVIEW_PENDING",
+      "evidence_note": "Name-to-graph semantics are explicitly annotated provisional rule-grounded inputs, not inferred by the reconciliation engine."
+    },
+    {
+      "id": "H07",
+      "description": "dependent parse is not an independent source vote",
+      "claims": [
+        {
+          "id": "a",
+          "name": "explicit ethanol graph",
+          "dimension": "constitution",
+          "state": "EXACT",
+          "smiles": "CCO",
+          "framework": "CCO",
+          "role": "IDENTITY_ASSERTION",
+          "role_established": true,
+          "origin": "SOURCE_PROVIDED",
+          "dependencies": [],
+          "basis": "RULE_ESTABLISHED"
+        },
+        {
+          "id": "b",
+          "name": "parser derivative",
+          "dimension": "constitution",
+          "state": "EXACT",
+          "smiles": "OCC",
+          "framework": "OCC",
+          "role": "IDENTITY_ASSERTION",
+          "role_established": true,
+          "origin": "DERIVED_SOURCE",
+          "dependencies": [
+            "a"
+          ],
+          "basis": "RULE_ESTABLISHED"
+        }
+      ],
+      "candidate": "CCO",
+      "required_dimensions": [
+        "constitution"
+      ],
+      "expected_relationships": [
+        "EXACT_COMPATIBLE",
+        "EXACT_COMPATIBLE"
+      ],
+      "expected_result": "RECONCILED_COMPATIBLE",
+      "chemical_justification": "Dependent claims retain one lineage.",
+      "references": [
+        "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+        "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+        "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+        "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-14.7"
+      ],
+      "review_status": "CHEMICAL_REVIEW_PENDING",
+      "evidence_note": "Name-to-graph semantics are explicitly annotated provisional rule-grounded inputs, not inferred by the reconciliation engine."
+    },
+    {
+      "id": "H08",
+      "description": "missing dependency",
+      "claims": [
+        {
+          "id": "a",
+          "name": "derived without parent",
+          "dimension": "constitution",
+          "state": "EXACT",
+          "smiles": "CCO",
+          "framework": "CCO",
+          "role": "IDENTITY_ASSERTION",
+          "role_established": true,
+          "origin": "DERIVED_SOURCE",
+          "dependencies": [
+            "missing"
+          ],
+          "basis": "RULE_ESTABLISHED"
+        }
+      ],
+      "candidate": "CCO",
+      "required_dimensions": [
+        "constitution"
+      ],
+      "expected_relationships": [
+        "UNKNOWN"
+      ],
+      "expected_result": "RECONCILIATION_UNRESOLVED",
+      "chemical_justification": "Missing dependency prevents using evidence.",
+      "references": [
+        "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+        "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+        "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+        "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-14.7"
+      ],
+      "review_status": "CHEMICAL_REVIEW_PENDING",
+      "evidence_note": "Name-to-graph semantics are explicitly annotated provisional rule-grounded inputs, not inferred by the reconciliation engine."
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "phase": "PRE_IMPLEMENTATION",
+  "files": {
+    "development_controls.json": "adb75f52aa879437ac2752109295bf6aa2ddf18960abd43cc20e26d242c41039",
+    "heldout_controls.json": "dbdb05a5616eb5886c97273ed7118b4920502284c801f407eeef45a6e513f4ed"
+  }
+}

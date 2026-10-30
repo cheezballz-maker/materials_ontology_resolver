@@ -1,0 +1,5 @@
+{
+  "expectations": "The 18 graph controls and their expected labels were declared in initialize.py before stereo_comparison.py was created. No expected label was changed.",
+  "freeze_timing_erratum": "The initial broad snapshot operation was interrupted because it was slow. The bounded snapshot and JSON control freeze completed after module creation and preliminary smoke checks, before formal control and corpus evaluations. The grounding field in the frozen JSON overstates the freeze timing; this note supersedes that metadata claim without rewriting the frozen control bytes.",
+  "independence_scope": "Explicit graph constraints and independent RDKit chirality/canonicalization checks; not independent chemical-expert adjudication or a blinded benchmark. Two later supplemental controls cover square-planar stereo rejection and partial symmetry."
+}

@@ -1,0 +1,141 @@
+[
+  {
+    "id": "U1",
+    "source_name": "nitrobenzoic acid",
+    "candidate": "O=C(O)c1ccc([N+](=O)[O-])cc1",
+    "aliases": [],
+    "expected_operation": "UNKNOWN",
+    "expected_dimension": "UNKNOWN",
+    "justification": "Additional acid site and source locants are outside supported grammar.",
+    "review": "CHEMICAL_REVIEW_PENDING",
+    "references": [
+      "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+      "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+      "https://iupac.qmul.ac.uk/BlueBook/P5.html"
+    ]
+  },
+  {
+    "id": "U2",
+    "source_name": "nitroaniline",
+    "candidate": "Nc1ccc([N+](=O)[O-])cc1",
+    "aliases": [],
+    "expected_operation": "UNKNOWN",
+    "expected_dimension": "UNKNOWN",
+    "justification": "Uninterpreted amino protonation sites and source scope.",
+    "review": "CHEMICAL_REVIEW_PENDING",
+    "references": [
+      "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+      "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+      "https://iupac.qmul.ac.uk/BlueBook/P5.html"
+    ]
+  },
+  {
+    "id": "U3",
+    "source_name": "glycine",
+    "candidate": "[NH3+]CC(=O)[O-]",
+    "aliases": [],
+    "expected_operation": "UNKNOWN",
+    "expected_dimension": "UNKNOWN",
+    "justification": "Net neutrality does not establish proton locations.",
+    "review": "CHEMICAL_REVIEW_PENDING",
+    "references": [
+      "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+      "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+      "https://iupac.qmul.ac.uk/BlueBook/P5.html"
+    ]
+  },
+  {
+    "id": "U4",
+    "source_name": "1-chloro-2-nitrobenzene",
+    "candidate": "Clc1ccccc1[N+](=O)[O-]",
+    "aliases": [
+      "chloro nitrobenzene"
+    ],
+    "expected_operation": "SUPPORTED",
+    "expected_dimension": "UNKNOWN",
+    "justification": "Preferred operation supported; alias specificity is not established.",
+    "review": "CHEMICAL_REVIEW_PENDING",
+    "references": [
+      "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+      "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+      "https://iupac.qmul.ac.uk/BlueBook/P5.html"
+    ]
+  },
+  {
+    "id": "U5",
+    "source_name": "1-chloro-2-nitrobenzene",
+    "candidate": "Clc1ccccc1[N+](=O)[O-].Cl",
+    "aliases": [],
+    "expected_operation": "UNKNOWN",
+    "expected_dimension": "UNKNOWN",
+    "justification": "Extra component outside v1.",
+    "review": "CHEMICAL_REVIEW_PENDING",
+    "references": [
+      "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+      "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+      "https://iupac.qmul.ac.uk/BlueBook/P5.html"
+    ]
+  },
+  {
+    "id": "U6",
+    "source_name": "1-chloro-2-nitrobenzene",
+    "candidate": "Clc1ccccc1N=O",
+    "aliases": [],
+    "expected_operation": "UNKNOWN",
+    "expected_dimension": "UNKNOWN",
+    "justification": "Nitroso is not supported neutral nitro.",
+    "review": "CHEMICAL_REVIEW_PENDING",
+    "references": [
+      "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+      "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+      "https://iupac.qmul.ac.uk/BlueBook/P5.html"
+    ]
+  },
+  {
+    "id": "U7",
+    "source_name": "1-chloro-2-nitrobenzene",
+    "candidate": "Clc1ccccc1ON=O",
+    "aliases": [],
+    "expected_operation": "UNKNOWN",
+    "expected_dimension": "UNKNOWN",
+    "justification": "Nitrite ester attaches via oxygen.",
+    "review": "CHEMICAL_REVIEW_PENDING",
+    "references": [
+      "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+      "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+      "https://iupac.qmul.ac.uk/BlueBook/P5.html"
+    ]
+  },
+  {
+    "id": "U8",
+    "source_name": "1-chloro-2-nitrobenzene",
+    "candidate": "Clc1ccccc1O[N+](=O)[O-]",
+    "aliases": [],
+    "expected_operation": "UNKNOWN",
+    "expected_dimension": "UNKNOWN",
+    "justification": "Nitrate ester differs from N-attached nitro.",
+    "review": "CHEMICAL_REVIEW_PENDING",
+    "references": [
+      "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+      "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+      "https://iupac.qmul.ac.uk/BlueBook/P5.html"
+    ]
+  },
+  {
+    "id": "U9",
+    "source_name": "1-chloro-2-nitrobenzene",
+    "candidate": "Clc1ccccc1[N+](=O)[O-]",
+    "aliases": [
+      "1-chloro-3-nitrobenzene"
+    ],
+    "expected_operation": "SUPPORTED",
+    "expected_dimension": "UNKNOWN",
+    "justification": "Specific incompatible alias must remain an independent source conflict.",
+    "review": "CHEMICAL_REVIEW_PENDING",
+    "references": [
+      "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+      "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+      "https://iupac.qmul.ac.uk/BlueBook/P5.html"
+    ]
+  }
+]

@@ -1,0 +1,140 @@
+--- a/TraceProbe.java
++++ b/TraceProbe.java
+@@ -8,11 +8,15 @@
+  static void parses(List<Element> ps){parseXml=new ArrayList<>();for(Element e:ps)parseXml.add(e.toXML());}
+  static IdentityHashMap<Element,Origin> origins;
+  static List<Event> events;
++ static class Mutation {int seq; String type,preA,postA,preB,postB; Atom a,b; Mutation(String t,Atom x,Atom y,String pa,String pb){seq=mutations.size();type=t;a=x;b=y;preA=pa;preB=pb;postA=snapshot(x);postB=snapshot(y);}}
++ static List<Mutation> mutations;
++ static String snapshot(Atom a){if(a==null)return "";return a.getElement()+":"+a.getCharge()+":"+a.getProtonsExplicitlyAddedOrRemoved()+":"+a.hasSpareValency()+":"+a.getIncomingValency()+":"+a.getBonds().size();}
++ static void mutation(String type,Atom a,Atom b,String preA,String preB){if(mutations!=null)mutations.add(new Mutation(type,a,b,preA,preB));}
+  static class Origin {int start,end; String text; Origin(int s,int e,String t){start=s;end=e;text=t;}}
+- static class Event {Origin o; String kind,locant,owner; Atom a; boolean spare; int fragment;
+-  Event(Element node,Element group,Fragment f,Atom atom,String loc){o=origins.get(node);kind=node.getName();owner=group.getValue();locant=loc;a=atom;spare=atom.hasSpareValency();fragment=System.identityHashCode(f);}}
+- static void reset(String s){raw=s;selected=false;cloned=false;attempts=0;parseXml=null;origins=new IdentityHashMap<>();events=new ArrayList<>();}
+- static void attempt(){attempts++;events.clear();selected=false;cloned=false;}
++ static class Event {Origin o; String kind,locant,owner; Atom a; boolean spare; int fragment,operationCursor; String parentState;
++  Event(Element node,Element group,Fragment f,Atom atom,String loc){o=origins.get(node);kind=node.getName();owner=group.getValue();locant=loc;a=atom;spare=atom.hasSpareValency();fragment=System.identityHashCode(f);operationCursor=mutations.size();parentState=snapshot(atom);}}
++ static void reset(String s){raw=s;selected=false;cloned=false;attempts=0;parseXml=null;origins=new IdentityHashMap<>();events=new ArrayList<>();mutations=new ArrayList<>();}
++ static void attempt(){attempts++;events.clear();mutations.clear();selected=false;cloned=false;}
+  static void token(Element el,String word,String tokens,int offset,String token){
+   if(raw==null || !word.equalsIgnoreCase(tokens))return;
+   // Only exact, unique word occurrences: no substring-offset guess after normalization.
+@@ -27,8 +31,10 @@
+  static void dump(OpsinResult r){
+   if(parseXml!=null){for(int i=0;i<parseXml.size();i++)System.out.println("P\t"+(i+1)+"\t"+(selected && attempts==i+1)+"\t"+b64(parseXml.get(i)));}
+   if(!selected || !r.getStatus().toString().equals("SUCCESS"))return;
++  for(Mutation m:mutations){boolean relevant=false;for(Event e:events)if(e.a==m.a || e.a==m.b)relevant=true;
++   if(relevant)System.out.println("O\t"+m.seq+"\t"+m.type+"\t"+(m.a==null?-1:m.a.getID())+"\t"+(m.b==null?-1:m.b.getID())+"\t"+b64(m.preA)+"\t"+b64(m.postA)+"\t"+b64(m.preB)+"\t"+b64(m.postB)+"\tSOURCE_NOT_CAPTURED");}
+   for(Event e:events){Origin o=e.o; boolean exists=r.getStructure().getAtomList().contains(e.a);
+-   System.out.println("E\t"+(o==null?-1:o.start)+"\t"+(o==null?-1:o.end)+"\t"+b64(o==null?null:o.text)+"\t"+b64(e.kind)+"\t"+b64(e.locant)+"\t"+b64(e.owner)+"\t"+e.a.getID()+"\t"+e.a.getElement()+"\t"+e.a.getCharge()+"\t"+e.spare+"\t"+exists+"\t"+cloned+"\t"+attempts+"\t"+e.fragment);
++   System.out.println("E\t"+(o==null?-1:o.start)+"\t"+(o==null?-1:o.end)+"\t"+b64(o==null?null:o.text)+"\t"+b64(e.kind)+"\t"+b64(e.locant)+"\t"+b64(e.owner)+"\t"+e.a.getID()+"\t"+e.a.getElement()+"\t"+e.a.getCharge()+"\t"+e.spare+"\t"+exists+"\t"+cloned+"\t"+attempts+"\t"+e.fragment+"\t"+e.operationCursor+"\t"+b64(e.parentState));
+   }
+  }
+ }
+--- a/FragmentManager.java
++++ b/FragmentManager.java
+@@ -641,6 +641,7 @@
+ 	 * @return Bond
+ 	 */
+ 	Bond createBond(Atom fromAtom, Atom toAtom, int bondOrder) {
++		String opA=TraceProbe.snapshot(fromAtom),opB=TraceProbe.snapshot(toAtom);
+ 		Bond b = new Bond(fromAtom, toAtom, bondOrder);
+ 		fromAtom.addBond(b);
+ 		toAtom.addBond(b);
+@@ -650,6 +651,7 @@
+ 		else{
+ 			addInterFragmentBond(b);
+ 		}
++		TraceProbe.mutation("BOND_CREATE_"+bondOrder,fromAtom,toAtom,opA,opB);
+ 		return b;
+ 	}
+ 	
+@@ -669,10 +671,12 @@
+ 	}
+ 	
+ 	void removeBond(Bond bond){
++		Atom opFrom=bond.getFromAtom(),opTo=bond.getToAtom();String opA=TraceProbe.snapshot(opFrom),opB=TraceProbe.snapshot(opTo);
+ 		bond.getFromAtom().getFrag().removeBond(bond);
+ 		bond.getFromAtom().removeBond(bond);
+ 		bond.getToAtom().removeBond(bond);
+ 		removeInterFragmentBondIfPresent(bond);
++		TraceProbe.mutation("BOND_REMOVE",opFrom,opTo,opA,opB);
+ 	}
+ 	
+ 	/**
+--- a/Bond.java
++++ b/Bond.java
+@@ -84,7 +84,9 @@
+ 	/**Sets order.
+     * @param order*/
+ 	void setOrder(int order) {
++		String opA=TraceProbe.snapshot(from),opB=TraceProbe.snapshot(to);int oldOrder=this.order;
+ 		this.order = order;
++		TraceProbe.mutation("BOND_ORDER_"+oldOrder+"_TO_"+order,from,to,opA,opB);
+ 	}
+ 
+ 	/**
+@@ -108,7 +110,9 @@
+ 	 * @param o The value to be added to the bond order.
+ 	 */
+ 	void addOrder(int o) {
++		String opA=TraceProbe.snapshot(from),opB=TraceProbe.snapshot(to);int oldOrder=order;
+ 		order += o;
++		TraceProbe.mutation("BOND_ORDER_"+oldOrder+"_TO_"+order,from,to,opA,opB);
+ 	}
+ 
+ 	/**
+--- a/Atom.java
++++ b/Atom.java
+@@ -338,7 +338,9 @@
+ 	 * @param chemEl The chemical element corresponding to the element of the atom
+ 	 */
+ 	void setElement(ChemEl chemEl) {
++		String opA=TraceProbe.snapshot(this);
+ 		this.chemEl = chemEl;
++		TraceProbe.mutation("ELEMENT_SET",this,null,opA,"");
+ 	}
+ 
+ 	/**Gets the formal charge on the atom.
+@@ -356,8 +358,10 @@
+ 	 * @param protons
+ 	 */
+ 	void addChargeAndProtons(int charge, int protons){
++		String opA=TraceProbe.snapshot(this);
+ 		this.charge += charge;
+ 		protonsExplicitlyAddedOrRemoved+=protons;
++		TraceProbe.mutation("CHARGE_AND_PROTON_DELTA",this,null,opA,"");
+ 	}
+ 
+ 	/**Sets the formal charge on the atom.
+@@ -366,7 +370,9 @@
+ 	 * @param c The formal charge on the atom
+ 	 */
+ 	void setCharge(int c) {
++		String opA=TraceProbe.snapshot(this);
+ 		charge = c;
++		TraceProbe.mutation("CHARGE_SET",this,null,opA,"");
+ 	}
+ 	
+ 	 /** 
+@@ -436,7 +442,9 @@
+ 	}
+ 
+ 	void setProtonsExplicitlyAddedOrRemoved(int protonsExplicitlyAddedOrRemoved) {
++		String opA=TraceProbe.snapshot(this);
+ 		this.protonsExplicitlyAddedOrRemoved = protonsExplicitlyAddedOrRemoved;
++		TraceProbe.mutation("PROTON_COUNT_SET",this,null,opA,"");
+ 	}
+ 	
+ 	/**Does the atom have spare valency to form double bonds?
+@@ -452,7 +460,9 @@
+ 	 * @param sv The spare valency
+ 	 */
+ 	void setSpareValency(boolean sv) {
++		String opA=TraceProbe.snapshot(this);
+ 		spareValency = sv;
++		TraceProbe.mutation("SPARE_VALENCY_SET",this,null,opA,"");
+ 	}
+ 
+ 	/**Gets the total bond order of the bonds expected to be created from this atom for inter fragment bonding

@@ -1,0 +1,55 @@
+{
+  "layer": "Structural attribution, not source semantics",
+  "cases": [
+    {
+      "id": "C1",
+      "a": "CCO",
+      "b": "COC",
+      "expected": "UNKNOWN",
+      "why": "Constitution differs; no meaningful protonation correspondence."
+    },
+    {
+      "id": "C2",
+      "a": "O=C(O)c1ccccc1",
+      "b": "O=C([O-])c1ccccc1",
+      "expected": "DIFFERENT",
+      "why": "Benzoic acid and benzoate differ by proton and net charge."
+    },
+    {
+      "id": "C3",
+      "a": "Nc1ccc([N+](=O)[O-])cc1",
+      "b": "[NH3+]c1ccc([N+](=O)[O-])cc1",
+      "expected": "DIFFERENT",
+      "why": "Nitro does not mask amine protonation."
+    },
+    {
+      "id": "C4",
+      "a": "O=C(O)c1ccc([N+](=O)[O-])cc1",
+      "b": "O=C([O-])c1ccc([N+](=O)[O-])cc1",
+      "expected": "DIFFERENT",
+      "why": "Nitro does not mask carboxyl protonation."
+    },
+    {
+      "id": "C5",
+      "a": "NCC(=O)O",
+      "b": "[NH3+]CC(=O)[O-]",
+      "expected": "DIFFERENT",
+      "why": "Same net charge and total H, different proton/charge locations; source glycine meaning is unassessed."
+    },
+    {
+      "id": "C6",
+      "a": "Clc1ccccc1[N+](=O)[O-]",
+      "b": "[O-][N+](=O)c1ccccc1Cl",
+      "expected": "EQUIVALENT",
+      "why": "Equivalent nitro representation."
+    },
+    {
+      "id": "C7",
+      "a": "c1ccccc1",
+      "b": "C1CCCCC1",
+      "expected": "UNKNOWN",
+      "why": "Different hydrogenation is not a pure protonation transformation."
+    }
+  ],
+  "review": "CHEMICAL_REVIEW_PENDING"
+}

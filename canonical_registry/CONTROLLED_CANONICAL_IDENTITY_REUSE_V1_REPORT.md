@@ -1,0 +1,82 @@
+# Controlled Canonical Identity Reuse v1
+
+## Conclusion
+Implemented source-independent concept/revision storage and controlled exact associations in marked disposable SQLite databases. The existing matcher, hardened chemical comparisons and production admission policy are reused unchanged. All 25 frozen workflow controls and 378 retained unit/integration tests pass. Production registry, ontology, aliases, canonical IDs, CUMA reconciliation and previous results remain unchanged. No new canonical Substance was created.
+
+This is provisional fixture validation, not authorization or evidence of production persistence readiness. Reproduce with `python canonical_registry/controlled_identity_reuse/evaluate.py`, `regressions.py`, then `finalize.py` (each under the same directory). Existing fixture files are retained for inspection; each evaluation creates fresh UUID-named databases.
+
+## Source concepts, revisions and ontology
+`SourceConcept` keys use a deterministic namespaced SHA-256 of the JSON tuple (system, record type, record ID, referent key). Names are display claims, never identity keys. Multiple patent mentions within one record have separate referent keys. Concepts with no molecular structure remain valid stored records.
+
+Revisions preserve the source revision label, original payload hash, complete incoming-evidence hash, optional source timestamp, recorded time and full serialized evidence. Identical evidence/revision coalesces; a reused version label with changed source payload conflicts; updated supporting evidence over the same payload can preserve the same target. The head represents the last processed new revision, not an inferred upstream chronological version order. Known old-revision retries do not move it. Unseen upstream versions require reliable ingestion ordering; automatic published-version ordering is not implemented.
+
+Source concepts remain distinct from Substance. IngredientConcept/CosmeticsIngredientConcept can be domain views of referents. Associations are qualified exact-resolution assertions, not owl:sameAs or Substance aliases. Unresolved concepts remain independent. No ontology class/property is added. See `schema/ontology_alignment.md` and `schema/legacy_cuma_migration_plan.md` for semantic mapping and the explicitly unexecuted CUMA migration design.
+
+## Actual relational design
+`schema/associations.sql` is executable and authoritative. Tables: source_concept; immutable source_concept_revision; source_concept_head; append-only concept_resolution_event; concept_substance_association; immutable-by-service association_request; fixture_authorization. Revisions have composite concept/revision foreign keys. Association IDs reference existing Substance IDs and resolution events. Association type is constrained to EXACT. A partial unique index reserves at most one ACTIVE or REVIEW_REQUIRED link per concept. Other concepts may share that Substance.
+
+Association creation revision remains immutable. Supporting new revisions update only validated_revision and audit references. Events retain full original/live matching decisions, evidence and registry digests, matcher/policy hashes, prior association IDs, operation, outcome, timestamp and reasons. MATCH_EVALUATED and the final outcome are committed together. Rejected evaluations can commit concept/revision/audit rows without committing an association: result.association_created distinguishes this from transaction committed.
+
+The current_exact_association view requires ACTIVE status, VALIDATED head and matching validated revision. A changed/broad/conflicting revision puts the old association on REVIEW_REQUIRED and removes it from current exact results while preserving its original target/history. No automatic revoke, delete, relink, supersession or review reactivation is exposed. Old request replay never proves a newer revision exact.
+
+## Eligibility and transaction
+Only the existing validated directly source-supplied structural-evidence classification is eligible. Caller boolean flags do not grant exemption. Names, raw parser hypotheses, broad/partial/conflicting concepts, multiple candidates, incomplete searches and missing validation cannot create links. Verified explicit structures retain the agreed external-corroboration exemption; no new independent-provider requirement is introduced. Name-derived results are ineligible for v1 persistence even when the unchanged policy accepts their diagnostic proposal.
+
+Preparation seals the input, operation, matching decision, canonical-table digest and implementation version using the fixture capability token. Arbitrary Substance IDs are not accepted as assignment authorization. Under BEGIN IMMEDIATE, the service verifies evidence/source keys and revision, rebuilds the current registry snapshot, reruns exhaustive matching and admission, checks canonical-state freshness and existing link/idempotency constraints, then writes events and association atomically. Every target is validated against the current snapshot and FK. The canonical digest covers all five legacy tables and ignores new association/audit writes, allowing legitimate retries. Missing/changed targets or other canonical changes reject stale proposals. The reserve lock serializes concurrent writers. On unexpected error, all source, revision, event, request and association writes roll back.
+
+Idempotency keys are database-primary-key unique; payload digests bind concept/revision/evidence, operation, target, registry state and implementation version. Same evidence returns UNCHANGED without another association; changed payload/target returns conflict. Retries still preserve an append-only decision event. Review-held associations remain held on replay.
+
+## Isolation and authorization
+The write-capable connector resolves and checks every path component, rejects symbolic links/junctions, multi-link files, production aliases and paths outside controlled_identity_reuse/fixtures, compares file identity around opening, uses mode=rw rather than file creation, and verifies an explicit fixture UUID plus token digest against an externally held capability. A runtime boolean is insufficient. Production is opened only mode=ro for backup and matching. The operational connection denies canonical-table writes and ATTACH/DETACH, ALTER and DROP TABLE operations through an SQLite authorizer. Foreign keys and DB uniqueness/triggers provide additional integrity.
+
+Tests attempted production and alternate paths, hard/symbolic links (actual availability/results recorded), changed targets, stale snapshots, rollback after insertion and concurrent duplicate requests. Capability administration, adversarial privileged filesystem races, deployment service authorization and operational disaster recovery are not production-certified by these local tests.
+
+## Executed evidence and results
+Frozen controls are public, synthetic, CUMA-independent workflow expectations declared before implementation: 19 development, six held-out. They exercise actual SQL persistence and the existing matcher, with actual local official InChI validation, not a mocked success flag. Stereo, isotopes, acid/base, tautomer and component distinctions are included. All 25/25 pass; rollback leaves no partial rows; concurrent identical requests produce one CREATED, one UNCHANGED and one current exact link. Duplicate reserved exact associations: zero. See evaluation/benchmark_results.json and transaction/idempotency/concurrency/source_revision results for actual outcomes.
+
+Real saved PubChem CID 1049 and 6323 create links to SUB_00000112 and SUB_00000006 in a read-only copy of the actual 112-record registry, then retry as UNCHANGED. These are known shared-PubChem-ancestry mechanics demonstrations, not independent chemical accuracy estimates. No verified positive ChEBI match exists in the available saved-source registry evaluation. Cross-database positives are zero; explicitly labelled synthetic different-system and separate-referent controls demonstrate many-to-one without fabricating ChEBI evidence.
+
+`evaluation/metrics.json` reports per-fixture concept instances, distinct keys, committed decision outcomes, qualified evaluations, unique/multiple/unresolved matches, admission statuses and association counts. It separates the real-source fixture from synthetic fixtures by path and accompanying real-source result. Setup evaluations and retries are included in event-based counts; one injected failed transaction has no committed audit event and is recorded externally in transaction_results.json. Thus no rolled-back audit falsely claims success. Protection results report attempted unauthorized paths separately from association requests. New canonical Substances and production changes are zero.
+
+All 378 retained tests pass, including Matching v1, hardening, evidence/reconciliation, charge, NSC-001/002, resolver/admission and chemical safety controls. Historical safety outputs remain available under evaluation. Memoized/uncached comparison parity and previous frozen matching expectations are preserved. No source-specific historical CUMA row was migrated or replaced.
+
+
+## Aggregate execution metrics
+
+Counts include setup evaluations and retries across disposable fixture instances; they are not independent chemical accuracy estimates.
+
+| Metric | Synthetic fixtures | Real saved sources |
+|---|---:|---:|
+| concept_instances | 22 | 2 |
+| committed_decision_attempts | 30 | 4 |
+| qualified_identity_evaluations | 26 | 4 |
+| unique_matching_evaluations | 17 | 4 |
+| admission_accepted_evaluations | 24 | 4 |
+| exact_associations_created | 7 | 2 |
+| idempotent_or_supporting_no_ops | 5 | 2 |
+| link_or_revision_conflicts | 1 | 0 |
+| review_required | 1 | 0 |
+| unresolved_matching | 5 | 0 |
+| multiple_candidates | 1 | 0 |
+| stale_snapshot_rejections | 3 | 0 |
+| idempotency_conflicts | 1 | 0 |
+| rolled_back_transactions | 1 | 0 |
+| duplicate_active_violations | 0 | 0 |
+| new_canonical_substances | 0 | 0 |
+| production_changes | 0 | 0 |
+| concept_instances_ever_sufficiently_qualified | 19 | 2 |
+
+Two production/alternate-path write attempts were blocked. Link-bypass results are recorded verbatim; no unavailable test is claimed passed. Separate referents with different chemical identities in the same record were exercised. Evidence packages must be scoped to individual referents. The real demonstrations use local ingestion revision labels, not claimed upstream provider release IDs. See controls/execution_manifest.json for grounding and seed hashes.
+
+## Readiness and next milestone
+| Capability | Assessment | Remaining work |
+|---|---|---|
+| Production source-concept storage | PARTIALLY_VALIDATED | Review key/version governance, deployment migration, retention/access controls and upstream ordering |
+| Production existing-ID association | PARTIALLY_VALIDATED | Independent code/security review, real deployment authorization, crash/recovery and multi-process/service tests, operational audit retention and review workflow |
+| New canonical Substance creation | NOT_EVALUATED | Separate authorization, global uniqueness/search scope, chemical admission evidence and creation transaction contract |
+
+Recommend review and hardening of the association service and schema in a non-production integration environment. Do not enable production writes from fixture success alone. Qualified expert/blind chemical validation remains pending; the small established chemistry scope and provider unknown-dependence behavior remain unchanged. No live provider requests are made.
+
+Integrity: 1207 protected files unchanged, including the production registry digest, authoritative ontology, provider/admission policy and all prior frozen JSON results. Detailed receipts: evaluation/integrity_report.json, schema_integrity_results.json, real_source_association_results.json and production_write_protection.json.
+
+CONTROLLED_IDENTITY_REUSE_V1_VALIDATED_PROVISIONAL

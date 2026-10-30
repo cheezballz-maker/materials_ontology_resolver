@@ -1,0 +1,24 @@
+{
+  "upstream_version": "2.9.0",
+  "upstream_commit": "b91b610af5ab07560fedb20730d7aef46bb2bca0",
+  "release_sha256": "627ee5da4af551f9c4d1d766f545eb7cf519a344776e0bb677247a47abac0252",
+  "published_digest": "627ee5da4af551f9c4d1d766f545eb7cf519a344776e0bb677247a47abac0252",
+  "trace_jar_sha256": "58708f2907c661806f2d67811cc3bb77f2b48f29e7d0d78d1cff4da956045be5",
+  "poc_patch_sha256": "f27766e3f55f208f171e196a8fe386df68197a41d5edf8d9041d77ed55ec4f61",
+  "poc_bundle_sha256": "265a3d2a253cb6d0eb7185ee50e6609fdf82cc5cca3b306e3034ba0f92857f4e",
+  "poc_manifest_entries_verified": 331,
+  "reproduction": {
+    "status": "PASS",
+    "temp_build": "C:\\Users\\ITPATS~1\\AppData\\Local\\Temp\\opsin-h-rxv2fa06",
+    "pin": "b91b610af5ab07560fedb20730d7aef46bb2bca0",
+    "adaptation": "classpath separator and base64 argument transport adapted for Windows; instrumentation patch unchanged"
+  },
+  "local_snapshot_comparison_controls": 15,
+  "version_comparison_results": {
+    "status_differences": 0,
+    "warning_differences": 0,
+    "smiles_differences": 0,
+    "cml_differences": 0
+  },
+  "admission_parser_replaced": false
+}

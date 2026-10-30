@@ -1,0 +1,77 @@
+--- baseline/NameToStructure.java
++++ diagnostic/NameToStructure.java
+@@ -131,6 +131,7 @@
+ 		}
+ 		n2sConfig = n2sConfig.clone();//avoid n2sconfig being modified mid name processing
+ 
++		OwnershipTrace.startCall();
+ 		List<Element> parses;
+ 		try {
+ 			LOG.debug(name);
+@@ -148,6 +149,7 @@
+ 		Fragment fragGeneratedWithWarning = null;
+ 		List<OpsinWarning> warnings = Collections.emptyList();
+ 		for(Element parse : parses) {
++            OwnershipTrace.beginAttempt();
+ 			try {
+ 				if (LOG.isDebugEnabled()) {
+ 					LOG.debug(parse.toXML());
+@@ -169,7 +171,9 @@
+ 					LOG.debug(parse.toXML());
+ 				}
+ 				if (state.getWarnings().isEmpty()) {
+-					return new OpsinResult(frag, OPSIN_RESULT_STATUS.SUCCESS, "", name);
++					OpsinResult selectedResult = new OpsinResult(frag, OPSIN_RESULT_STATUS.SUCCESS, "", name);
++					OwnershipTrace.commitSuccess();
++					return selectedResult;
+ 				}
+ 				if (fragGeneratedWithWarning == null) {
+ 					//record first frag that had a warning but try other parses as they may work without a warning
+--- baseline/StereochemistryHandler.java
++++ diagnostic/StereochemistryHandler.java
+@@ -298,6 +298,18 @@
+ 	 * @throws StructureBuildingException
+ 	 * @throws StereochemistryException 
+ 	 */
++	private String diagnosticPrior() {
++        ArrayList<Integer> ids = new ArrayList<>();
++        for (Atom a : atomStereoCentreMap.keySet())
++            if (!notExplicitlyDefinedStereoCentreMap.containsKey(a)) ids.add(a.getID());
++        Collections.sort(ids); return ids.toString();
++    }
++    private void diagnosticRecord(String kind, Element node, Fragment f, String locant, String path, String prior) {
++        Atom a = f == null || locant == null ? null : f.getAtomByLocant(locant);
++        OwnershipTrace.record(kind,node,node.getParent(),f,locant,a,
++            a != null && atomStereoCentreMap.containsKey(a),
++            a != null && notExplicitlyDefinedStereoCentreMap.containsKey(a),path,prior);
++    }
+ 	private void assignStereoCentre(Element stereoChemistryEl) throws StructureBuildingException, StereochemistryException {
+ 		//generally the LAST group in this list will be the appropriate group e.g. (5S)-5-ethyl-6-methylheptane where the heptane is the appropriate group
+ 		//we use the same algorithm as for unlocanted substitution so as to deprecate assignment into brackets
+@@ -311,8 +323,18 @@
+ 		String rOrS = stereoChemistryEl.getAttributeValue(VALUE_ATR);
+ 		String grpStr = stereoChemistryEl.getAttributeValue(STEREOGROUP_ATR);
+ 		StereoGroupType grpType = grpStr != null ? StereoGroupType.valueOf(grpStr) : StereoGroupType.Unk;
++        String tracePrior = diagnosticPrior();
++        diagnosticRecord("DESCRIPTOR",stereoChemistryEl,null,locant,"",tracePrior);
++        for (Fragment f : possibleFragments) diagnosticRecord("CANDIDATE",stereoChemistryEl,f,locant,"PRIMARY",tracePrior);
++        Element diagnosticWord = parentSubBracketOrRoot.getParent();
++        if (diagnosticWord.getName().equals(WORD_EL) && diagnosticWord.getChild(0).equals(parentSubBracketOrRoot)) {
++            for (Element word : OpsinTools.getNextSiblingsOfType(diagnosticWord, WORD_EL))
++                for (Element group : OpsinTools.getDescendantElementsWithTagName(word, GROUP_EL))
++                    diagnosticRecord("CANDIDATE",stereoChemistryEl,group.getFrag(),locant,"FALLBACK",tracePrior);
++        }
+ 		for (Fragment fragment : possibleFragments) {
+ 			if (attemptAssignmentOfStereoCentreToFragment(fragment, rOrS, locant, grpType)) {
++                diagnosticRecord("SELECT",stereoChemistryEl,fragment,locant,"PRIMARY",tracePrior);
+ 				return;
+ 			}
+ 		}
+@@ -325,6 +347,7 @@
+ 				List<Element> possibleGroups = OpsinTools.getDescendantElementsWithTagName(word, GROUP_EL);
+ 				for (int i = possibleGroups.size()-1; i >=0; i--) {
+ 					if (attemptAssignmentOfStereoCentreToFragment(possibleGroups.get(i).getFrag(), rOrS, locant, grpType)) {
++                        diagnosticRecord("SELECT",stereoChemistryEl,possibleGroups.get(i).getFrag(),locant,"FALLBACK",tracePrior);
+ 						return;
+ 					}
+ 				}

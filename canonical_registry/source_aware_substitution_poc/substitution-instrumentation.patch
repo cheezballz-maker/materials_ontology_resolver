@@ -1,0 +1,57 @@
+--- a/ComponentProcessor.java
++++ b/ComponentProcessor.java
+@@ -5337,6 +5337,7 @@
+ 				throw new StructureBuildingException(groupIfPresent.getValue() +" cannot be locanted");
+ 			}
+ 			subOrBracket.addAttribute(new Attribute(LOCANT_ATR, locantEl.getValue()));
++			TraceProbe.copy(locantEl,subOrBracket);
+ 			locantEl.detach();
+ 		}
+ 	}
+--- a/StructureBuildingMethods.java
++++ b/StructureBuildingMethods.java
+@@ -220,7 +220,9 @@
+ 							}
+ 						}
+ 					}
++					Atom traceAttachment=frag.getOutAtom(0).getAtom();
+ 					joinFragmentsSubstitutively(state, frag, atomToSubstituteAt);
++					TraceProbe.substitution(subBracketOrRoot,group,parentFrag,atomToSubstituteAt,traceAttachment,locantString);
+ 				}
+ 			}
+ 		}
+--- a/TraceProbe.java
++++ b/TraceProbe.java
+@@ -10,13 +10,19 @@
+  static List<Event> events;
+  static class Mutation {int seq; String type,preA,postA,preB,postB; Atom a,b; Mutation(String t,Atom x,Atom y,String pa,String pb){seq=mutations.size();type=t;a=x;b=y;preA=pa;preB=pb;postA=snapshot(x);postB=snapshot(y);}}
+  static List<Mutation> mutations;
++ static List<Substitution> substitutions;
++ static class Substitution {Element node,group;Origin loc,sub;Fragment parent;Atom target,attachment;String locant,sourceNodes;int order;boolean bonded;
++  Substitution(Element n,Element g,Fragment f,Atom t,Atom a,String l){node=n;group=g;parent=f;target=t;attachment=a;locant=l;loc=origins.get(n);sub=origins.get(g);sourceNodes=sourceDescendants(n);order=mutations.size();bonded=t.getBondToAtom(a)!=null;}}
++ static String sourceDescendants(Element n){StringBuilder s=new StringBuilder();appendSources(n,s);return s.toString();}
++ static void appendSources(Element n,StringBuilder s){Origin o=origins.get(n);if(o!=null)s.append(o.start).append(':').append(o.end).append(':').append(o.text).append(';');for(Element x:n.getChildElements())appendSources(x,s);}
++ static void substitution(Element n,Element g,Fragment f,Atom t,Atom a,String l){if(substitutions!=null)substitutions.add(new Substitution(n,g,f,t,a,l));}
+  static String snapshot(Atom a){if(a==null)return "";return a.getElement()+":"+a.getCharge()+":"+a.getProtonsExplicitlyAddedOrRemoved()+":"+a.hasSpareValency()+":"+a.getIncomingValency()+":"+a.getBonds().size();}
+  static void mutation(String type,Atom a,Atom b,String preA,String preB){if(mutations!=null)mutations.add(new Mutation(type,a,b,preA,preB));}
+  static class Origin {int start,end; String text; Origin(int s,int e,String t){start=s;end=e;text=t;}}
+  static class Event {Origin o; String kind,locant,owner; Atom a; boolean spare; int fragment,operationCursor; String parentState;
+   Event(Element node,Element group,Fragment f,Atom atom,String loc){o=origins.get(node);kind=node.getName();owner=group.getValue();locant=loc;a=atom;spare=atom.hasSpareValency();fragment=System.identityHashCode(f);operationCursor=mutations.size();parentState=snapshot(atom);}}
+- static void reset(String s){raw=s;selected=false;cloned=false;attempts=0;parseXml=null;origins=new IdentityHashMap<>();events=new ArrayList<>();mutations=new ArrayList<>();}
+- static void attempt(){attempts++;events.clear();mutations.clear();selected=false;cloned=false;}
++ static void reset(String s){raw=s;selected=false;cloned=false;attempts=0;parseXml=null;origins=new IdentityHashMap<>();events=new ArrayList<>();mutations=new ArrayList<>();substitutions=new ArrayList<>();}
++ static void attempt(){attempts++;events.clear();mutations.clear();substitutions.clear();selected=false;cloned=false;}
+  static void token(Element el,String word,String tokens,int offset,String token){
+   if(raw==null || !word.equalsIgnoreCase(tokens))return;
+   // Only exact, unique word occurrences: no substring-offset guess after normalization.
+@@ -31,6 +37,10 @@
+  static void dump(OpsinResult r){
+   if(parseXml!=null){for(int i=0;i<parseXml.size();i++)System.out.println("P\t"+(i+1)+"\t"+(selected && attempts==i+1)+"\t"+b64(parseXml.get(i)));}
+   if(!selected || !r.getStatus().toString().equals("SUCCESS"))return;
++  for(Substitution s:substitutions){boolean sameH=false;for(Event e:events)if(e.a==s.target)sameH=true;
++   boolean targetFinal=r.getStructure().getAtomList().contains(s.target),attachmentFinal=r.getStructure().getAtomList().contains(s.attachment);
++   System.out.println("S\t"+(s.loc==null?-1:s.loc.start)+"\t"+(s.loc==null?-1:s.loc.end)+"\t"+b64(s.loc==null?null:s.loc.text)+"\t"+(s.sub==null?-1:s.sub.start)+"\t"+(s.sub==null?-1:s.sub.end)+"\t"+b64(s.sub==null?null:s.sub.text)+"\t"+b64(s.sourceNodes)+"\t"+b64(s.node.toXML())+"\t"+b64(s.group.getValue())+"\t"+b64(s.locant)+"\t"+s.target.getID()+"\t"+s.attachment.getID()+"\t"+s.bonded+"\t"+sameH+"\t"+targetFinal+"\t"+attachmentFinal+"\t"+cloned+"\t"+s.order+"\t"+attempts);
++  }
+   for(Mutation m:mutations){boolean relevant=false;for(Event e:events)if(e.a==m.a || e.a==m.b)relevant=true;
+    if(relevant)System.out.println("O\t"+m.seq+"\t"+m.type+"\t"+(m.a==null?-1:m.a.getID())+"\t"+(m.b==null?-1:m.b.getID())+"\t"+b64(m.preA)+"\t"+b64(m.postA)+"\t"+b64(m.preB)+"\t"+b64(m.postB)+"\tSOURCE_NOT_CAPTURED");}
+   for(Event e:events){Origin o=e.o; boolean exists=r.getStructure().getAtomList().contains(e.a);

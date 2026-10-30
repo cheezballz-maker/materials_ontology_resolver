@@ -1,0 +1,33 @@
+# Second fresh form-aware holdout protocol
+
+Evaluation only, dated 2026-10-28. No resolver/provider/policy/form/comparator/schema/ontology/test changes. All prior registries, references and protected implementation files are hashed. New work is confined to this directory and the requested final report.
+
+## Sampling and blinding
+
+Select 400 source records using seed 2026102802. Exclude prior 300 and 360 samples, inherited development exclusions, all known curated indices, source name/alias overlap, string literals in current/historical development code, named documentation examples and obvious duplicate source names. Store the full eligible population and exclusions before adjudication. Candidate strata and lexical pair neighbourhoods provide coverage only; no parser or resolver outcome is used to select records. The fixed algorithm tops up rare-stratum shortages with ordinary source names. Report actual shortages without claiming keyword matches establish chemical categories. This is capability validation, not a prevalence survey.
+
+Freeze source workbook, sample, source packets and implementation hashes before adjudication. Three fresh agents with no inherited conversation receive only original source index/name/aliases, the unchanged molecular identity framework and independent investigation instructions. Pair hints and strata remain with the steward. All alias occurrences are labelled before predictions, so no adjudicator is told which aliases the engine promotes. Agents are restricted by instructions to their own packet; the shared filesystem is not an OS isolation boundary. No predictions exist for this sample during adjudication.
+
+The supplemental three-record packet is investigated independently under identical restrictions. It is excluded from sample selection and all fresh-holdout metrics. Prior predicted structures/outcomes are withheld until its reference judgments are frozen.
+
+## Reference evidence
+
+Inspect source intent and independently retrieve appropriate authoritative chemistry evidence. Record URLs, returned identity fields, exact queries, timestamps, available source lineage and uncertainties. Neither database synonym membership nor matching Standard InChIKey alone proves exact identity. Multiple URLs for one record or copied records do not establish independence. Strong authoritative evidence may support a judgment with an explicit limitation; a single unexamined database hit or LLM intuition cannot. Independently validate complete structures with bare RDKit, without importing resolver modules. Preserve stereo, isotope positions, hydrogen/bond placement, charge and every component/ratio. Uncertainty remains UNRESOLVED; distinguish insufficient investigation/evidence from established intrinsic ambiguity. SAME aliases require exact-form evidence, not co-occurrence or spelling similarity.
+
+Before execution, freeze each reference packet and supporting method/evidence files; independently check complete record/alias coverage, structure syntax, generated InChI/key agreement and identity-dimension completeness. QA may return issues to still-blinded adjudicators, but a revised pre-run freeze must explicitly supersede its earlier hash. Never revise reference labels after predictions to improve agreement; any later discovery is a separate methodological issue.
+
+## Fixed execution
+
+Run the unchanged upgraded resolver once, only after the adjudication manifest is frozen. Use a new candidate database containing original inputs only and initially empty PubChem, ChEBI and GSRS runtime caches. Set HTTP budgets before any predictions: **PubChem 2400, ChEBI 4000, GSRS 800**. Use existing timeout/pacing/selection behavior. No cache deletion, selective retry, budget increase, provider addition or search change. Preserve logs, actual requests, cache-hit observations and failures. Existing registry may be read for ID allocation only; write results to a separate evaluation registry. Any interrupted/failed attempt must be disclosed and retained, never silently rerun.
+
+## Scoring and attribution
+
+Freeze scoring definitions before prediction. EXACT precision uses adjudicable admissions; insufficient-evidence references remain unverified, not errors. Reference EXACT graph mismatch or admission of an established nonadmissible referent is a confirmed error. Recall uses all reference EXACT records. Distinguish non-admitted reference EXACT losses from justified abstention and inconclusive references. Correct-abstention precision is justified non-admissions divided by assessable non-admissions; recall is justified non-admissions divided by reference-established nonadmissible records. Five-status agreement is a separate descriptive metric.
+
+Use independent strict RDKit full-graph equivalence, permitting representation-only resonance but retaining stereo, isotopes, hydrogen placement, charge and components. Standard InChIKey alone never establishes equality. Count false merges over assessable coassigned record pairs, and report unassessed pairs. Separately examine frozen source-neighbour pairs and all reference-equivalent pairs; distinguish both-admitted-distinct, coassigned, one withheld, both withheld and unassessable. Lexical pairing does not establish a near-form relationship.
+
+Alias promotion precision uses original source alias occurrences. Assessable SAME/DIFFERENT labels require an assessable subject identity; uncertain subjects or aliases remain unverified. Report denominator, reference coverage, all promoted claims and any newly found alias errors. Use independently established reference form categories for capability metrics; do not substitute sampling strata.
+
+Attribution uses the saved acquisition trace and frozen current policy, not a second resolver run. For each admitted record describe full-key, structure/InChI, original-alias, GSRS, supplied-identifier and validated-provider-name evidence. A route used is not necessarily causally necessary. Compare pre-expansion evidence/sufficiency when recorded; otherwise mark the older-path counterfactual UNKNOWN. No live replay, extra network retrieval or old-resolver execution is permitted. Distinguish related discovery results from contradictions against original claims and count supporting provider lineages conservatively.
+
+Freeze metrics and per-case disagreements before ranking gaps. Rank confirmed identity losses alongside safety risk, deterministic implementability, cross-source usefulness and whether semantics must change. Choose one next capability only after scoring. Ontology changes require a recurring unrepresentable semantic distinction, not a parser/evidence/implementation gap. Do not recommend full CUMA canonicalization.

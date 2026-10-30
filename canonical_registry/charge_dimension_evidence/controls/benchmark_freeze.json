@@ -1,0 +1,11 @@
+{
+  "stage": "PRE_IMPLEMENTATION",
+  "sha256": {
+    "chemical_scope.json": "527b25b17fe2e5eb04a22c0ae2b759f622f982c440b8938f64fa2f1374e9ef39",
+    "contradiction_controls.json": "cbac0668f6d0f55cbdc5e1df84cea93c9f91fc069ffd60b381c85098980337ca",
+    "heldout_controls.json": "19a063a13a7d9c8412b34b0e4876629386c2a129605847752ace5856adbe9a3d",
+    "positive_controls.json": "62ddac972faba54f69670b35bf88aa082c5b1177149831281f03f064947a34f8",
+    "unknown_controls.json": "d328e7735234b36e4115f9b4f7817382fd92bfb4f70f46d346933b88e60fc260"
+  },
+  "holdout": "PUBLIC_FROZEN_NOT_BLINDED"
+}

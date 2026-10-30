@@ -1,0 +1,81 @@
+{
+  "cases": [
+    {
+      "id": "create",
+      "expected": "ASSOCIATION_CREATED"
+    },
+    {
+      "id": "retry",
+      "expected": "ASSOCIATION_UNCHANGED"
+    },
+    {
+      "id": "many_to_one",
+      "expected": "ASSOCIATION_CREATED"
+    },
+    {
+      "id": "different_target",
+      "expected": "ASSOCIATION_CONFLICT"
+    },
+    {
+      "id": "supporting_revision",
+      "expected": "ASSOCIATION_UNCHANGED"
+    },
+    {
+      "id": "broad_revision",
+      "expected": "ASSOCIATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "name_derived",
+      "expected": "ASSOCIATION_REJECTED"
+    },
+    {
+      "id": "broad",
+      "expected": "ASSOCIATION_REJECTED"
+    },
+    {
+      "id": "partial_stereo",
+      "expected": "ASSOCIATION_REJECTED"
+    },
+    {
+      "id": "source_conflict",
+      "expected": "ASSOCIATION_REJECTED"
+    },
+    {
+      "id": "multiple",
+      "expected": "ASSOCIATION_REJECTED"
+    },
+    {
+      "id": "no_match",
+      "expected": "ASSOCIATION_REJECTED"
+    },
+    {
+      "id": "incomplete_search",
+      "expected": "ASSOCIATION_REJECTED"
+    },
+    {
+      "id": "stale_registry",
+      "expected": "STALE_PROPOSAL"
+    },
+    {
+      "id": "missing_official",
+      "expected": "ASSOCIATION_REJECTED"
+    },
+    {
+      "id": "rollback",
+      "expected": "ROLLED_BACK"
+    },
+    {
+      "id": "concurrent",
+      "expected": "ONE_ACTIVE"
+    },
+    {
+      "id": "idempotency_conflict",
+      "expected": "IDEMPOTENCY_CONFLICT"
+    },
+    {
+      "id": "production_write",
+      "expected": "BLOCKED"
+    }
+  ],
+  "grounding": "Declared workflow expectations; synthetic controls, public not blinded, before implementation"
+}

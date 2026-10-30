@@ -1,0 +1,7 @@
+{
+  "version": "1.0",
+  "source_scope": "Unchanged full NSC-002 grammar with at least one nitro and complete candidate correspondence. Every provided alias must be independently in the same closed grammar and compatible; otherwise dimension UNKNOWN.",
+  "site_closure": "Only benzene, supported halo and neutral N-attached nitro sites; all outside context abstains.",
+  "dimension_negative_boundary": "No new general protonation-source grammar. Structurally incompatible outside-envelope nitro candidates return UNKNOWN; valid protonation contradictions are tested separately in attribution comparator.",
+  "review": "CHEMICAL_REVIEW_PENDING"
+}

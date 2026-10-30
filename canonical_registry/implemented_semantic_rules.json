@@ -1,0 +1,19 @@
+{
+  "rules": [
+    {
+      "capability": "indicated hydrogen lexical observation",
+      "status": "READY_TO_IMPLEMENT",
+      "meaning": "Observe a possible numbered H token only; it can refer to indicated or added indicated hydrogen, or be syntactically ambiguous.",
+      "citation": "https://iupac.qmul.ac.uk/BlueBook/P1.html",
+      "examples": [
+        "1H-pyrrole",
+        "3H-pyrrole"
+      ],
+      "observable": "numbered H token and character span",
+      "result": "UNMAPPED; not an admission signal",
+      "limitations": "Does not determine fragment ownership, isotope meaning, atom mapping, or whether every tautomeric site is fixed."
+    }
+  ],
+  "integration": "standalone audit-only lexical observation; resolver and admission policy unchanged",
+  "admission_changing_rules": []
+}

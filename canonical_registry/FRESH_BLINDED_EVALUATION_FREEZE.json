@@ -1,0 +1,81 @@
+{
+  "created_utc": "2026-10-28T16:23:49.108223+00:00",
+  "source_freeze_sha256": "be9de7c9e4b30ea3cbd22aefbcdd2d0d79499abc7f3cd6e8bdfac9ac255d36ed",
+  "implementation_hashes": {
+    "RegistryBridge.class": "4a3531785b43e7814ec2e1211a48b498f9c6b1af09aeb9249d7aadefb5717b63",
+    "RegistryBridge.java": "3c09c471453878634df6f19f77c293e6a1e52becf481af2cebd615bab3e9b3f8",
+    "chemistry.py": "8acbf4c9ca7c06981d35292e512f48eaf1694f29ef567a1580710b1f9f49b303",
+    "composition_constraints.py": "e9fb4d730965158712f012a2d7d8f0f83d5d52ebd479a4c01661342cf0736681",
+    "comptox.py": "40abe8f80c4adf418dcb7401189c7dc5eb81f66fbd164971b3c947ad91a33ec9",
+    "coverage.py": "e6b27d42c60589e35cb23b09114bbbb8960f808cb021b045f4b0da905779211d",
+    "diagnostics.py": "a3ce4ec332e3547ce90d02ed8cf81aa3c9a4470d2ffaf4ac66db5132352e5617",
+    "evaluate.py": "522df7a2d6257524c64b36fa7f1fdbe2673cc6cc1c8b0f7a77f4a29282fa7718",
+    "evidence_model.py": "04e881cf4c48b73050189fb794b1911b3d5ccc1af4cbfc56bd2df0719d72facb",
+    "evidence_retrieval.py": "60248e44530e5f83948b33e1318deb5a09867e77188a75a0643ce86d03b298c1",
+    "form_characterizer.py": "cb3e69349654e1689ef5e296d41c107189a03973b227cac3477175b673812754",
+    "identity_comparator.py": "cc0a2274929fdaeb48dee8f0e8f66513ca723f2a71fcbbda5b7bce7177782ed3",
+    "name_interpretation.py": "05391fe44076a59584721eded76a2b0bd7fdefc910d86d06d57b4dc34ca383f9",
+    "pipeline.py": "153898543ed1f8001a1f34104142b33e620248ff03d99ac74609bf3f7edaf8d3",
+    "policy.py": "02eb1a5afc76fa00b7108ae4dafe6d206fc7866ef147b5a39c08b4c8868ec3b5",
+    "prepare_evidence_evaluation.py": "ff3d8f96c488be4b5b6119ec3c59dcefdb54ae8f05e8a4f6df138f13009c5ef4",
+    "prepare_source_form_evaluation.py": "651c21193dbb62c0c20d1d7912c215112af782771ed97b281dc232c883ffabe1",
+    "provider_capabilities.py": "19220fa045bafdf431fa1f5763e50b7169eda76d50722abad802275fb4267548",
+    "providers.py": "ff08578bfd14933cbfaf882d5742020c30ca26ad076c42b2998990817fa28ea3",
+    "reevaluate_forms.py": "335139cea8c3368703685a1881f6297e3bc82470e38606662355e6441b8e62dc",
+    "registry_builder.py": "7c6eb62d3a649bca04279c1277826b44e0f6c56ee6835863ed7ddcb5f1dfc2ab",
+    "report.py": "7cd512b4562244a650be4b274c6b3d9573c1b1182ad783ec42c7dafd1e03ba91",
+    "resolver.py": "b53112703d34789130c721600615aaaf6dd5b77c2be3e5b15fa768d6cbe862a6",
+    "schema.sql": "d3b7c7e1989bdb43393b9f8dff1eca54f739d19599e68d455857a52d4b6e0bfa",
+    "score_evidence_evaluation.py": "a8b7685707f5323433e374cb35ef2e9f79c1e7e5fa7b836f733d7c83e30cf8ef",
+    "score_forms.py": "1b1726f013fbf34f45dac314fbf9094994aa16eb56e270db714ce875a343ef24",
+    "source_form.py": "4ccb75ae654de66f781dda9101230e6f5dace61dbe77508863215cc959f6ed5d",
+    "systematic_notation.py": "fbcd67218ada6f6fd72ab7aaa83be358a1b1dbf235204a23b462c685716e0db9",
+    "test_composition_constraints.py": "346e561ae9afb5e4cac2b1b4ec7100b6031f76fe22de1e68785bf31ebe979e05",
+    "test_comptox.py": "c914bf6fd1b2246ddb582d0688c05e5a1d22a679347521daa474ee4d4bf3c58e",
+    "test_evidence_model.py": "7b0178728931d4903782491a712622b9958dfea70f5a54fa7581a603b9c1ae65",
+    "test_evidence_retrieval.py": "d33584db0dee2d19c21f62b934354712837f1e6f2cdc468c8931862e5a6e19bb",
+    "test_forms.py": "8b60bf1f287f23268cf5081773fb19398cbf02d13dfcdf9e60fda2313e79fca9",
+    "test_grounding_remediation.py": "4fade63644e684228616c58bdc033a871cfcbaa4efc39a6b72431d6e0d5e88c0",
+    "test_name_interpretation.py": "edd92ade55f8d9874f118e65c7b1ba6e6301bee5d944cbb3e7d88f773bfaeac2",
+    "test_provider_correspondence.py": "4df80afba74b4bb39c6b18596af97da0fa4a4184265ff2126b40a16a300177f1",
+    "test_provider_qualification.py": "cec29a59cc2d2375d86cb38e913c0c905df5dbf95d3b102ce9b016f2fe5018ac",
+    "test_registry.py": "1b0507ca7676aab529e44cf8828f43bf445de515baa2bf14234045dfb4cf4102",
+    "test_scope_capability.py": "1fe49c6c03a863453d0e4b2fcf19932cd7bc16bd57a3610c9284e149f4789568",
+    "test_source_form.py": "17e058ae3feb7d395a5431b52cd73a2b8fcdfb170ddeb1876875ef4c7b7a51fa",
+    "test_stereo_propagation.py": "c96f9f563d552dc5bc22b626989cb5a7af53a9236e3c9f7aea9680437642fe78",
+    "test_systematic_notation.py": "5ca30875c6853451af5d094e2fe0f758e76c580273c9264a41b0692d7ba32af9",
+    "verify.py": "f3b9abca33306b65b72ca5e60248359a07632ff6c45202dba3fd59ebc65e6130"
+  },
+  "external_hashes": {
+    "opsin_jar": {
+      "path": "C:\\Users\\IT PatsnapSG\\OneDrive - Patsnap\\13. PatSnap\\12. Normalization\\main\\opsin-master\\opsin-cli\\target\\opsin-cli-3.0-SNAPSHOT-jar-with-dependencies.jar",
+      "sha256": "a2cdde821c35352496e7f658b32d8619f851aa774cbcdf41d801fd3af5a021d3"
+    },
+    "ontology": {
+      "path": "C:\\Users\\IT PatsnapSG\\OneDrive - Patsnap\\13. PatSnap\\13. Materials Ontology\\Ontology\\substance_ontology.ttl",
+      "sha256": "e493f483a2d2abe765f74521d455bb5dd6962137cf57f338f5f55951287aabd9"
+    },
+    "framework": {
+      "path": "C:\\Users\\IT PatsnapSG\\Downloads\\Molecular_Substance_Identity_Framework_v1.md",
+      "sha256": "138b4f76316f04198094244699bde139e4d62287d7248ffe59283c0477f45ba6"
+    },
+    "schema": {
+      "path": "C:\\Users\\IT PatsnapSG\\OneDrive - Patsnap\\13. PatSnap\\12. Normalization\\main\\canonical_registry\\schema.sql",
+      "sha256": "d3b7c7e1989bdb43393b9f8dff1eca54f739d19599e68d455857a52d4b6e0bfa"
+    },
+    "nonsecret_config": {
+      "path": "C:\\Users\\IT PatsnapSG\\OneDrive - Patsnap\\13. PatSnap\\12. Normalization\\main\\canonical_registry\\.env.example",
+      "sha256": "856f187ffb274cc8954a25291c3ffbd0830dd07b2facd9373fa088f86c7007c0"
+    },
+    "requirements": {
+      "path": "C:\\Users\\IT PatsnapSG\\OneDrive - Patsnap\\13. PatSnap\\12. Normalization\\main\\canonical_registry\\requirements.txt",
+      "sha256": "6dff8beba0a555e9339d48c36bfba1b18c9ecba2a1e74cdaeeda2ed33dd7da98"
+    }
+  },
+  "runtime": {
+    "python": "3.14.3",
+    "rdkit": "2025.09.6",
+    "CTX_API_KEY_configured": true
+  },
+  "note": "No secret values, authorization headers or credential-bearing URLs recorded."
+}

@@ -1,0 +1,29 @@
+{
+  "cases": [
+    {
+      "id": "changed_target",
+      "expected": "STALE_PROPOSAL"
+    },
+    {
+      "id": "missing_target",
+      "expected": "STALE_PROPOSAL"
+    },
+    {
+      "id": "isotope",
+      "expected": "ASSOCIATION_REJECTED"
+    },
+    {
+      "id": "tautomer",
+      "expected": "ASSOCIATION_REJECTED"
+    },
+    {
+      "id": "charge",
+      "expected": "ASSOCIATION_REJECTED"
+    },
+    {
+      "id": "components",
+      "expected": "ASSOCIATION_REJECTED"
+    }
+  ],
+  "grounding": "Declared workflow expectations; synthetic controls, public not blinded, before implementation"
+}

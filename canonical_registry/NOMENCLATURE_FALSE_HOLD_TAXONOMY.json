@@ -1,0 +1,4346 @@
+[
+  {
+    "record_id": 388,
+    "preferred_name": "4-Amino-6-methoxypyrimidine",
+    "aliases": [
+      {
+        "text": "4-amine-6-methoxypyrimidine",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "6-methoxypyrimidin-4-amine",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "COc1cc(N)ncn1",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "heterocycle_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "COc1cc(N)ncn1",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 440,
+    "preferred_name": "heptafluorobutyramide",
+    "aliases": [
+      {
+        "text": "Heptafluorobutyroamide",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "2,2,3,3,4,4,4-heptafluorobutanamide",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "NC(=O)C(F)(F)C(F)(F)C(F)(F)F",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "amide_imide_or_carbamoyl_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "NC(=O)C(F)(F)C(F)(F)C(F)(F)F",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 598,
+    "preferred_name": "5-Fluoro-3-methylpyridin-2-amine",
+    "aliases": [
+      {
+        "text": "5-Fluoro-3-methylpyridin-2-ylamine",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "2-Amino-5-fluoro-3-methylpyridine",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "Cc1cc(F)cnc1N",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "heterocycle_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "Cc1cc(F)cnc1N",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 714,
+    "preferred_name": "2-Amino-5-bromonicotinic acid",
+    "aliases": [
+      {
+        "text": "2-Amino-5-bromo-3-pyridinecarboxylic acid",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "5-bromo-2-aminonicotinic acid",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "5-bromo-2-amino nicotinic acid",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "2-amino-5-bromopyridine-3-carboxylic acid",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "2-Amino-5-Bromo Nicotinic Acid",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "Nc1ncc(Br)cc1C(=O)O",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "acid_or_acid_derivative_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "Nc1ncc(Br)cc1C(=O)O",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 868,
+    "preferred_name": "(2-oxo-1H-quinolin-8-yl) acetate",
+    "aliases": [
+      {
+        "text": "2,8-quinolinediol",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "8-acetate",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "2-Hydroxyquinolin-8-yl acetate",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "2-Oxo-1,2-dihydroquinolin-8-yl acetate",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "alias conflict",
+    "secondary_blockers": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN",
+      "TAUTOMER_DIFFERENT"
+    ],
+    "all_reason_codes": [
+      "SOURCE_CONSTITUTION_CONFLICT",
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN",
+      "TAUTOMER_DIFFERENT"
+    ],
+    "opsin_candidate": "CC(=O)Oc1cccc2ccc(=O)[nH]c12",
+    "relevant_identity_dimension": "multiple_source_claim_dimensions",
+    "suspected_nomenclature_patterns": [
+      "indicated_hydrogen_token_requires_locant_mapping",
+      "carbonyl_or_oxo_context",
+      "heterocycle_context"
+    ],
+    "source_appears_genuinely_specific": "EXPLICIT_HYDROGEN_TOKEN_SCOPE_UNMAPPED",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "CC(=O)Oc1cccc2ccc(=O)[nH]c12",
+    "source_claim_conflicts": [
+      {
+        "alias": "2,8-quinolinediol",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": true,
+        "dimensions": {
+          "connectivity": "DIFFERENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      },
+      {
+        "alias": "2-Hydroxyquinolin-8-yl acetate",
+        "reason_codes": [
+          "TAUTOMER_DIFFERENT"
+        ],
+        "constitution_different": false,
+        "dimensions": {
+          "connectivity": "EQUIVALENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "EQUIVALENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "DIFFERENT",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      }
+    ]
+  },
+  {
+    "record_id": 1352,
+    "preferred_name": "isopropyl salicylate",
+    "aliases": [
+      {
+        "text": "2-Hydroxybenzoic acid 1-methylethyl ester",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "Salicylic Acid Isopropyl Ester",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "propan-2-yl 2-hydroxybenzoate",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "CC(C)OC(=O)c1ccccc1O",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "other_nomenclature_or_claim_scope"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "CC(C)OC(=O)c1ccccc1O",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 4139,
+    "preferred_name": "1-(3-Chloro-2-hydroxyphenyl)ethanone",
+    "aliases": [
+      {
+        "text": "1-(3-chloro-2-hydroxyphenyl)-",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "CC(=O)c1cccc(Cl)c1O",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "carbonyl_or_oxo_context",
+      "hydroxy_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "CC(=O)c1cccc(Cl)c1O",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 5364,
+    "preferred_name": "6-chloro-2-naphthol",
+    "aliases": [
+      {
+        "text": "6-Chloro-2-naphthol",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "NSC 76587",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "6-chloronaphthalen-2-ol",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "2-Chloro-6-naphthol",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "Oc1ccc2cc(Cl)ccc2c1",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "hydroxy_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "Oc1ccc2cc(Cl)ccc2c1",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 7278,
+    "preferred_name": "Methyl 2-Methyl-5-Pyrimidinecarboxylate",
+    "aliases": [],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "COC(=O)c1cnc(C)nc1",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "acid_or_acid_derivative_context",
+      "heterocycle_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "COC(=O)c1cnc(C)nc1",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 8165,
+    "preferred_name": "2-ethyl-5-nitroaniline",
+    "aliases": [
+      {
+        "text": "2-ethyl-5-nitro-Aniline",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "charge/protonation",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_PROTONATION_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "CCc1ccc([N+](=O)[O-])cc1N",
+    "relevant_identity_dimension": "protonation_charge",
+    "suspected_nomenclature_patterns": [
+      "nitro_group_may_explain_internal_formal_charges"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "CCc1ccc([N+](=O)[O-])cc1N",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 8776,
+    "preferred_name": "4-amino-2-(trifluoromethyl)benzoic acid",
+    "aliases": [
+      {
+        "text": "4-Amino-α,α,α-trifluoro-o-toluic acid",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "4-amino-2-(trifluoromethyl)-",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "QVR DZ BXFFF",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "4-Amino-2-trifluoromethylbenzoicacid",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "4-AMINO-2-TRIFLUOROMETHYLBENZOIC ACID",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "4-Amimo-2-(trifluoro methyl) benzoic acid",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      }
+    ],
+    "primary_blocker": "alias conflict",
+    "secondary_blockers": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "all_reason_codes": [
+      "SOURCE_CONSTITUTION_CONFLICT",
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "Nc1ccc(C(=O)O)c(C(F)(F)F)c1",
+    "relevant_identity_dimension": "multiple_source_claim_dimensions",
+    "suspected_nomenclature_patterns": [
+      "acid_or_acid_derivative_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "Nc1ccc(C(=O)O)c(C(F)(F)F)c1",
+    "source_claim_conflicts": [
+      {
+        "alias": "4-Amino-α,α,α-trifluoro-o-toluic acid",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": true,
+        "dimensions": {
+          "connectivity": "DIFFERENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      }
+    ]
+  },
+  {
+    "record_id": 8982,
+    "preferred_name": "2-chloro-5-nitrobenzenesulphonic acid",
+    "aliases": [
+      {
+        "text": "2-Chloro-5-Nitrobenzenesulfonic Acid",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "4-Nitrochlorobenzene-2-sulfonic acid",
+        "parse_status": "WARNING",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "P-Nitrochlorobenzene-o-sulfonic acid",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      }
+    ],
+    "primary_blocker": "charge/protonation",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_PROTONATION_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "O=[N+]([O-])c1ccc(Cl)c(S(=O)(=O)O)c1",
+    "relevant_identity_dimension": "protonation_charge",
+    "suspected_nomenclature_patterns": [
+      "nitro_group_may_explain_internal_formal_charges",
+      "acid_or_acid_derivative_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "O=[N+]([O-])c1ccc(Cl)c(S(=O)(=O)O)c1",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 10700,
+    "preferred_name": "2-Pyridinamine, 4-chloro-5-(4,4,5,5-tetramethyl-1,3,2-dioxaborolan-2-yl)-",
+    "aliases": [],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "CC1(C)OB(c2cnc(N)cc2Cl)OC1(C)C",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "heterocycle_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "CC1(C)OB(c2cnc(N)cc2Cl)OC1(C)C",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 11113,
+    "preferred_name": "Dimethyl terephthalate",
+    "aliases": [
+      {
+        "text": "D.M.T.",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "Terephthalic acid dimethyl ester",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "Benzene-1,4-dicarboxylic acid dimethyl ester",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "Terephthalic acid dimethyl ester",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "dimethyl cyclohexane-1,4-dicarboxylate",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_BROAD_OR_UNKNOWN_SCOPE"
+      },
+      {
+        "text": "1,3-benzodioxol-5-yl methylcarbamate",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "dimethyl benzene-1,4-dicarboxylate",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "4-(methoxycarbonyl)benzoic acid",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "dimethyl benzene-1,2-dicarboxylate",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "DMT",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      }
+    ],
+    "primary_blocker": "alias conflict",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_CONSTITUTION_CONFLICT"
+    ],
+    "opsin_candidate": "COC(=O)c1ccc(C(=O)OC)cc1",
+    "relevant_identity_dimension": "multiple_source_claim_dimensions",
+    "suspected_nomenclature_patterns": [
+      "other_nomenclature_or_claim_scope"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "COC(=O)c1ccc(C(=O)OC)cc1",
+    "source_claim_conflicts": [
+      {
+        "alias": "dimethyl cyclohexane-1,4-dicarboxylate",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT",
+          "STEREO_UNSPECIFIED"
+        ],
+        "constitution_different": false,
+        "dimensions": {
+          "connectivity": "EQUIVALENT",
+          "stereochemistry": "UNKNOWN",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": false
+      },
+      {
+        "alias": "1,3-benzodioxol-5-yl methylcarbamate",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": true,
+        "dimensions": {
+          "connectivity": "DIFFERENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      },
+      {
+        "alias": "4-(methoxycarbonyl)benzoic acid",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": true,
+        "dimensions": {
+          "connectivity": "DIFFERENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      },
+      {
+        "alias": "dimethyl benzene-1,2-dicarboxylate",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": true,
+        "dimensions": {
+          "connectivity": "DIFFERENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      }
+    ]
+  },
+  {
+    "record_id": 11807,
+    "preferred_name": "1-Chloro-4-iodobenzene",
+    "aliases": [
+      {
+        "text": "4-Chloroiodobenzene",
+        "parse_status": "WARNING",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "ethyl hydrazinylacetate",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "P-CHLOROIODOBENZENE",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      }
+    ],
+    "primary_blocker": "alias conflict",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_CONSTITUTION_CONFLICT"
+    ],
+    "opsin_candidate": "Clc1ccc(I)cc1",
+    "relevant_identity_dimension": "multiple_source_claim_dimensions",
+    "suspected_nomenclature_patterns": [
+      "other_nomenclature_or_claim_scope"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "Clc1ccc(I)cc1",
+    "source_claim_conflicts": [
+      {
+        "alias": "ethyl hydrazinylacetate",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": true,
+        "dimensions": {
+          "connectivity": "DIFFERENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      }
+    ]
+  },
+  {
+    "record_id": 12388,
+    "preferred_name": "Cyclohexylmethanol",
+    "aliases": [
+      {
+        "text": "Cyclohexanemethanol~(Hydroxymethyl)cyclohexane",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "Cyclohexylcarbinol",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "(hydroxymethyl)cyclohexane",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "Hexyl Methanol",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "1-Cyclohexylmethanol",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "alias conflict",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_CONSTITUTION_CONFLICT"
+    ],
+    "opsin_candidate": "OCC1CCCCC1",
+    "relevant_identity_dimension": "multiple_source_claim_dimensions",
+    "suspected_nomenclature_patterns": [
+      "other_nomenclature_or_claim_scope"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "OCC1CCCCC1",
+    "source_claim_conflicts": [
+      {
+        "alias": "Hexyl Methanol",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": true,
+        "dimensions": {
+          "connectivity": "DIFFERENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      }
+    ]
+  },
+  {
+    "record_id": 13245,
+    "preferred_name": "2,3-Difluorobenzaldehyde",
+    "aliases": [
+      {
+        "text": "2,3-Difluorbenzolcarbaldehyd",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "VHR BF CF",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "2,2',3,3',5,5',6,6'-octafluoro-4,4'-dimethylbiphenyl",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "alias conflict",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_CONSTITUTION_CONFLICT"
+    ],
+    "opsin_candidate": "O=Cc1cccc(F)c1F",
+    "relevant_identity_dimension": "multiple_source_claim_dimensions",
+    "suspected_nomenclature_patterns": [
+      "carbonyl_or_oxo_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "O=Cc1cccc(F)c1F",
+    "source_claim_conflicts": [
+      {
+        "alias": "2,2',3,3',5,5',6,6'-octafluoro-4,4'-dimethylbiphenyl",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": true,
+        "dimensions": {
+          "connectivity": "DIFFERENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      }
+    ]
+  },
+  {
+    "record_id": 14396,
+    "preferred_name": "2-chloro-6-methoxy-3-nitropyridine",
+    "aliases": [
+      {
+        "text": "2-CHLORO-3-NITRO-6-METHOXYPYRIDINE",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "charge/protonation",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_PROTONATION_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "COc1ccc([N+](=O)[O-])c(Cl)n1",
+    "relevant_identity_dimension": "protonation_charge",
+    "suspected_nomenclature_patterns": [
+      "nitro_group_may_explain_internal_formal_charges",
+      "heterocycle_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "COc1ccc([N+](=O)[O-])c(Cl)n1",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 14763,
+    "preferred_name": "2-Mesitylenesulfonyl chloride",
+    "aliases": [
+      {
+        "text": "2,4,6-Trimethylbenzenesulfonyl Chloride",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "Mesitylenesulphonyl Chloride",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "2,4,6-Trimethylbenzenesulphonyl Chloride",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "2,4,6-Trimethylbenzylsulfonyl Chloride",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "2-Mesitylensulfonyl Chloride",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "Mesitylene-2-Sulfonyl Chloride",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "Mesitylene-2-Sulfonic Acid Chloride",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "Mesitylenesulfonyl Chloride",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "2,4,6-trimethyl-Benzenesulfonyl chloride",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "alias conflict",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_CONSTITUTION_CONFLICT"
+    ],
+    "opsin_candidate": "Cc1cc(C)c(S(=O)(=O)Cl)c(C)c1",
+    "relevant_identity_dimension": "multiple_source_claim_dimensions",
+    "suspected_nomenclature_patterns": [
+      "acid_or_acid_derivative_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "Cc1cc(C)c(S(=O)(=O)Cl)c(C)c1",
+    "source_claim_conflicts": [
+      {
+        "alias": "2,4,6-Trimethylbenzylsulfonyl Chloride",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": true,
+        "dimensions": {
+          "connectivity": "DIFFERENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      }
+    ]
+  },
+  {
+    "record_id": 15692,
+    "preferred_name": "tert-Butyl 3-amino-6,6-dimethyl-4,6-dihydropyrrolo[3,4-c]pyrazole-5(1H)-carboxylate",
+    "aliases": [
+      {
+        "text": "Pyrrolo[3,4-c]pyrazole-5(1H)-carboxylicacid",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "3-amino-4,6-dihydro-6,6-dimethyl-",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "Pyrrolo[3,4-c]pyrazole-5(1H)-carboxylicacid,3-amino-4,6-dihydro-6,6-dimethyl-,1,1-dimethylethyl ester",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      }
+    ],
+    "primary_blocker": "alias conflict",
+    "secondary_blockers": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "all_reason_codes": [
+      "SOURCE_CONSTITUTION_CONFLICT",
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "CC(C)(C)OC(=O)N1Cc2c(N)n[nH]c2C1(C)C",
+    "relevant_identity_dimension": "multiple_source_claim_dimensions",
+    "suspected_nomenclature_patterns": [
+      "indicated_hydrogen_token_requires_locant_mapping",
+      "acid_or_acid_derivative_context",
+      "heterocycle_context"
+    ],
+    "source_appears_genuinely_specific": "EXPLICIT_HYDROGEN_TOKEN_SCOPE_UNMAPPED",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "CC(C)(C)OC(=O)N1Cc2c(N)n[nH]c2C1(C)C",
+    "source_claim_conflicts": [
+      {
+        "alias": "Pyrrolo[3,4-c]pyrazole-5(1H)-carboxylicacid",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": true,
+        "dimensions": {
+          "connectivity": "DIFFERENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      }
+    ]
+  },
+  {
+    "record_id": 16000,
+    "preferred_name": "2-BROMO-4-METHOXY-5-(BENZYLOXY)BENZOIC ACID",
+    "aliases": [
+      {
+        "text": "3-BROMO-4-METHOXY-5-BENZYLOXYBENZOIC ACID",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "5-BENZYLOXY-2-BROMO-4-METHOXY-BENZOIC ACID",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "2-BROMO-5-BENZYLOXY-4-METHOXYBENZOIC ACID",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "2-BROMO-4-METHOXY-5-(PHENYLMETHOXY)BENZOIC ACID",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "5-Benzyloxy-2-Bromo-4-Methoxyb",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "2-brono-5-benzyloxy-4-methoxybenzoic acid",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "5-(benzyloxy)-2-bromo-4-methoxybenzoic acid",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "3-Benzyloxy-4-methoxy-6-bromoben",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "5-Benzyloxy-2-Bromo-4-Methoxybenzoic Acid",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "3-Benzyloxy-4-methoxy-6-bromobenzoic acid",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "alias conflict",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_CONSTITUTION_CONFLICT"
+    ],
+    "opsin_candidate": "COc1cc(Br)c(C(=O)O)cc1OCc1ccccc1",
+    "relevant_identity_dimension": "multiple_source_claim_dimensions",
+    "suspected_nomenclature_patterns": [
+      "acid_or_acid_derivative_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "COc1cc(Br)c(C(=O)O)cc1OCc1ccccc1",
+    "source_claim_conflicts": [
+      {
+        "alias": "3-BROMO-4-METHOXY-5-BENZYLOXYBENZOIC ACID",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": true,
+        "dimensions": {
+          "connectivity": "DIFFERENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      }
+    ]
+  },
+  {
+    "record_id": 16294,
+    "preferred_name": "Benzoic acid, 2-amino-4-bromo-6-fluoro-",
+    "aliases": [],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "Nc1cc(Br)cc(F)c1C(=O)O",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "acid_or_acid_derivative_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "Nc1cc(Br)cc(F)c1C(=O)O",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 17165,
+    "preferred_name": "Benzoyl chloride, 2-fluoro-4-nitro-",
+    "aliases": [
+      {
+        "text": "2-fluoro-4-nitrobenzoyl chloride",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "charge/protonation",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_PROTONATION_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "O=C(Cl)c1ccc([N+](=O)[O-])cc1F",
+    "relevant_identity_dimension": "protonation_charge",
+    "suspected_nomenclature_patterns": [
+      "nitro_group_may_explain_internal_formal_charges"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "O=C(Cl)c1ccc([N+](=O)[O-])cc1F",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 17803,
+    "preferred_name": "Benzamide, 2-methoxy-6-methyl-",
+    "aliases": [
+      {
+        "text": "2-Methyl-6-methoxybenzamide",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "COc1cccc(C)c1C(N)=O",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "amide_imide_or_carbamoyl_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "COc1cccc(C)c1C(N)=O",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 18118,
+    "preferred_name": "1-phenyl-6,7-dihydro-1H-indol-4(5H)-one",
+    "aliases": [],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "O=C1CCCc2c1ccn2-c1ccccc1",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "indicated_hydrogen_token_requires_locant_mapping",
+      "carbonyl_or_oxo_context",
+      "heterocycle_context"
+    ],
+    "source_appears_genuinely_specific": "EXPLICIT_HYDROGEN_TOKEN_SCOPE_UNMAPPED",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "O=C1CCCc2c1ccn2-c1ccccc1",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 18520,
+    "preferred_name": "methyl 1-methylpyrrol-2-acetate",
+    "aliases": [
+      {
+        "text": "Methyl,1-methyl pyrroleacetate",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "1-METHYLPYRROLE-2-ACETIC ACID METHYL ESTER",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "LABOTEST-BB LT00455212",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "METHYL 1-METHYLPYRROLE-2-ACETATE",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "METHYL 1-METHYL-2-PYRROLEACETATE",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "Methyl (1-methyl-1H-pyrrol-2-yl)acetate",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "Methyl 1-methyl-1H-pyrrole-2-acetate",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "Methyl(1-methyl-2-pyrrolyl)acetate",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "Methyl 2-(1-methyl-1H-pyrrol-2-yl)acetate",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "COC(=O)Cc1cccn1C",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "heterocycle_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "COC(=O)Cc1cccn1C",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 18984,
+    "preferred_name": "5-Nitroisatin",
+    "aliases": [
+      {
+        "text": "Nitroisatin",
+        "parse_status": "WARNING",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "2,3-dihydro-5-nitroindole-2,3-dione",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "5-nitro-1H-indole-2,3-dione",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "charge/protonation",
+    "secondary_blockers": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "all_reason_codes": [
+      "SOURCE_PROTONATION_SPECIFICITY_UNKNOWN",
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "O=C1Nc2ccc([N+](=O)[O-])cc2C1=O",
+    "relevant_identity_dimension": "protonation_charge",
+    "suspected_nomenclature_patterns": [
+      "nitro_group_may_explain_internal_formal_charges"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "O=C1Nc2ccc([N+](=O)[O-])cc2C1=O",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 19395,
+    "preferred_name": "6-Chloro-1,3-dihydro-indol-2-one",
+    "aliases": [
+      {
+        "text": "AKOS 207-09",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "6-chloroindol-2(3H)-one",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "6-chlorooxindole",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "6-chloro-2-oxoindoline",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "6-chloro-2-oxindole",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "6-chloro-2-indolinone",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "6-chloro-1,3-dihydro-2H-indol-2-one",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "LABOTEST-BB LT01147821",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "6-Chloroindole-2(3H)-one",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "6-Chloro-2-oxoindole",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "6-Chloro-1,3-dihydro-2H-indol-",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "6-chloro-1,3-dihydro-2H-indol-2-one",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "6-Chloroindolin-2-one",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "charge/protonation",
+    "secondary_blockers": [
+      "SOURCE_CONSTITUTION_CONFLICT",
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN",
+      "PROTONATION_DIFFERENT"
+    ],
+    "all_reason_codes": [
+      "SOURCE_CONSTITUTION_CONFLICT",
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN",
+      "PROTONATION_DIFFERENT"
+    ],
+    "opsin_candidate": "O=C1Cc2ccc(Cl)cc2N1",
+    "relevant_identity_dimension": "protonation_charge",
+    "suspected_nomenclature_patterns": [
+      "carbonyl_or_oxo_context",
+      "heterocycle_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "O=C1Cc2ccc(Cl)cc2N1",
+    "source_claim_conflicts": [
+      {
+        "alias": "6-Chloro-2-oxoindole",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": false,
+        "dimensions": {
+          "connectivity": "EQUIVALENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      },
+      {
+        "alias": "6-Chloro-1,3-dihydro-2H-indol-",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": true,
+        "dimensions": {
+          "connectivity": "DIFFERENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      }
+    ]
+  },
+  {
+    "record_id": 19830,
+    "preferred_name": "6-Quinolinol, 4-bromo-",
+    "aliases": [
+      {
+        "text": "4-Bromo-6-hydroxyquinoline",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "Oc1ccc2nccc(Br)c2c1",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "heterocycle_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "Oc1ccc2nccc(Br)c2c1",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 20787,
+    "preferred_name": "2,5-Dibromo-3,4-dinitrothiophene",
+    "aliases": [
+      {
+        "text": "2,5-Dibromo-3,4-dinitrthiphene",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "AKOS 92299",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "2,5-DIBROMO-3,4-DINITROTHIOPHENE 98+%",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      }
+    ],
+    "primary_blocker": "charge/protonation",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_PROTONATION_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "O=[N+]([O-])c1c(Br)sc(Br)c1[N+](=O)[O-]",
+    "relevant_identity_dimension": "protonation_charge",
+    "suspected_nomenclature_patterns": [
+      "nitro_group_may_explain_internal_formal_charges"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "O=[N+]([O-])c1c(Br)sc(Br)c1[N+](=O)[O-]",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 21505,
+    "preferred_name": "2,3,6-Trichloropyridine",
+    "aliases": [
+      {
+        "text": "Trichloropyridine",
+        "parse_status": "WARNING",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "2,3,4-trichloropyridine",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "alias conflict",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_CONSTITUTION_CONFLICT"
+    ],
+    "opsin_candidate": "Clc1ccc(Cl)c(Cl)n1",
+    "relevant_identity_dimension": "multiple_source_claim_dimensions",
+    "suspected_nomenclature_patterns": [
+      "heterocycle_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "Clc1ccc(Cl)c(Cl)n1",
+    "source_claim_conflicts": [
+      {
+        "alias": "2,3,4-trichloropyridine",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": true,
+        "dimensions": {
+          "connectivity": "DIFFERENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      }
+    ]
+  },
+  {
+    "record_id": 22322,
+    "preferred_name": "Methyl hydrogen phthalate",
+    "aliases": [
+      {
+        "text": "Monomethyl phthalate~Phthalic acid monomethyl ester",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "mono-Methyl phthalate",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "Phthalic acid monomethyl ester",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "Benzene-1,2-dicarboxylic acid monomethyl ester~Monomethyl phthalate~Phthalic acid monomethyl ester",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "2-(methoxycarbonyl)benzoic acid",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "2-(methoxycarbonyl)benzoate",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "charge/protonation",
+    "secondary_blockers": [
+      "PROTONATION_DIFFERENT"
+    ],
+    "all_reason_codes": [
+      "PROTONATION_DIFFERENT"
+    ],
+    "opsin_candidate": "COC(=O)c1ccccc1C(=O)O",
+    "relevant_identity_dimension": "protonation_charge",
+    "suspected_nomenclature_patterns": [
+      "other_nomenclature_or_claim_scope"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "COC(=O)c1ccccc1C(=O)O",
+    "source_claim_conflicts": [
+      {
+        "alias": "mono-Methyl phthalate",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": false,
+        "dimensions": {
+          "connectivity": "EQUIVALENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      },
+      {
+        "alias": "2-(methoxycarbonyl)benzoate",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": false,
+        "dimensions": {
+          "connectivity": "EQUIVALENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      }
+    ]
+  },
+  {
+    "record_id": 22461,
+    "preferred_name": "2,3,4-Trifluorobenzoic acid",
+    "aliases": [
+      {
+        "text": "2,3,4-3-Fluorobenzoic acid",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "RARECHEM AL BO 0257",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "TIMTEC-BB SBB006557",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "BUTTPARK 30\\01-45",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "2,3,4-trifluorobenzoic acid and derivatives",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "2,3,4-TRIFLUOROBENZOIC ACID THE DERIVATIVES",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "2,3,4-Trifluorobenzoic",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "2,3,4-Trifluorobenzoic acid 98%",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "2-bromo-2,3,3,3-tetrafluoropropanoyl fluoride",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_BROAD_OR_UNKNOWN_SCOPE"
+      },
+      {
+        "text": "2,3,4-trifluorobenzoate",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "charge/protonation",
+    "secondary_blockers": [
+      "PROTONATION_DIFFERENT"
+    ],
+    "all_reason_codes": [
+      "PROTONATION_DIFFERENT"
+    ],
+    "opsin_candidate": "O=C(O)c1ccc(F)c(F)c1F",
+    "relevant_identity_dimension": "protonation_charge",
+    "suspected_nomenclature_patterns": [
+      "acid_or_acid_derivative_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "O=C(O)c1ccc(F)c(F)c1F",
+    "source_claim_conflicts": [
+      {
+        "alias": "2-bromo-2,3,3,3-tetrafluoropropanoyl fluoride",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT",
+          "STEREO_UNSPECIFIED"
+        ],
+        "constitution_different": true,
+        "dimensions": {
+          "connectivity": "DIFFERENT",
+          "stereochemistry": "UNKNOWN",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": false
+      },
+      {
+        "alias": "2,3,4-trifluorobenzoate",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": false,
+        "dimensions": {
+          "connectivity": "EQUIVALENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      }
+    ]
+  },
+  {
+    "record_id": 22730,
+    "preferred_name": "diethyl fluoromalonate",
+    "aliases": [
+      {
+        "text": "Diethyl 2-fluoromalonate",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "diethyl fluoropropanedioate",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "trifluoromethylsulfonyl 2,2,2-trifluoroacetate",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "1,3-diethyl 2-fluoropropanedioate",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "2-Fluoro-malonic acid diethyl ester",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "2-Fluoro-malonic acid dimethyl(diethyl)ester",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      }
+    ],
+    "primary_blocker": "alias conflict",
+    "secondary_blockers": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "all_reason_codes": [
+      "SOURCE_CONSTITUTION_CONFLICT",
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "CCOC(=O)C(F)C(=O)OCC",
+    "relevant_identity_dimension": "multiple_source_claim_dimensions",
+    "suspected_nomenclature_patterns": [
+      "other_nomenclature_or_claim_scope"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "CCOC(=O)C(F)C(=O)OCC",
+    "source_claim_conflicts": [
+      {
+        "alias": "trifluoromethylsulfonyl 2,2,2-trifluoroacetate",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": true,
+        "dimensions": {
+          "connectivity": "DIFFERENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      }
+    ]
+  },
+  {
+    "record_id": 22772,
+    "preferred_name": "Succinimide",
+    "aliases": [
+      {
+        "text": "Succinic imide",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "Succinic acid imide",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "Butanimide",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "2,5-Dioxopyrrolidine",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "2,5-Diketopyrrolidine",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "pyrrolidine-2,5-dione",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "O=C1CCC(=O)N1",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "amide_imide_or_carbamoyl_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "O=C1CCC(=O)N1",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 23777,
+    "preferred_name": "6-(trifluoromethoxy) quinolin-2(1H)-one",
+    "aliases": [
+      {
+        "text": "6-(trifluoromethoxy)-",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "O=c1ccc2cc(OC(F)(F)F)ccc2[nH]1",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "indicated_hydrogen_token_requires_locant_mapping",
+      "carbonyl_or_oxo_context",
+      "heterocycle_context"
+    ],
+    "source_appears_genuinely_specific": "EXPLICIT_HYDROGEN_TOKEN_SCOPE_UNMAPPED",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "O=c1ccc2cc(OC(F)(F)F)ccc2[nH]1",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 23892,
+    "preferred_name": "Dimethyl aminoterephthalate",
+    "aliases": [
+      {
+        "text": "Aminoterephthalic acid dimethyl ester",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "Amino Tere Phthalate dimethyl ESter",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "dimethyl 2-aminobenzene-1,4-dicarboxylate",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "2-Aminoterephthalic Acid Dimethyl Ester",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "1,4-dimethyl 2-aminobenzene-1,4-dicarboxylate",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "COC(=O)c1ccc(C(=O)OC)c(N)c1",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "other_nomenclature_or_claim_scope"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "COC(=O)c1ccc(C(=O)OC)c(N)c1",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 26820,
+    "preferred_name": "p-Chlorobutyrophenone",
+    "aliases": [
+      {
+        "text": "4-chlorobutylphenone",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "CCCC(=O)c1ccc(Cl)cc1",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "carbonyl_or_oxo_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "CCCC(=O)c1ccc(Cl)cc1",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 26846,
+    "preferred_name": "2-cyano-3-nitro-5-fluoropyridine",
+    "aliases": [],
+    "primary_blocker": "charge/protonation",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_PROTONATION_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "N#Cc1ncc(F)cc1[N+](=O)[O-]",
+    "relevant_identity_dimension": "protonation_charge",
+    "suspected_nomenclature_patterns": [
+      "nitro_group_may_explain_internal_formal_charges",
+      "heterocycle_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "N#Cc1ncc(F)cc1[N+](=O)[O-]",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 26870,
+    "preferred_name": "1,3-dibromo-5-nitrobenzene",
+    "aliases": [
+      {
+        "text": "1,3-Dibromo-5-Nitrobenzene",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "1,3-dibromo-5-nitro-",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "3,5-DIBROMONITRO BENZENE",
+        "parse_status": "WARNING",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      }
+    ],
+    "primary_blocker": "charge/protonation",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_PROTONATION_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "O=[N+]([O-])c1cc(Br)cc(Br)c1",
+    "relevant_identity_dimension": "protonation_charge",
+    "suspected_nomenclature_patterns": [
+      "nitro_group_may_explain_internal_formal_charges"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "O=[N+]([O-])c1cc(Br)cc(Br)c1",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 28529,
+    "preferred_name": "2-Bromo-6-methoxy-3-nitropyridine",
+    "aliases": [],
+    "primary_blocker": "charge/protonation",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_PROTONATION_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "COc1ccc([N+](=O)[O-])c(Br)n1",
+    "relevant_identity_dimension": "protonation_charge",
+    "suspected_nomenclature_patterns": [
+      "nitro_group_may_explain_internal_formal_charges",
+      "heterocycle_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "COc1ccc([N+](=O)[O-])c(Br)n1",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 28716,
+    "preferred_name": "2-(2H-benzotriazol-2-yl)-4,6-di-tert-pentylphenol",
+    "aliases": [
+      {
+        "text": "2-(2-Hydroxy-3,5-dipenryl-phenyl) benzotriazole",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "2-(2H-benzotriazol-2-yl)-4,6-bis(1,1-dimethylpropyl)-phenol",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "2-(2H-hydroxy-3-5-Di-tert-Amyllphenyl)benzotriazole",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "UV-328",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "Tinuvin 328",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "Primesorb328",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "Ultraviolet absorbent UV-328",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "2-(2'-Hydroxy-3',5'-di-tert-Pentyl Phenyl)-Benzotriazole",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "BHSORB-328",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "2-(2'-Hydroxy-3',5-dipenryl-phenyl) benzotriazole",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "UV absorber-328",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "UV absorber UV-328",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "2-(2H-benzotriazol-2-yl)-4,6-bis(2-methylbutan-2-yl)phenol",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "Ultraviolet absorberUV-328",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "2-(2H-Benzotriazol-2-yl)-4,6-di-tert-amylphenol",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "Ultraviolet absorber UV-328",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "UV 328",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "2-(2H-Benzotriazol-2-yl)-4,6-ditertpentylphenol",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "CCC(C)(C)c1cc(-n2nc3ccccc3n2)c(O)c(C(C)(C)CC)c1",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "indicated_hydrogen_token_requires_locant_mapping",
+      "hydroxy_context",
+      "heterocycle_context"
+    ],
+    "source_appears_genuinely_specific": "EXPLICIT_HYDROGEN_TOKEN_SCOPE_UNMAPPED",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "CCC(C)(C)c1cc(-n2nc3ccccc3n2)c(O)c(C(C)(C)CC)c1",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 29460,
+    "preferred_name": "4,7-Dichloropyrido[2,3-d]pyrimidine",
+    "aliases": [
+      {
+        "text": "4,7-Dichloro-pyrido[2,3-d]pyrimidine",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "Pyrido[2,3-d]pyrimidine",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "alias conflict",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_CONSTITUTION_CONFLICT"
+    ],
+    "opsin_candidate": "Clc1ccc2c(Cl)ncnc2n1",
+    "relevant_identity_dimension": "multiple_source_claim_dimensions",
+    "suspected_nomenclature_patterns": [
+      "heterocycle_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "Clc1ccc2c(Cl)ncnc2n1",
+    "source_claim_conflicts": [
+      {
+        "alias": "Pyrido[2,3-d]pyrimidine",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": true,
+        "dimensions": {
+          "connectivity": "DIFFERENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      }
+    ]
+  },
+  {
+    "record_id": 30059,
+    "preferred_name": "2-Amino-6-chlorophenol",
+    "aliases": [
+      {
+        "text": "2-AMINO-6-CHLORO-PHENOL",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "Nc1cccc(Cl)c1O",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "hydroxy_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "Nc1cccc(Cl)c1O",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 31876,
+    "preferred_name": "4-n-Propoxybenzoic acid",
+    "aliases": [
+      {
+        "text": "4-Propoxybenzoic Acid",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "5438-19-7",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "p-Propoxybenzoic Acid",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "4-propoxybenzoate",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "charge/protonation",
+    "secondary_blockers": [
+      "PROTONATION_DIFFERENT"
+    ],
+    "all_reason_codes": [
+      "PROTONATION_DIFFERENT"
+    ],
+    "opsin_candidate": "CCCOc1ccc(C(=O)O)cc1",
+    "relevant_identity_dimension": "protonation_charge",
+    "suspected_nomenclature_patterns": [
+      "acid_or_acid_derivative_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "CCCOc1ccc(C(=O)O)cc1",
+    "source_claim_conflicts": [
+      {
+        "alias": "4-propoxybenzoate",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": false,
+        "dimensions": {
+          "connectivity": "EQUIVALENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      }
+    ]
+  },
+  {
+    "record_id": 32235,
+    "preferred_name": "4,5-Imidazoledicarboxylic acid",
+    "aliases": [
+      {
+        "text": "1H-Imidazole-4,5-dicarboxylic Acid",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "1H-imidazole-4,5-dicarboxylate",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "charge/protonation",
+    "secondary_blockers": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN",
+      "PROTONATION_DIFFERENT"
+    ],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN",
+      "PROTONATION_DIFFERENT"
+    ],
+    "opsin_candidate": "O=C(O)c1nc[nH]c1C(=O)O",
+    "relevant_identity_dimension": "protonation_charge",
+    "suspected_nomenclature_patterns": [
+      "acid_or_acid_derivative_context",
+      "heterocycle_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "O=C(O)c1nc[nH]c1C(=O)O",
+    "source_claim_conflicts": [
+      {
+        "alias": "1H-imidazole-4,5-dicarboxylate",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": false,
+        "dimensions": {
+          "connectivity": "EQUIVALENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      }
+    ]
+  },
+  {
+    "record_id": 33951,
+    "preferred_name": "2-Amino-3-bromo-5-chloropyrazine",
+    "aliases": [
+      {
+        "text": "3-Bromo-5-chloropyrazin-2-amine",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "Nc1ncc(Cl)nc1Br",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "heterocycle_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "Nc1ncc(Cl)nc1Br",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 34227,
+    "preferred_name": "2-Nitrothiophene-4-carboxylic acid",
+    "aliases": [
+      {
+        "text": "5-Nitrothiophene-3-carboxylic acid",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "5-nitrothiophene-3-carboxylate",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "charge/protonation",
+    "secondary_blockers": [
+      "PROTONATION_DIFFERENT"
+    ],
+    "all_reason_codes": [
+      "SOURCE_PROTONATION_SPECIFICITY_UNKNOWN",
+      "PROTONATION_DIFFERENT"
+    ],
+    "opsin_candidate": "O=C(O)c1csc([N+](=O)[O-])c1",
+    "relevant_identity_dimension": "protonation_charge",
+    "suspected_nomenclature_patterns": [
+      "nitro_group_may_explain_internal_formal_charges",
+      "acid_or_acid_derivative_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "O=C(O)c1csc([N+](=O)[O-])c1",
+    "source_claim_conflicts": [
+      {
+        "alias": "5-nitrothiophene-3-carboxylate",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": false,
+        "dimensions": {
+          "connectivity": "EQUIVALENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      }
+    ]
+  },
+  {
+    "record_id": 34604,
+    "preferred_name": "2-Amino-4-methylamino-6-ethoxy-1,3,5-triazine",
+    "aliases": [],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "CCOc1nc(N)nc(NC)n1",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "heterocycle_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "CCOc1nc(N)nc(NC)n1",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 36149,
+    "preferred_name": "3-Nitropyrrole",
+    "aliases": [
+      {
+        "text": "3-nitro-1H-pyrrole",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "charge/protonation",
+    "secondary_blockers": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "all_reason_codes": [
+      "SOURCE_PROTONATION_SPECIFICITY_UNKNOWN",
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "O=[N+]([O-])c1cc[nH]c1",
+    "relevant_identity_dimension": "protonation_charge",
+    "suspected_nomenclature_patterns": [
+      "nitro_group_may_explain_internal_formal_charges",
+      "heterocycle_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "O=[N+]([O-])c1cc[nH]c1",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 36180,
+    "preferred_name": "3,5-dinitroaniline",
+    "aliases": [
+      {
+        "text": "Dinitroaniline",
+        "parse_status": "WARNING",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      }
+    ],
+    "primary_blocker": "charge/protonation",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_PROTONATION_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "Nc1cc([N+](=O)[O-])cc([N+](=O)[O-])c1",
+    "relevant_identity_dimension": "protonation_charge",
+    "suspected_nomenclature_patterns": [
+      "nitro_group_may_explain_internal_formal_charges"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "Nc1cc([N+](=O)[O-])cc([N+](=O)[O-])c1",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 38189,
+    "preferred_name": "7-Hydroxy-1-indanone",
+    "aliases": [
+      {
+        "text": "7-Hydroxyindan-1-one",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "7-hydroxy-2,3-dihydro-1H-inden-1-one",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "O=C1CCc2cccc(O)c21",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "carbonyl_or_oxo_context",
+      "hydroxy_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "O=C1CCc2cccc(O)c21",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 38538,
+    "preferred_name": "2,4-dimethyl-1,3-thiazole-5-sulfonyl chloride",
+    "aliases": [
+      {
+        "text": "2,4-dimethylthiazole-5-sulfonyl chloride",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "Cc1nc(C)c(S(=O)(=O)Cl)s1",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "acid_or_acid_derivative_context",
+      "heterocycle_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "Cc1nc(C)c(S(=O)(=O)Cl)s1",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 39008,
+    "preferred_name": "methyl nicotinate",
+    "aliases": [
+      {
+        "text": "Methyl pyridine-3-carboxylate",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "Nicotinic acid methyl ester",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "2-methylpyridine-3-carboxylate",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "3-Picolinic Acid Methyl Ester",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "alias conflict",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_CONSTITUTION_CONFLICT"
+    ],
+    "opsin_candidate": "COC(=O)c1cccnc1",
+    "relevant_identity_dimension": "multiple_source_claim_dimensions",
+    "suspected_nomenclature_patterns": [
+      "other_nomenclature_or_claim_scope"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "COC(=O)c1cccnc1",
+    "source_claim_conflicts": [
+      {
+        "alias": "2-methylpyridine-3-carboxylate",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": true,
+        "dimensions": {
+          "connectivity": "DIFFERENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      }
+    ]
+  },
+  {
+    "record_id": 39608,
+    "preferred_name": "2-methylnicotinamide",
+    "aliases": [
+      {
+        "text": "2-methylpyridine-3-carboxamide",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "Cc1ncccc1C(N)=O",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "amide_imide_or_carbamoyl_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "Cc1ncccc1C(N)=O",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 40467,
+    "preferred_name": "3-Acetyl-1-chlorocarbonyl-2-imidazolidone",
+    "aliases": [
+      {
+        "text": "3-Acetyl-2-oxo-1-imidazolidinecarbonyl chloride",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "3-acetyl-2-oxoimidazolidine-1-carbonyl chloride",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "CC(=O)N1CCN(C(=O)Cl)C1=O",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "carbonyl_or_oxo_context",
+      "heterocycle_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "CC(=O)N1CCN(C(=O)Cl)C1=O",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 40839,
+    "preferred_name": "2-Methyl-3-nitrobenzyl chloride",
+    "aliases": [],
+    "primary_blocker": "charge/protonation",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_PROTONATION_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "Cc1c(CCl)cccc1[N+](=O)[O-]",
+    "relevant_identity_dimension": "protonation_charge",
+    "suspected_nomenclature_patterns": [
+      "nitro_group_may_explain_internal_formal_charges"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "Cc1c(CCl)cccc1[N+](=O)[O-]",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 41840,
+    "preferred_name": "4-Hydroxybenzamide",
+    "aliases": [
+      {
+        "text": "AI3-15540",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "NSC 524134",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "p-Hydroxybenzamide",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "NC(=O)c1ccc(O)cc1",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "amide_imide_or_carbamoyl_context",
+      "hydroxy_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "NC(=O)c1ccc(O)cc1",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 42982,
+    "preferred_name": "2-Chloro-5-nitrobenzophenone",
+    "aliases": [
+      {
+        "text": "(2-chloro-5-nitrophenyl)(phenyl)methanone",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "2 Chloro 5 Nitro benzophenone",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "charge/protonation",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_PROTONATION_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "O=C(c1ccccc1)c1cc([N+](=O)[O-])ccc1Cl",
+    "relevant_identity_dimension": "protonation_charge",
+    "suspected_nomenclature_patterns": [
+      "nitro_group_may_explain_internal_formal_charges",
+      "carbonyl_or_oxo_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "O=C(c1ccccc1)c1cc([N+](=O)[O-])ccc1Cl",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 43018,
+    "preferred_name": "1,2-bis(4-hydroxyphenyl)ethane-1,2-dione",
+    "aliases": [
+      {
+        "text": "4,4'-Dihydroxybenzil",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "O=C(C(=O)c1ccc(O)cc1)c1ccc(O)cc1",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "carbonyl_or_oxo_context",
+      "hydroxy_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "O=C(C(=O)c1ccc(O)cc1)c1ccc(O)cc1",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 43540,
+    "preferred_name": "4-[(butylcarbamoyl)sulfamoyl]benzoic acid",
+    "aliases": [],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "CCCCNC(=O)NS(=O)(=O)c1ccc(C(=O)O)cc1",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "acid_or_acid_derivative_context",
+      "amide_imide_or_carbamoyl_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "CCCCNC(=O)NS(=O)(=O)c1ccc(C(=O)O)cc1",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 43692,
+    "preferred_name": "N,N-Diethyl-p-toluidine",
+    "aliases": [
+      {
+        "text": "N,N-diethyl-4-methyl-",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "4-(Diethylamino)toluene",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "N,N-Diethyl-4-methylaniline",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "N,N-Diethyl-p-toluidinium ion",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "NSC 8709",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "p-Methyl-N,N-diethylaniline",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "p-Toluidine",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "N,N-diethyl- (8CI)",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      }
+    ],
+    "primary_blocker": "alias conflict",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_CONSTITUTION_CONFLICT"
+    ],
+    "opsin_candidate": "CCN(CC)c1ccc(C)cc1",
+    "relevant_identity_dimension": "multiple_source_claim_dimensions",
+    "suspected_nomenclature_patterns": [
+      "other_nomenclature_or_claim_scope"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "CCN(CC)c1ccc(C)cc1",
+    "source_claim_conflicts": [
+      {
+        "alias": "p-Toluidine",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": true,
+        "dimensions": {
+          "connectivity": "DIFFERENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      }
+    ]
+  },
+  {
+    "record_id": 43794,
+    "preferred_name": "2'-Iodo-5'-fluoroacetophenone",
+    "aliases": [
+      {
+        "text": "1-(5-Fluoro-2-iodophenyl)ethanone",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "5'-fluoro-2'-Iodoacetophenone",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "CC(=O)c1cc(F)ccc1I",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "carbonyl_or_oxo_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "CC(=O)c1cc(F)ccc1I",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 44101,
+    "preferred_name": "Methyl 4-hydroxy-3-nitrobenzoate",
+    "aliases": [
+      {
+        "text": "4-Hydroxy-3-nitrobenzoic acid methyl ester",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "Methyl 3-nitro-4-hydroxybenzoate",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "4-(methoxycarbonyl)-2-nitrophenolate",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "3-nitro-4-hydroxymethyl benzoate",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      }
+    ],
+    "primary_blocker": "charge/protonation",
+    "secondary_blockers": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN",
+      "PROTONATION_DIFFERENT"
+    ],
+    "all_reason_codes": [
+      "SOURCE_PROTONATION_SPECIFICITY_UNKNOWN",
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN",
+      "PROTONATION_DIFFERENT"
+    ],
+    "opsin_candidate": "COC(=O)c1ccc(O)c([N+](=O)[O-])c1",
+    "relevant_identity_dimension": "protonation_charge",
+    "suspected_nomenclature_patterns": [
+      "nitro_group_may_explain_internal_formal_charges",
+      "hydroxy_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "COC(=O)c1ccc(O)c([N+](=O)[O-])c1",
+    "source_claim_conflicts": [
+      {
+        "alias": "4-(methoxycarbonyl)-2-nitrophenolate",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": false,
+        "dimensions": {
+          "connectivity": "EQUIVALENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      }
+    ]
+  },
+  {
+    "record_id": 45070,
+    "preferred_name": "1-(3-Iodo-1-isopropyl-1H-pyrazol-4-yl)ethanone",
+    "aliases": [],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "CC(=O)c1cn(C(C)C)nc1I",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "indicated_hydrogen_token_requires_locant_mapping",
+      "carbonyl_or_oxo_context",
+      "heterocycle_context"
+    ],
+    "source_appears_genuinely_specific": "EXPLICIT_HYDROGEN_TOKEN_SCOPE_UNMAPPED",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "CC(=O)c1cn(C(C)C)nc1I",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 45175,
+    "preferred_name": "3-Aminobenzonitrile",
+    "aliases": [
+      {
+        "text": "m-Cyanoaniline",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "3-Aminobenzonitrile",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "(3-Cyanoaniline)",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "m-amino-",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "m-Anthranilonitrile",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "M-AMINOBENZONITRILE",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "3-AMINOBENZONITRIL",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "3-CYANOANILINE",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "3-Cyanobenzonitrile",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "alias conflict",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_CONSTITUTION_CONFLICT"
+    ],
+    "opsin_candidate": "N#Cc1cccc(N)c1",
+    "relevant_identity_dimension": "multiple_source_claim_dimensions",
+    "suspected_nomenclature_patterns": [
+      "other_nomenclature_or_claim_scope"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "N#Cc1cccc(N)c1",
+    "source_claim_conflicts": [
+      {
+        "alias": "3-Cyanobenzonitrile",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": true,
+        "dimensions": {
+          "connectivity": "DIFFERENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      }
+    ]
+  },
+  {
+    "record_id": 46342,
+    "preferred_name": "5-Pyrimidinecarbonitrile, 2-chloro- (7CI,8CI)",
+    "aliases": [
+      {
+        "text": "5-Pyrimidinecarbonitrile",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "2-chloropyrimidine-5-carbonitrile",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "2-Chloro-5-pyrimidinecarbonitrile",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "alias conflict",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_CONSTITUTION_CONFLICT"
+    ],
+    "opsin_candidate": "N#Cc1cnc(Cl)nc1",
+    "relevant_identity_dimension": "multiple_source_claim_dimensions",
+    "suspected_nomenclature_patterns": [
+      "heterocycle_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "N#Cc1cnc(Cl)nc1",
+    "source_claim_conflicts": [
+      {
+        "alias": "5-Pyrimidinecarbonitrile",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": true,
+        "dimensions": {
+          "connectivity": "DIFFERENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      }
+    ]
+  },
+  {
+    "record_id": 46442,
+    "preferred_name": "2-(2-(2-Aminoethoxy)ethoxy)acetic acid",
+    "aliases": [
+      {
+        "text": "[2-(2-Aminoethoxy)ethoxy]acetic acid",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "NCCOCCOCC(=O)O",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "acid_or_acid_derivative_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "NCCOCCOCC(=O)O",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 48339,
+    "preferred_name": "m-acetylaminoacetophenone",
+    "aliases": [
+      {
+        "text": "3'-Acetamidoacetophenone",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "N-(3-acetylphenyl)acetamide",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "CC(=O)Nc1cccc(C(C)=O)c1",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "carbonyl_or_oxo_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "CC(=O)Nc1cccc(C(C)=O)c1",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 48687,
+    "preferred_name": "4-Pentenal",
+    "aliases": [
+      {
+        "text": "4-01-00-03459 (Beilstein Handbook Reference)",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "AI3-24690",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "BRN 1734369",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "pent-4-enal",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "C=CCCC=O",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "carbonyl_or_oxo_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "C=CCCC=O",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 49128,
+    "preferred_name": "4-Chloro-6-methyl-2-(methylthio)pyrimidine",
+    "aliases": [
+      {
+        "text": "4-CHLORO-6-METHYL-2-METHYLSULFANYL-PYRIMIDINE",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "4,6-dichloro-2-(methylsulfanyl)pyrimidine",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "4-chloro-6-methyl-2-Methylthio Pyrimidine",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "alias conflict",
+    "secondary_blockers": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "all_reason_codes": [
+      "SOURCE_CONSTITUTION_CONFLICT",
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "CSc1nc(C)cc(Cl)n1",
+    "relevant_identity_dimension": "multiple_source_claim_dimensions",
+    "suspected_nomenclature_patterns": [
+      "heterocycle_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "CSc1nc(C)cc(Cl)n1",
+    "source_claim_conflicts": [
+      {
+        "alias": "4,6-dichloro-2-(methylsulfanyl)pyrimidine",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": true,
+        "dimensions": {
+          "connectivity": "DIFFERENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      }
+    ]
+  },
+  {
+    "record_id": 49431,
+    "preferred_name": "heptyl butyrate",
+    "aliases": [
+      {
+        "text": "HEPTYL-BUTYRATE",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "heptyl butanoate",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "CCCCCCCOC(=O)CCC",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "other_nomenclature_or_claim_scope"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "CCCCCCCOC(=O)CCC",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 49687,
+    "preferred_name": "9-Hydroxy-9-fluorenecarboxylic acid",
+    "aliases": [
+      {
+        "text": "9-Hydroxyfluorene-9-carboxylic acid",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "Flurenol Pestanal",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "9-Hydroxy-9-Fluororenecarboxylic Acid",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "Flurenol",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "9-Hydroxy-9-fluorene carboxylic acid",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "9-hydroxy-9H-fluorene-9-carboxylic acid",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "9-hydroxy-9H-fluorene-9-carboxylate",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "9-Fluorenol-9-carboxylicacid",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      }
+    ],
+    "primary_blocker": "charge/protonation",
+    "secondary_blockers": [
+      "PROTONATION_DIFFERENT"
+    ],
+    "all_reason_codes": [
+      "PROTONATION_DIFFERENT"
+    ],
+    "opsin_candidate": "O=C(O)C1(O)c2ccccc2-c2ccccc21",
+    "relevant_identity_dimension": "protonation_charge",
+    "suspected_nomenclature_patterns": [
+      "acid_or_acid_derivative_context",
+      "hydroxy_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "O=C(O)C1(O)c2ccccc2-c2ccccc21",
+    "source_claim_conflicts": [
+      {
+        "alias": "9-hydroxy-9H-fluorene-9-carboxylate",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": false,
+        "dimensions": {
+          "connectivity": "EQUIVALENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      }
+    ]
+  },
+  {
+    "record_id": 50400,
+    "preferred_name": "m-Hydroxyacetophenone",
+    "aliases": [
+      {
+        "text": "3-Hydroxyacetophenone (m-Acetylphenol",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "1-(3-hydroxyphenyl)-",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "M-Hydroxyacetophenonel",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "3'-Hydroxyacetophenone 3-Acetylphenol m-Acetylphenol",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_BROAD_OR_UNKNOWN_SCOPE"
+      },
+      {
+        "text": "3-Hydroxyacetophenon",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "3-Hydroxyacetophenone",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "Meta-hydroxyacetophenone",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "3-Acetylphenol",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "3-Acetophenol",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "3'-Hydroxyacetophenone",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "3-Hydroxyphenyl Methyl Ketone",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "1-(3-Hydroxy- Phenyl)-Ethanone",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "M-acetophenol",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "1-(3-hydroxyphenyl)ethan-1-one)",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "M-Acetylphenol",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "3-Hydroxy acetophenone",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "3-Hydroxyl acetophenone",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "CC(=O)c1cccc(O)c1",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "carbonyl_or_oxo_context",
+      "hydroxy_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "CC(=O)c1cccc(O)c1",
+    "source_claim_conflicts": [
+      {
+        "alias": "3'-Hydroxyacetophenone 3-Acetylphenol m-Acetylphenol",
+        "reason_codes": [
+          "COMPONENT_STOICHIOMETRY_DIFFERENT",
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": true,
+        "dimensions": {
+          "connectivity": "DIFFERENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "EQUIVALENT",
+          "component_stoichiometry": "DIFFERENT"
+        },
+        "alias_specific": false
+      }
+    ]
+  },
+  {
+    "record_id": 50481,
+    "preferred_name": "3-Bromothioanisole",
+    "aliases": [
+      {
+        "text": "3-Bromophenyl methyl sulphide",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "3-Bromothioanisol/3-Bromophenyl methyl sulphide",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "1-Bromo-3-(methylthio)benzene",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "m-Bromothioanisole",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "1-bromo-3-(methylsulfanyl)benzene",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "1-(bromosulfanyl)-3-methoxybenzene",
+        "parse_status": "SUCCESS",
+        "comparison": "DISTINCT",
+        "claim_strength": "PARSER_SPECIFIC_INCOMPATIBLE_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "alias conflict",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_CONSTITUTION_CONFLICT"
+    ],
+    "opsin_candidate": "CSc1cccc(Br)c1",
+    "relevant_identity_dimension": "multiple_source_claim_dimensions",
+    "suspected_nomenclature_patterns": [
+      "other_nomenclature_or_claim_scope"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "CSc1cccc(Br)c1",
+    "source_claim_conflicts": [
+      {
+        "alias": "1-(bromosulfanyl)-3-methoxybenzene",
+        "reason_codes": [
+          "PROTONATION_DIFFERENT"
+        ],
+        "constitution_different": true,
+        "dimensions": {
+          "connectivity": "DIFFERENT",
+          "stereochemistry": "NOT_APPLICABLE",
+          "isotope_specification": "NOT_APPLICABLE",
+          "protonation_charge": "DIFFERENT",
+          "electronic_state": "EQUIVALENT",
+          "tautomeric_form": "UNKNOWN",
+          "components": "NOT_APPLICABLE",
+          "component_stoichiometry": "NOT_APPLICABLE"
+        },
+        "alias_specific": true
+      }
+    ]
+  },
+  {
+    "record_id": 50738,
+    "preferred_name": "2-(trimethoxysilyl)ethyl acetate",
+    "aliases": [
+      {
+        "text": "2-(Trimethoxysilyl)ethyl acetate",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "2-(trimethoxysilyl)-",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "CO[Si](CCOC(C)=O)(OC)OC",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "other_nomenclature_or_claim_scope"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "CO[Si](CCOC(C)=O)(OC)OC",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 51844,
+    "preferred_name": "3,4-Dihydro-2H-isoquinolin-1-one",
+    "aliases": [
+      {
+        "text": "CHEMPACIFIC 43808",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "1-oxo-1,2,3,4-tetrahydroisoquinoline",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "3,4-DIHYDROISOQUINOLIN-1(2H)-ONE",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "3,4-DIHYDRO-1(2H)-ISOQUINOLINONE",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "3,4-Dihydro-1-isoquinolinone",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "O=C1NCCc2ccccc21",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "indicated_hydrogen_token_requires_locant_mapping",
+      "carbonyl_or_oxo_context",
+      "heterocycle_context"
+    ],
+    "source_appears_genuinely_specific": "EXPLICIT_HYDROGEN_TOKEN_SCOPE_UNMAPPED",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "O=C1NCCc2ccccc21",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 52055,
+    "preferred_name": "3,5-Dichloro-4-hydroxybenzoic acid methyl ester",
+    "aliases": [
+      {
+        "text": "Methyl 3,5-dichloro-4-hydroxybenzoate",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "COC(=O)c1cc(Cl)c(O)c(Cl)c1",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "acid_or_acid_derivative_context",
+      "hydroxy_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "COC(=O)c1cc(Cl)c(O)c(Cl)c1",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 52587,
+    "preferred_name": "3-Acetyl-6-ethoxypyridine",
+    "aliases": [
+      {
+        "text": "1-(6-Ethoxy-3-pyridinyl)ethanone",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "1-(6-ethoxy-3-pyridinyl)-",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "CCOc1ccc(C(C)=O)cn1",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "carbonyl_or_oxo_context",
+      "heterocycle_context"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "CCOc1ccc(C(C)=O)cn1",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 53068,
+    "preferred_name": "2-Nitro-4-(trifluoromethyl)benzyl bromide",
+    "aliases": [
+      {
+        "text": "1-(bromomethyl)-2-nitro-4-(trifluoromethyl)benzene",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      },
+      {
+        "text": "2-nitro-4-trifluoromethylbromobenzene",
+        "parse_status": "WARNING",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      }
+    ],
+    "primary_blocker": "charge/protonation",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_PROTONATION_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "O=[N+]([O-])c1cc(C(F)(F)F)ccc1CBr",
+    "relevant_identity_dimension": "protonation_charge",
+    "suspected_nomenclature_patterns": [
+      "nitro_group_may_explain_internal_formal_charges"
+    ],
+    "source_appears_genuinely_specific": "NOT_DETERMINED_FROM_FROZEN_EVIDENCE",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "O=[N+]([O-])c1cc(C(F)(F)F)ccc1CBr",
+    "source_claim_conflicts": []
+  },
+  {
+    "record_id": 53512,
+    "preferred_name": "6-Amino-1,3-diethyl-5-nitrosopyrimidine-2,4(1H,3H)-dione",
+    "aliases": [
+      {
+        "text": "6-amino-1,3-diethyl-5-nitroso-",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "6-amino-1,3-diethyl-5-nitroso-",
+        "parse_status": "FAILURE",
+        "comparison": "NOT_COMPARED",
+        "claim_strength": "UNPARSEABLE_ALIAS"
+      },
+      {
+        "text": "1,3-Diethyl-5-nitroso-6-aminouracil",
+        "parse_status": "SUCCESS",
+        "comparison": "EXACT",
+        "claim_strength": "PARSED_EQUIVALENT_SCOPE_UNVERIFIED"
+      }
+    ],
+    "primary_blocker": "tautomer specificity",
+    "secondary_blockers": [],
+    "all_reason_codes": [
+      "SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN"
+    ],
+    "opsin_candidate": "CCn1c(N)c(N=O)c(=O)n(CC)c1=O",
+    "relevant_identity_dimension": "tautomer",
+    "suspected_nomenclature_patterns": [
+      "indicated_hydrogen_token_requires_locant_mapping",
+      "nitro_group_may_explain_internal_formal_charges",
+      "carbonyl_or_oxo_context",
+      "heterocycle_context"
+    ],
+    "source_appears_genuinely_specific": "EXPLICIT_HYDROGEN_TOKEN_SCOPE_UNMAPPED",
+    "general_rule_appears_possible": "POSSIBLE_IF_SOURCE_ATOM_SCOPE_AND_OTHER_FORM_DIMENSIONS_ARE_VERIFIED",
+    "grounding_source_required": [
+      "IUPAC nomenclature and source-to-atom mapping",
+      "independent interpretation of each conflicting alias"
+    ],
+    "reference_smiles": "CCn1c(N)c(N=O)c(=O)n(CC)c1=O",
+    "source_claim_conflicts": []
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "fields": {
+    "parent_semantic_state": "source token/span, owning fragment, atom object ID and snapshot at application",
+    "operations[]": "ordered observed mutation events with pre/post snapshots; source provenance NOT_CAPTURED",
+    "final_opsin_state": "same-result CML element, formal charge, isotope, neighboring bonds and explicit H count",
+    "resolver_graph_mapping": "bounded all-isomorphism result or UNKNOWN",
+    "mobile_h_completeness": "UNKNOWN",
+    "constraint_state": "UNKNOWN",
+    "constraint_reason": "operation source provenance, mutation coverage and mobile-H completeness are unproven"
+  },
+  "warnings": "This schema describes an investigative probe, not a production acceptance certificate."
+}

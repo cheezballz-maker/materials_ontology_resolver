@@ -1,0 +1,94 @@
+# Architecture B semantic coverage and resolution blockers
+
+## Executive conclusion
+
+The immediate priority is a **dimension-scoped charge/protonation evidence capability**, with conservative source-form consumption, rather than another whole-name nomenclature grammar. The current guard treats any formal atom charge as requiring an unresolved source-protonation assessment. Among 22 charge-primary records, all saved candidates have net charge zero; 16 have charged atoms only in neutral nitro motifs, and 12 have only `SOURCE_PROTONATION_SPECIFICITY_UNKNOWN`. NSC-002 already establishes provisional source-operation support for one of these while the guard still withholds it. This is a measurable interface/semantic gap; net neutrality or nitro detection alone cannot safely remove it.
+
+The baseline reproduced exactly: **183 reference-correct interpretations, 102 locally eligible and 81 withheld**. Across all current reasons, tautomer support affects **51**, source-claim reconciliation **26**, and charge/protonation **22** unique records, with overlap. No record is demonstrated recoverable by this diagnostic. Independent record-wide source-specificity adjudication remains incomplete for all 81; the record table therefore explicitly uses **Type 5**, with supported observations and provisional causal hypotheses rather than fabricated Type 1–4 judgments.
+
+The next task is fully specified in [next_implementation_specification.json](semantic_gap_analysis/next_implementation_specification.json). No proposed improvement was implemented here.
+
+## Reproduced population and outcome boundaries
+
+[Baseline reproduction](semantic_gap_analysis/baseline_reproduction.json) executes the existing saved-claim local helper with experiment-local outputs. The frozen deterministic cohort is **224**, comprising 183 `CORRECT`, 1 `INCORRECT`, 38 `UNADJUDICABLE`, and 2 `SOURCE_UNDERSPECIFICATION_REVIEW_REQUIRED`. Current local eligibility is 117/224: 102 correct and 15 unadjudicable. All 81 withheld correct records, the incorrect record and the remaining 25 records stay withheld. Source-form statuses across the 224 are 117 `SUPPORTED`, 71 `UNRESOLVED`, and 36 `CONFLICT`.
+
+Historical provider and final-decision evidence is retained separately: 10/224 saved qualifying-corroboration passes, with historical final outcomes 8 `EXACT`, 214 `UNRESOLVED`, and 2 `CONFLICT`. These historical final statuses precede the current local replay. Of the 102 currently eligible correct interpretations, seven have saved qualifying corroboration and 95 do not. Three of the 81 withheld correct records have a saved corroboration pass: 11807, 14763 and 17165. In particular, a historical `EXACT` does not override a current local conflict. No new final-admission or provider run was performed.
+
+The existing helper also prints recall 102/225 against an older frozen reference-exact population; **225 is not the 224 deterministic cohort**, and that ratio is not an updated measure for this task. Denominators and reference labels were preserved. All 81 source-identifier fields were present but empty; CAS-like alias strings were not silently converted into source identifiers.
+
+## Taxonomy and complete record evidence
+
+The [taxonomy](semantic_gap_analysis/blocker_taxonomy.json) was recorded before detailed categorization. It separates source nomenclature/H/ionic/context interpretation (A), structural comparison and charge representation (B), claim specificity and exact conflicts (C), genuine insufficiency versus insufficient evidence to classify (D), and overbroad guards/result aggregation (E). Memberships overlap; historical primary labels remain unchanged.
+
+[withheld_81_diagnostics.json](semantic_gap_analysis/withheld_81_diagnostics.json) contains exactly one primary row per CUMA index, including preferred name, every saved alias and claim structure, source-identifier availability, independent-reference origin/quality, validated candidate features, all current reason codes and dimension states, recomputed pairwise alias comparisons, current conflict records, saved provider routes/states, and NSC-001/002 observations. Every row includes a record-specific explanation, apparent capability dependency set, source-sufficiency uncertainty and recovery caveat. This is the complete record-level analysis table; its classifications do not rely on primary blockers alone.
+
+An exact reference match validates the interpreted candidate relative to that reference. It does not establish the semantics of every source string. Parser-success, parser-exact aliases, abbreviated aliases, and parser differences were therefore labelled separately from independently established source meaning. No qualified human chemical review occurred. The Type-5 classification explicitly records the limit of this analysis; it is not evidence that all 81 names are chemically ambiguous or incapable of improvement. Independent source adjudication is needed to distinguish Type 1 interpretation, Type 2 comparison, Type 3 reconciliation, and Type 4 genuine insufficiency record by record.
+
+## Tautomer findings
+
+There are **51** records with a current tautomer reason, not just the 41 tautomer-primary records. The 41 primary cases all have `SOURCE_TAUTOMER_SPECIFICITY_UNKNOWN` as their only current reason. Six primary preferred names contain explicit numbered-H tokens: 18118, 23777, 28716, 45070, 51844 and 53512. The remaining names span amines/aminated heterocycles, carbonyl and hydroxy constructions, amides/imides, acids/esters and conventional names; they do not share one demonstrated closed grammar. Full lists and all comparison outcomes are in [tautomer_gap_analysis.json](semantic_gap_analysis/tautomer_gap_analysis.json).
+
+`form_characterizer.characterize` sets `tautomer_sensitive` when a bounded RDKit enumeration produces more than one graph. `source_form.assess` then holds a non-typed source on that feature even when a name parses successfully. This establishes a conservative trigger, not a demonstration that a given source omits tautomer specificity. Conversely, a numbered-H token is not proof that every mobile-H site is fixed. [IUPAC P-14.7](https://iupac.qmul.ac.uk/BlueBook/P1.html#P-14.7) distinguishes indicated-H parent states from added-H associated with another structural operation. Any future support needs parent ownership, suffix/H composition, correspondence and relevant-site completeness. Universal tautomer normalization would erase the distinctions the registry is required to preserve.
+
+The current evidence cannot independently partition these 41 into fully specified versus genuinely unspecified names. A functioning graph comparator or correct reference cannot supply missing source semantics. A reusable context-aware operation layer is valuable, but a new narrow indicated-H grammar alone would address only a small observed subset and leave other blockers on ten of the 51 records.
+
+## Charge/protonation findings
+
+[Charge analysis](semantic_gap_analysis/charge_protonation_gap_analysis.json) separates 16 source-protonation unknown triggers from eight actual alias-comparison `PROTONATION_DIFFERENT` reasons; two records have both. All 22 charge-primary candidates are single-component and net-neutral. Sixteen have all formally charged atoms inside `[N+](=O)[O-]` motifs. **Twelve** of those have only the source-protonation unknown reason; four have additional current obligations, including alias acid/base differences or tautomer specificity. The other six charge-primary cases concern alias or structural differences outside this neutral-nitro-only trigger.
+
+The distinction is substantive: formal atomic charge, molecular net charge, and proton position are different observations. [IUPAC P-7](https://iupac.qmul.ac.uk/BlueBook/P7.html) distinguishes ionic operations and zwitterions; the [Gold Book nitro definition](https://goldbook.iupac.org/terms/view/N04158/pdf) identifies N-attached nitro groups. The legacy Gold Book page returned HTTP 502 and its PDF returned HTTP 403 during this task; prior recorded grounding was retained, and no fresh human chemical verification is claimed.
+
+Record 26870 is the clearest bounded demonstration: NSC-002's full preferred-name grammar supports its neutral substituted-benzene pattern provisionally, but `source_form.assess` still sets charge/protonation unknown on `charge_distribution`. That is deliberate diagnostic non-integration, not proof that a result was accidentally dropped. Other examples contain acids, amines or heterocycles; a nitro subgraph cannot establish the states of those other sites. Record 34227 has a nitro trigger plus an acid/carboxylate alias difference; 44101 adds tautomer and phenolate-related conflicts. They must not be counted as removable charge holds merely because the candidate is net-neutral.
+
+## Alias and source-claim findings
+
+The 18 alias-primary cases contain 49 parser-exact, 22 parser-distinct and 25 unsuccessful/warning alias interpretations. Across the whole 81 there are **151 parser-exact, 34 parser-distinct/unresolved and 95 unsuccessful/warning alias claims**. These are claim counts, not unique records or validated alias promotions. There are 19 current constitution conflicts and eight protonation differences, with one record overlapping, so source reconciliation is relevant to **26** records. [Alias analysis](semantic_gap_analysis/alias_reconciliation_gap_analysis.json) preserves every claim and its status.
+
+Three cases illustrate why blanket alias relaxation is unsafe:
+
+- 11807's halogenated benzene preferred name is accompanied by `ethyl hydrazinylacetate`; the saved structures disagree in constitution. NSC-002 support for the preferred name cannot settle that separate claim.
+- 11113's dimethyl terephthalate record includes an ortho positional isomer, a monoacid, an unrelated carbamate and a cyclohexane analogue, as well as compatible aliases. These cannot all be promoted by finding one correct candidate.
+- 21505 contains a warning-producing `Trichloropyridine` and a specifically locanted incompatible alias. An underspecified family-like expression and an exact positional assertion require different treatment. Likewise, unsubstituted `p-Toluidine` is not automatically a broad family covering every N-substituted derivative.
+
+The existing `alias_specific` flag depends on global `form.specification`, ensemble flags and some relative-stereo logic. A single unknown stereo/form feature can make a claim globally broad even where its constitution is specific. This is a real design weakness worth testing per dimension, but this task does not establish that every resulting record conflict is erroneous. Failed parsing alone does not prove broadness. A generic model should represent scope separately for constitution, stereo, isotope, H/charge and components, with `EXACT_COMPATIBLE`, `EXACT_INCOMPATIBLE`, `BROADER_THAN_CANDIDATE` and `UNKNOWN` relations. Independently exact contradictions must persist until source correction or authoritative adjudication resolves them.
+
+## Comparator and aggregation mechanisms
+
+The pairwise comparator already enumerates resonance contributors; wholesale resonance support is not absent. However, its `charge_equal` also compares total hydrogen and graph-dependent charge views. The isolated [ethanol/dimethyl-ether probe](semantic_gap_analysis/comparison_attribution_probe.json) returns correct global `DISTINCT` and constitution `DIFFERENT`, but also `PROTONATION_DIFFERENT` for two neutral constitutional isomers. This demonstrates misleading reason attribution, not a false exact match. A source-claim analyzer must not interpret every such reason as an acid/base transformation.
+
+`aggregate_dimensions` preserves conflicts before unknowns; no evidence here demonstrates a general lost-`DIFFERENT` or unrelated-`UNKNOWN` precedence defect. The principal aggregation issue is the contract for *which evidence establishes each dimension*. NSC results are currently diagnostic by design. They cannot replace a required dimension merely because an operation was supported. Charge evidence consumption must preserve unsupported contexts, exact alias contradictions and complete source-form checks.
+
+## Multiple blockers and conservative opportunity
+
+The following exclusive partitions reconcile to 81: tautomer only **41**; charge only **12**; claim reconciliation only **13**; tautomer plus claims **5**; charge plus tautomer **2**; charge plus claims **5**; all three **3**. Eleven records have more than one current reason code, while 15 have multiple capability families. Multiple reason codes can express one family, and a family can require multiple internal implementation components.
+
+| Proposed capability | Relevant cases | Sole apparent capability/reason | Additional dependencies | Potential recovery | Priority |
+|---|---:|---:|---|---|---|
+| Dimension-scoped neutral-nitro charge evidence | 16 | 12 | Source-site completeness, alias meaning, remaining tautomer/acid-base questions, corroboration | 0 demonstrated; conditional ceiling 12 | Immediate |
+| Full charge/protonation interpretation and comparison | 22 | 12 | Claim reconciliation and/or tautomer on 10 | 0 demonstrated; conditional ceiling 12 | Expand only after immediate checkpoint |
+| Per-dimension source-claim reconciliation | 26 | 13 | Charge and/or tautomer on 13; authoritative source correction may be necessary | 0 demonstrated; conditional ceiling 13 | Second |
+| Context-aware tautomer source/correspondence | 51 | 41 | Claims and/or charge on 10; parent/suffix/H closure | 0 demonstrated; conditional ceiling 41 | Third, after scope assessment |
+
+The first row is a subset of the second; all four overlap. Their conditional ceilings assume every source claim is sufficiently specific and compatible, the capability solves all attributed obligations, and no new blocker appears. They must **not be added** or presented as expected gains. Of the 12 narrow single-reason charge cases, only 17165 has saved qualifying corroboration; local improvement would still be separate from final admission. All relevant record-wide source-sufficiency counts remain **unestablished**, with zero independently confirmed sufficient or insufficient cases in this diagnostic and all memberships requiring adjudication. Zero here means no determination was made, not that no source can be sufficient.
+
+## Architecture B reuse and prioritized development
+
+The immediate objective is a versioned `ChargeDimensionEvidence` contract carrying source claim/rule/owner links, candidate correspondence, all relevant site coverage, unresolved dependencies and dimension compatibility. Reuse NSC-001/002 typed source claims, symmetry-aware structural utilities and the existing source-form dimensions. Start with independently validated full source referents and N-attached neutral nitro semantics; reject unmapped surrounding chemistry. Keep the candidate's atom charges, net charge, H placement and resonance observations separate from source-supported specificity. Consume the evidence only in a default-off isolated evaluator. Fix misleading charge reason attribution when constitution does not correspond, preserving the global distinct result.
+
+The [implementation specification](semantic_gap_analysis/next_implementation_specification.json) defines inputs, outputs, abstention, validation and regressions. Independent controls must include equivalent nitro representations; benzoic acid/benzoate; nitroaniline and its explicitly protonated form; nitrobenzoic acid/nitrobenzoate; neutral versus zwitterionic glycine with independently adjudicated source scope; constitutional isomers; unsupported salts; and unknown source context. No charged-atom or net-zero shortcut is acceptable. Freeze chemical controls and a source-context closure rule before implementation. No CUMA index may appear in runtime rules.
+
+The approximately three-task sequence is:
+
+1. **Dimension-scoped charge evidence and attribution.** Validate evidence consumption, source/candidate compatibility, actual isolated local eligibility and absence of new false exact matches. A repeated zero-recovery result triggers reassessment of source adjudication or coverage before adding more grammar.
+2. **Per-dimension source-claim reconciliation.** Reuse typed evidence and comparator results; distinguish exact compatible/incompatible claims from broad or unresolved scope. Validate contradictions involving missing substituents and acid/base aliases, not only easy broad names. This may preserve many conflicts rather than recover them.
+3. **Context-aware tautomer operations.** Independently choose a useful suffix/H class and prove spans, fragment ownership, surrounding-operation compatibility and mobile-site closure. Composability is a separate dependency to validate, not substring extraction or a mandatory full-name parser rewrite.
+
+[Reuse assessment](semantic_gap_analysis/architecture_b_reuse_assessment.json), [dependency map](semantic_gap_analysis/capability_dependency_map.json) and [prioritized capabilities](semantic_gap_analysis/prioritized_capabilities.json) distinguish new naming contracts, comparator work, reconciliation and evidence aggregation. Shared schema extension and site completeness are medium effort for a narrow charge envelope; acids/bases, general claim scope and tautomer composition are higher effort. The highest risks are turning net neutrality into identity proof, discarding exact aliases and erasing tautomer distinctions. Source independence and semantic closure take precedence over implementation size.
+
+## Verification, integrity and limits
+
+The retained resolver suite ran **201 tests: 201 passed**. The saved-evidence helper reproduced the 224-record baseline, all 81 indices occur exactly once, reason totals and exclusive dependency partitions reconcile, overlapping memberships are deduplicated, and opportunity counts remain distinct from recoveries. [Integrity verification](semantic_gap_analysis/evaluation_integrity.json) compares selected production code, frozen evidence and NSC benchmarks, provider caches and the canonical `output/registry.sqlite` digest to the pre-analysis snapshot; no protected changes were found. Other registry copies were not exhaustively snapshotted, and no registry write was issued. No resolver-provider query or production-policy change occurred.
+
+All required reports, actual source-form/identity logic, saved candidate/reference evidence, and NSC diagnostic artifacts informed this analysis. The remaining limitation is substantive: independent source-level chemistry and alias adjudication are incomplete, so a fully adjudicated causal partition or demonstrable recovery cannot be honestly supplied. The evidence supports a narrow technical priority and its safety conditions, not a forecast of broad registry recall.
+
+NEXT_PRIORITY_FOUNDATIONAL_SEMANTIC_CAPABILITY

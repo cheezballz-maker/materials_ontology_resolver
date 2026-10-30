@@ -1,0 +1,221 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NSC-002 interpretation using NSC-001 typed semantic interface",
+  "type": "object",
+  "required": [
+    "contract_id",
+    "contract_version",
+    "input_name",
+    "scope_status",
+    "source_claims",
+    "semantic_operations",
+    "structural_constraints",
+    "unresolved_dependencies"
+  ],
+  "properties": {
+    "contract_id": {
+      "const": "NSC-002"
+    },
+    "contract_version": {
+      "const": "1.0"
+    },
+    "input_name": {
+      "type": "string"
+    },
+    "scope_status": {
+      "enum": [
+        "IN_CONTRACT",
+        "OUT_OF_CONTRACT",
+        "UNKNOWN"
+      ]
+    },
+    "source_claims": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/claim"
+      }
+    },
+    "semantic_operations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/operation"
+      }
+    },
+    "structural_constraints": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/constraint"
+      }
+    },
+    "unresolved_dependencies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "$defs": {
+    "span": {
+      "type": "object",
+      "required": [
+        "start",
+        "end"
+      ],
+      "properties": {
+        "start": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "end": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "claim": {
+      "type": "object",
+      "required": [
+        "claim_id",
+        "source_span",
+        "source_text",
+        "claim_type",
+        "semantic_owner",
+        "rule_id"
+      ],
+      "properties": {
+        "claim_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_span": {
+          "$ref": "#/$defs/span"
+        },
+        "source_text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "claim_type": {
+          "type": "string"
+        },
+        "semantic_owner": {
+          "type": "string"
+        },
+        "rule_id": {
+          "enum": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "operation": {
+      "type": "object",
+      "required": [
+        "operation_id",
+        "operation_type",
+        "source_claim_ids",
+        "rule_ids",
+        "semantic_owner",
+        "parameters",
+        "dependencies"
+      ],
+      "properties": {
+        "operation_id": {
+          "type": "string"
+        },
+        "operation_type": {
+          "type": "string"
+        },
+        "source_claim_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "rule_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "semantic_owner": {
+          "type": "string"
+        },
+        "parameters": {
+          "type": "object"
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "constraint": {
+      "type": "object",
+      "required": [
+        "constraint_id",
+        "constraint_type",
+        "source_claim_ids",
+        "rule_ids",
+        "semantic_owner",
+        "structural_assertion",
+        "dependencies",
+        "applicability_conditions"
+      ],
+      "properties": {
+        "constraint_id": {
+          "type": "string"
+        },
+        "constraint_type": {
+          "type": "string"
+        },
+        "source_claim_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "rule_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "semantic_owner": {
+          "type": "string"
+        },
+        "structural_assertion": {
+          "type": "object"
+        },
+        "dependencies": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "applicability_conditions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false,
+  "description": "Half-open offsets in Unicode code points of original source. JSON Schema alone does not validate cross-references; semantic_interface.validate_interpretation enforces referential integrity, spans, unique IDs and rules."
+}

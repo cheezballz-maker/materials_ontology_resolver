@@ -1,0 +1,812 @@
+{
+  "candidates": [
+    {
+      "candidate_substance_id": "REF_ETHANOL",
+      "preferred_name": "ethanol",
+      "structure": "OCC",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_ETHANOL"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_ETHER",
+      "preferred_name": "dimethyl ether",
+      "structure": "COC",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_ETHER"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_BENZENE",
+      "preferred_name": "benzene Kekule",
+      "structure": "C1=CC=CC=C1",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_BENZENE"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_NITRO",
+      "preferred_name": "nitrobenzene",
+      "structure": "c1ccc(cc1)[N+]([O-])=O",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_NITRO"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_R_BUTANOL",
+      "preferred_name": "specified butan-2-ol configuration A",
+      "structure": "CC[C@@H](O)C",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_R_BUTANOL"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_S_BUTANOL",
+      "preferred_name": "opposite butan-2-ol configuration B",
+      "structure": "CC[C@H](O)C",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_S_BUTANOL"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_UNSPEC_BUTANOL",
+      "preferred_name": "unspecified butan-2-ol",
+      "structure": "CCC(C)O",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_UNSPEC_BUTANOL"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_ACID",
+      "preferred_name": "acetic acid",
+      "structure": "OC(=O)C",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_ACID"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_ACETATE",
+      "preferred_name": "acetate",
+      "structure": "[O-]C(C)=O",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_ACETATE"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_LACTAM",
+      "preferred_name": "explicit pyridone lactam",
+      "structure": "O=C1C=CC=CN1",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_LACTAM"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_LACTIM",
+      "preferred_name": "explicit hydroxypyridine lactim",
+      "structure": "Oc1ncccc1",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_LACTIM"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_C13_TERMINAL",
+      "preferred_name": "terminal carbon-13 ethanol",
+      "structure": "OC[13CH3]",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_C13_TERMINAL"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_C13_CARBI",
+      "preferred_name": "carbinol carbon-13 ethanol",
+      "structure": "O[13CH2]C",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_C13_CARBI"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_D2O",
+      "preferred_name": "explicit dideuterium oxide",
+      "structure": "[2H]O[2H]",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_D2O"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_H1_WATER",
+      "preferred_name": "explicit protium water",
+      "structure": "[1H]O[1H]",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_H1_WATER"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_WATER",
+      "preferred_name": "conventionally unlabelled water",
+      "structure": "O",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_WATER"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_METHYLAMINE",
+      "preferred_name": "methylamine",
+      "structure": "NC",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_METHYLAMINE"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_METHYLAMMONIUM_CHLORIDE",
+      "preferred_name": "defined 1:1 methylammonium chloride",
+      "structure": "[Cl-].[NH3+]C",
+      "identity_scope": "DEFINED_MULTICOMPONENT_COMPOSITION",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_METHYLAMMONIUM_CHLORIDE"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_ETHANOL_WATER_1",
+      "preferred_name": "explicit 1:1 ethanol/water molecular composition",
+      "structure": "O.CCO",
+      "identity_scope": "DEFINED_MULTICOMPONENT_COMPOSITION",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_ETHANOL_WATER_1"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_ETHANOL_WATER_2",
+      "preferred_name": "explicit 1:2 ethanol/water molecular composition",
+      "structure": "O.O.CCO",
+      "identity_scope": "DEFINED_MULTICOMPONENT_COMPOSITION",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_ETHANOL_WATER_2"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_META_BROMOCHLORO",
+      "preferred_name": "1-bromo-3-chlorobenzene",
+      "structure": "Clc1cccc(Br)c1",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_META_BROMOCHLORO"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_PARA_BROMOCHLORO",
+      "preferred_name": "1-bromo-4-chlorobenzene",
+      "structure": "Clc1ccc(Br)cc1",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_PARA_BROMOCHLORO"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_METHANOL",
+      "preferred_name": "methanol",
+      "structure": "OC",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_METHANOL"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_PROPANOL",
+      "preferred_name": "propan-1-ol",
+      "structure": "OCCC",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_PROPANOL"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_ISOPROPANOL",
+      "preferred_name": "propan-2-ol",
+      "structure": "OC(C)C",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_ISOPROPANOL"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_DEUT_METHANOL",
+      "preferred_name": "carbon-monodeuterated methanol",
+      "structure": "OC[2H]",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_DEUT_METHANOL"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_E_BUTENE",
+      "preferred_name": "E-but-2-ene",
+      "structure": "C/C=C/C",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_E_BUTENE"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_Z_BUTENE",
+      "preferred_name": "Z-but-2-ene",
+      "structure": "C/C=C\\C",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_Z_BUTENE"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_ZWITTERION",
+      "preferred_name": "explicit glycine zwitterion",
+      "structure": "[O-]C(=O)C[NH3+]",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_ZWITTERION"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_NEUTRAL_GLYCINE",
+      "preferred_name": "explicit neutral glycine graph",
+      "structure": "OC(=O)CN",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_NEUTRAL_GLYCINE"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_METHANE",
+      "preferred_name": "methane",
+      "structure": "C",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_METHANE"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_METHYL_RADICAL",
+      "preferred_name": "methyl radical",
+      "structure": "[CH3]",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:REF_METHYL_RADICAL"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "REF_ETHANOL_DUPLICATE",
+      "preferred_name": "ethanol",
+      "structure": "C(C)O",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "REFERENCE_INVENTORY:ETHANOL_DUPLICATE"
+        ],
+        "independence_status": "ESTABLISHED_FOR_CONTROL_DEFINITION",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "SOURCE_DERIVED_DUPLICATE",
+      "preferred_name": "ethanol",
+      "structure": "OCC",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "INCOMING_CONTROL:D31"
+        ],
+        "independence_status": "SOURCE_DERIVED",
+        "derived_from_source_concepts": [
+          "INCOMING:D31"
+        ],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    },
+    {
+      "candidate_substance_id": "UNQUALIFIED_CANDIDATE",
+      "preferred_name": "ethanol",
+      "structure": "OCC",
+      "identity_scope": "DISCRETE_MOLECULAR",
+      "provenance": {
+        "definition_kind": "INDEPENDENT_REFERENCE_DEFINITION",
+        "document": "Frozen separately authored reference inventory; not from incoming source",
+        "references": [
+          "https://iupac.qmul.ac.uk/BlueBook/P6.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P8.html",
+          "https://iupac.qmul.ac.uk/BlueBook/P9.html#P-93.1",
+          "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html"
+        ],
+        "lineage_roots": [
+          "UNESTABLISHED:CANDIDATE"
+        ],
+        "independence_status": "UNESTABLISHED",
+        "derived_from_source_concepts": [],
+        "review_status": "CHEMICAL_REVIEW_PENDING"
+      }
+    }
+  ],
+  "review": "CHEMICAL_REVIEW_PENDING"
+}

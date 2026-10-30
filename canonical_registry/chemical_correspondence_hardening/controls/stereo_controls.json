@@ -1,0 +1,113 @@
+{
+  "grounding": "Prospective explicit graph constraints; not blind or expert-reviewed; frozen before comparator implementation",
+  "cases": [
+    {
+      "id": "partial_contradiction",
+      "left": "C1C([C@H](C2=CC=CC=C21)O)Br",
+      "right": "C1[C@H]([C@@H](C2=CC=CC=C21)O)Br",
+      "expected": "DIFFERENT"
+    },
+    {
+      "id": "partial_compatible",
+      "left": "C1C([C@H](C2=CC=CC=C21)O)Br",
+      "right": "C1[C@@H]([C@H](C2=CC=CC=C21)O)Br",
+      "expected": "UNKNOWN"
+    },
+    {
+      "id": "complete_match",
+      "left": "F[C@H](Cl)[C@H](Br)I",
+      "right": "F[C@H](Cl)[C@H](Br)I",
+      "expected": "EQUIVALENT"
+    },
+    {
+      "id": "complete_one_difference",
+      "left": "F[C@H](Cl)[C@H](Br)I",
+      "right": "F[C@@H](Cl)[C@H](Br)I",
+      "expected": "DIFFERENT"
+    },
+    {
+      "id": "different_traversal",
+      "left": "N[C@@H](C)C(=O)O",
+      "right": "C[C@H](N)C(O)=O",
+      "expected": "EQUIVALENT"
+    },
+    {
+      "id": "symmetric_meso",
+      "left": "C[C@H](O)[C@H](O)C",
+      "right": "C[C@@H](O)[C@@H](O)C",
+      "expected": "EQUIVALENT"
+    },
+    {
+      "id": "symmetric_opposite",
+      "left": "C[C@H](O)[C@@H](O)C",
+      "right": "C[C@@H](O)[C@H](O)C",
+      "expected": "DIFFERENT"
+    },
+    {
+      "id": "unspecified",
+      "left": "CC(O)CC",
+      "right": "CC(O)CC",
+      "expected": "UNKNOWN"
+    },
+    {
+      "id": "nonstereogenic",
+      "left": "CCO",
+      "right": "OCC",
+      "expected": "NOT_APPLICABLE"
+    },
+    {
+      "id": "different_constitution",
+      "left": "CCO",
+      "right": "COC",
+      "expected": "UNKNOWN"
+    },
+    {
+      "id": "enhanced_relative",
+      "left": "C[C@H](O)CC |&1:1|",
+      "right": "C[C@H](O)CC |&1:1|",
+      "expected": "UNKNOWN"
+    },
+    {
+      "id": "double_complete",
+      "left": "F/C=C/Cl",
+      "right": "Cl/C=C/F",
+      "expected": "EQUIVALENT"
+    },
+    {
+      "id": "double_opposite",
+      "left": "F/C=C/Cl",
+      "right": "F/C=C\\Cl",
+      "expected": "DIFFERENT"
+    },
+    {
+      "id": "double_unspecified",
+      "left": "FC=CCl",
+      "right": "F/C=C/Cl",
+      "expected": "UNKNOWN"
+    },
+    {
+      "id": "two_partial_incompatible",
+      "left": "F[C@H](Cl)C(Br)I",
+      "right": "F[C@@H](Cl)C(Br)I",
+      "expected": "DIFFERENT"
+    },
+    {
+      "id": "two_partial_compatible",
+      "left": "F[C@H](Cl)C(Br)I",
+      "right": "F[C@H](Cl)C(Br)I",
+      "expected": "UNKNOWN"
+    },
+    {
+      "id": "isotope_environment_diff",
+      "left": "[13CH3][C@H](O)CC",
+      "right": "C[C@H](O)CC",
+      "expected": "UNKNOWN"
+    },
+    {
+      "id": "partial_bond_and_center",
+      "left": "F/C=C/[C@H](O)C(Cl)Br",
+      "right": "F/C=C/[C@@H](O)[C@H](Cl)Br",
+      "expected": "DIFFERENT"
+    }
+  ]
+}

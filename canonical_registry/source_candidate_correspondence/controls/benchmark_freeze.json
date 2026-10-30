@@ -1,0 +1,8 @@
+{
+  "phase": "PRE_IMPLEMENTATION",
+  "files": {
+    "candidate_reference_inventory.json": "b130a7bdd72217e9e6e7e0a6b6595d50e3bef3d3034dfb6ae25cfd0e5d18216b",
+    "development_controls.json": "81bc440c5a59d77ccb7dbcf96647dbbb494e28aab2ecdd5844dec275d9d8dcd9",
+    "heldout_controls.json": "f146d69298dc0ab7e2a287e72a855516030989a35cf5d2d9231bb18a706780eb"
+  }
+}

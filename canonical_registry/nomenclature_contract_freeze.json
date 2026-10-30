@@ -1,0 +1,13 @@
+{
+  "purpose": "Contract and shared controls frozen before 81-case applicability review.",
+  "sha256": {
+    "nomenclature_support_contract.json": "db78af45673ebb93336fc5c3280cd66f44e3121fee20842b1c164e913e91ad1a",
+    "nomenclature_grammar.ebnf": "e49bc40230606444a815b13aa29f2a2555a12ac5a5bff45fcc11c3fd2c2ba07e",
+    "semantic_constraint_schema.json": "18688e66f9d03bce92a5148d6306ae59abea800a2a6cb90b7090ac76bf946a83",
+    "nomenclature_rule_catalog.json": "cef12021ad89b8812f02421b639e10402e854881233f09debcfc0f59a0aade3a",
+    "architecture_comparison_requirements.json": "7c48a25fcd13e2288b68a5aa9c686a05134fa6aa7e7ddb1b087095a0872b394f",
+    "independent_semantic_controls.json": "6e2bf8567ccbf3a9d9aba0cc889679b249b17216e5f205e753e9120227ce1f33",
+    "heldout_semantic_controls.json": "d132675feee0cf4b419e8df8cd148162e1390279c17badcd6379f256642ba1c3",
+    "nomenclature_extension_roadmap.json": "97718b1fe84b29b6c9295b4a70c2e6a5e51a40deb653583bd690aea7ba78f25b"
+  }
+}

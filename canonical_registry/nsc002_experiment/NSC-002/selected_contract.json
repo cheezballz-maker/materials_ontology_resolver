@@ -1,0 +1,12 @@
+{
+  "contract_id": "NSC-002",
+  "version": "1.0",
+  "chosen_candidate": "C",
+  "selection": "Compositional multiple locanted substitutions on benzene offer a reusable operation and two exact lexical opportunities, compared with zero for either frozen alternative.",
+  "scope": "One to three explicit halo/nitro groups and up to six distinct locants on a single neutral benzene; no suffixes or other operations.",
+  "partial_scope": "No partial-operation SUPPORT is claimed for a name that does not fully match. Unparsed surroundings may affect ownership and scope.",
+  "charge": "Nitro N+/O- is an internal resonance representation of a neutral substituent, not proof of a separately protonated ion; non-nitro charge remains unsupported.",
+  "identity": "NOT_ESTABLISHED",
+  "review": "CHEMICAL_REVIEW_PENDING",
+  "freeze_note": "The selected grammar is exactly provisional C, with its existing semantic guard that a substituent type appears in one group."
+}

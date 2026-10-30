@@ -1,0 +1,10 @@
+(* NSC-001 v1, whole source name; grammar is case sensitive. *)
+name             = substitution, "-", indicated_h, "-", parent ;
+substitution     = "1-", normal_alkyl ;
+normal_alkyl     = "methyl" | "ethyl" | "propyl" | "butyl" ;
+indicated_h      = "1H" ;
+parent           = "pyrazole" | "imidazole" ;
+(* Semantic guards: one neutral mononuclear parent, N1 bears the source H,
+   exactly one unbranched terminal alkyl bond at N1; no residual tokens. *)
+(* Parsing is whole-input; no implicit whitespace, alternate spelling, primes,
+   multipliers, suffixes, isotope/stereo notation, charge or salts. *)

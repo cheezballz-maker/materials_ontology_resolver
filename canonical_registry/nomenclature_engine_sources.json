@@ -1,0 +1,74 @@
+[
+  {
+    "id": "opsin",
+    "url": "https://github.com/dan2097/opsin",
+    "type": "official source and public interface documentation",
+    "details": "2.9.0 latest listed release, MIT; local experiments use different unpinned 3.0-SNAPSHOT"
+  },
+  {
+    "id": "opsin_release",
+    "url": "https://github.com/dan2097/opsin/releases",
+    "type": "official release notes",
+    "details": "v2.9.0 notes primed number-letter locants and CLI warnings"
+  },
+  {
+    "id": "iupac_indicated_h",
+    "url": "https://iupac.qmul.ac.uk/BlueBook/P1.html",
+    "type": "authoritative nomenclature reference",
+    "details": "P-14.7 distinguishes indicated and added indicated H"
+  },
+  {
+    "id": "iupac_tautomer",
+    "url": "https://goldbook.iupac.org/terms/view/T06252",
+    "type": "authoritative nomenclature reference",
+    "details": "tautomerism"
+  },
+  {
+    "id": "acd",
+    "url": "https://www.acdlabs.com/products/name/",
+    "type": "official product documentation",
+    "details": "ACD/Name, Name to Structure Batch, UI rule and atom numbering features"
+  },
+  {
+    "id": "acd_version",
+    "url": "https://www.acdlabs.com/technical-support/current-software-versions/name/",
+    "type": "official product version",
+    "details": "Name 2025 page; do not infer local availability"
+  },
+  {
+    "id": "chemaxon_api",
+    "url": "https://docs.chemaxon.com/lts-platinum/name-to-structure_developer-guide.html",
+    "type": "official developer documentation",
+    "details": "MolImporter.importMol API, name options and plugins"
+  },
+  {
+    "id": "chemaxon_license",
+    "url": "https://docs.chemaxon.com/latest/jchem-microservices_licenses.html",
+    "type": "official licensing documentation",
+    "details": "separate name conversion license in microservices"
+  },
+  {
+    "id": "openeye_parse",
+    "url": "https://docs.eyesopen.com/toolkits/python/lexichemtk/OEIUPACFunctions/OEParseIUPACName.html",
+    "type": "official API documentation",
+    "details": "OEParseIUPACName returns bool; failure can leave partial molecule"
+  },
+  {
+    "id": "openeye_locant",
+    "url": "https://docs.eyesopen.com/toolkits/python/lexichemtk/OEIUPACFunctions/OENameLocant.html",
+    "type": "official API documentation",
+    "details": "OEParseIUPACName atom integer type has a locant index; OENameLocant renders it"
+  },
+  {
+    "id": "openeye_license",
+    "url": "https://docs.eyesopen.com/toolkits/python/quickstart-python/license.html",
+    "type": "official licensing documentation",
+    "details": "toolkit license required"
+  },
+  {
+    "id": "rdkit_cx",
+    "url": "https://github.com/rdkit/rdkit/blob/master/Docs/Book/RDKit_Book.rst",
+    "type": "official RDKit documentation",
+    "details": "CXSMILES parsing differs from strict plain SMILES; do not pass extended string to strict input gate"
+  }
+]

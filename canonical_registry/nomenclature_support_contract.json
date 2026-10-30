@@ -1,0 +1,82 @@
+{
+  "contract_id": "NSC-001",
+  "version": "1.0",
+  "status": "FROZEN_SPECIFICATION_NOT_IMPLEMENTED",
+  "purpose": "Compare a single explicitly locanted normal alkyl substitutive operation on an explicitly indicated-H parent; no whole identity admission.",
+  "grammar_file": "nomenclature_grammar.ebnf",
+  "accepted_parents": [
+    "1H-pyrazole",
+    "1H-imidazole"
+  ],
+  "accepted_substituents": [
+    {
+      "name": "methyl",
+      "linear_carbons": 1
+    },
+    {
+      "name": "ethyl",
+      "linear_carbons": 2
+    },
+    {
+      "name": "propyl",
+      "linear_carbons": 3
+    },
+    {
+      "name": "butyl",
+      "linear_carbons": 4
+    }
+  ],
+  "guards": [
+    "source exactly one whole name",
+    "explicit locant 1 for substituent and indicated-H parent",
+    "neutral conventional mononuclear parent",
+    "one alkyl substituent bonded at parent N1",
+    "no other operations"
+  ],
+  "interpretation": [
+    "The IUPAC parent locant and indicated-H define the parent hydride state before substitution.",
+    "Substitution formally exchanges one N1 hydrogen for a covalently bonded unbranched alkyl group; do not require the replaced hydrogen in the final structure.",
+    "Use independently validated numbered parent templates and exact alkyl templates, not parser atom IDs."
+  ],
+  "semantic_states": [
+    "SUPPORTED",
+    "DIFFERENT",
+    "UNKNOWN"
+  ],
+  "grammar_states": [
+    "IN_CONTRACT",
+    "OUT_OF_CONTRACT",
+    "UNKNOWN"
+  ],
+  "identity_admission": "NOT_ESTABLISHED",
+  "no_runtime_implementation": true,
+  "negative_proof": "DIFFERENT only if the relevant constraint is established, the candidate is reliable and complete, and all chemically admissible correspondences violate it; graph mismatch alone is not a reason.",
+  "completeness": "Operation only. Tautomer dimension and all other identity dimensions require independently justified completeness; no such result is promised here.",
+  "nonclaims": [
+    "Excluded strings are not asserted chemically ambiguous.",
+    "Candidate isotope, stereo, charge, additional components or source conflict require separate assessment.",
+    "No synonym is validated by this contract alone."
+  ],
+  "references": {
+    "R1": [
+      "IUPAC Blue Book P-13.1: substitutive operation",
+      "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1"
+    ],
+    "R2": [
+      "IUPAC Blue Book P-14.3.2: placement of locants",
+      "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-14.3.2"
+    ],
+    "R3": [
+      "IUPAC Blue Book P-14.7.1: indicated hydrogen",
+      "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-14.7"
+    ],
+    "R4": [
+      "IUPAC Blue Book P-22.2, Table 2.2: retained parent hydrides and numbering",
+      "https://iupac.qmul.ac.uk/BlueBook/P2.html"
+    ],
+    "R5": [
+      "IUPAC Blue Book P-29: substituent-group names",
+      "https://iupac.qmul.ac.uk/BlueBook/P2.html#P-29"
+    ]
+  }
+}

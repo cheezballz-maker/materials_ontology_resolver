@@ -1,0 +1,27 @@
+{
+  "recommendation": "INSTRUMENTED_OPSIN_POC_REQUIRED",
+  "scope": "A narrow isolated source-H/functional-group ownership trace with pinned exact source; compare selected and rejected parses without production integration.",
+  "supplied_capability": "Test whether grammar node, source span/clone lineage, owner fragment, and same-result CML atom can be linked reliably for a bounded class.",
+  "existing_work": "Reuse prior isolated R/S trace; do not repeat it as a new finding.",
+  "blockers": [
+    "tautomer specificity",
+    "selected charge/protonation contexts",
+    "alias claim specificity as a separate downstream task"
+  ],
+  "criteria_accept": [
+    "pin matching source revision and artifact provenance",
+    "prove source span -> selected parse node -> fragment -> atom with clone/transform lineage",
+    "validate symmetry and ambiguity with explicit abstention",
+    "match independent positive, negative, underspecified and conflicting source constraints",
+    "preserve warnings and reject trace when provenance is incomplete"
+  ],
+  "criteria_reject": [
+    "fallback ordering or default silently presented as explicit",
+    "missing original-token lineage or graph correspondence",
+    "scope collision accepted",
+    "any historical unsafe source elevated to exact",
+    "any production or gate change"
+  ],
+  "limits": "No expectation that this covers all nomenclature classes; FixedH and parser consensus cannot prove source semantics.",
+  "commercial_next": "If an existing license is later available, run same blind challenge against OpenEye atom locant fields; ask vendor about source occurrence and ownership."
+}

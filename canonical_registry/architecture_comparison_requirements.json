@@ -1,0 +1,32 @@
+{
+  "shared_contract": "NSC-001 v1.0",
+  "same_inputs": "Use both frozen JSON control files unchanged; no candidate or source from either parser may set a reference label.",
+  "evaluation": [
+    "Preserve original source span/ownership and compare source-derived constraints with separately supplied candidate.",
+    "Measure exact matches for grammar and operation labels; safety gate requires zero unsupported positive or negative assertions, including UNKNOWN and symmetry cases.",
+    "Demonstrate whole-input rejection, candidate correspondence completeness and no identity admission side effect.",
+    "Report coverage, false positive/negative and abstentions separately, with per-case and heldout outcomes.",
+    "Require independent chemical review of expected graph and symmetry items before acceptance."
+  ],
+  "A": {
+    "requires": [
+      "Pinned version",
+      "source token ownership",
+      "semantic parent template/candidate correspondence",
+      "bounded transformation closure or independently validated final-structure proof",
+      "fail-closed clones, normalization, warning and alternatives"
+    ],
+    "note": "Full internal operation logging is not a contract requirement."
+  },
+  "B": {
+    "requires": [
+      "independently implemented whole-name grammar",
+      "reviewed numbered parent and alkyl templates",
+      "separately supplied candidate graph",
+      "symmetry-aware comparison",
+      "fail-closed unsupported transformations"
+    ],
+    "note": "Independent rules must not copy candidate parser results as source evidence."
+  },
+  "release": "Specification only. No resolver flag, provider change or evidence gate change."
+}

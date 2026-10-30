@@ -1,0 +1,69 @@
+{
+  "extensions": [
+    {
+      "class": "additional substitution",
+      "reusable_components": "numbered parent and locant mapping",
+      "additional_semantics": "multiple positions, multipliers and precedence",
+      "structural_comparison": "all symmetry-aware attachment mappings",
+      "limitations": "ownership and equivalent positions",
+      "expected_practical_value": "high"
+    },
+    {
+      "class": "added-H and suffixes",
+      "reusable_components": "parent and operation composition",
+      "additional_semantics": "P-14.7.2 and functional suffix transformations",
+      "structural_comparison": "affected atom/bond and H states",
+      "limitations": "mobile-H completeness",
+      "expected_practical_value": "high"
+    },
+    {
+      "class": "functional-class names",
+      "reusable_components": "source spans and claims",
+      "additional_semantics": "class-specific names and conventional variants",
+      "structural_comparison": "role-specific structure mapping",
+      "limitations": "polysemy",
+      "expected_practical_value": "medium"
+    },
+    {
+      "class": "charge and protonation",
+      "reusable_components": "atom-mapped constraints",
+      "additional_semantics": "ionic nomenclature and source scope",
+      "structural_comparison": "charged graph and proton assignments",
+      "limitations": "acid/base defaults",
+      "expected_practical_value": "high"
+    },
+    {
+      "class": "salts and stoichiometry",
+      "reusable_components": "typed components",
+      "additional_semantics": "counterions and composition",
+      "structural_comparison": "component multiset and stoichiometry",
+      "limitations": "hydration and unknown composition",
+      "expected_practical_value": "high"
+    },
+    {
+      "class": "stereo",
+      "reusable_components": "claim scopes",
+      "additional_semantics": "R/S, E/Z and relative stereochemistry",
+      "structural_comparison": "stereo-aware all-isomorphism",
+      "limitations": "unspecified versus relative stereo",
+      "expected_practical_value": "high"
+    },
+    {
+      "class": "isotopes",
+      "reusable_components": "locant ownership",
+      "additional_semantics": "isotopic descriptor syntax and conventional scope",
+      "structural_comparison": "isotopic atom mapping",
+      "limitations": "unlabelled isotope convention",
+      "expected_practical_value": "medium"
+    },
+    {
+      "class": "validated aliases",
+      "reusable_components": "independent claim scopes",
+      "additional_semantics": "systematic and conventional naming rules",
+      "structural_comparison": "full-form identity correspondence",
+      "limitations": "broad aliases and source provenance",
+      "expected_practical_value": "high"
+    }
+  ],
+  "value": "qualitative estimates, not measured recoveries"
+}

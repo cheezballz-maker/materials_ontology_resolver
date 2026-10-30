@@ -1,0 +1,173 @@
+--- a/opsin-core/src/main/java/uk/ac/cam/ch/wwmm/opsin/ComponentGenerator.java
++++ b/opsin-core/src/main/java/uk/ac/cam/ch/wwmm/opsin/ComponentGenerator.java
+@@ -276,7 +276,8 @@
+ 									Element addedHydrogenElement = new TokenEl(ADDEDHYDROGEN_EL);
+ 									String hydrogenLocant = fixLocantCapitalisation(addedHydrogen.substring(0, addedHydrogen.length() - 1));
+ 									addedHydrogenElement.addAttribute(new Attribute(LOCANT_ATR, hydrogenLocant));
+-									OpsinTools.insertBefore(locantEl, addedHydrogenElement);
++									TraceProbe.copy(locantEl, addedHydrogenElement);
++                                    OpsinTools.insertBefore(locantEl, addedHydrogenElement);
+ 								}
+ 								if (locantEl.getAttribute(TYPE_ATR) == null){
+ 									locantEl.addAttribute(new Attribute(TYPE_ATR, ADDEDHYDROGENLOCANT_TYPE_VAL));//this locant must not be used as an indirect locant
+@@ -858,6 +859,7 @@
+                 	String locant = fixLocantCapitalisation(hydrogenLocant.substring(0, hydrogenLocant.length() - 1));
+                     Element indicatedHydrogenEl = new TokenEl(INDICATEDHYDROGEN_EL);
+                     indicatedHydrogenEl.addAttribute(new Attribute(LOCANT_ATR, locant));
++                    TraceProbe.copy(indicatedHydrogenGroup, indicatedHydrogenEl);
+                     OpsinTools.insertBefore(indicatedHydrogenGroup, indicatedHydrogenEl);
+                 }
+                 else{
+--- a/opsin-core/src/main/java/uk/ac/cam/ch/wwmm/opsin/FragmentManager.java
++++ b/opsin-core/src/main/java/uk/ac/cam/ch/wwmm/opsin/FragmentManager.java
+@@ -477,7 +477,8 @@
+ 				newBond.setBondStereoElement(newAtomRefs4, bond.getBondStereo().getBondStereoValue());
+ 			}
+ 		}
+-		List<Atom> indicatedHydrogenAtoms = originalFragment.getIndicatedHydrogen();
++		TraceProbe.cloned = true;
++        List<Atom> indicatedHydrogenAtoms = originalFragment.getIndicatedHydrogen();
+ 		for (Atom atom : indicatedHydrogenAtoms) {
+ 			newFragment.addIndicatedHydrogen(oldToNewAtomMap.get(atom));
+ 		}
+@@ -507,7 +508,8 @@
+ 	 * @throws StructureBuildingException
+ 	 */
+ 	Element cloneElement(BuildState state, Element elementToBeCloned, int primesToAdd) throws StructureBuildingException {
+-		Element clone = elementToBeCloned.copy();
++		TraceProbe.cloned = true;
++        Element clone = elementToBeCloned.copy();
+ 		List<Element> originalGroups = OpsinTools.getDescendantElementsWithTagName(elementToBeCloned, XmlDeclarations.GROUP_EL);
+ 		List<Element> clonedGroups = OpsinTools.getDescendantElementsWithTagName(clone,  XmlDeclarations.GROUP_EL);
+ 		HashMap<Fragment,Fragment> oldNewFragmentMapping  =new LinkedHashMap<>();
+--- a/opsin-core/src/main/java/uk/ac/cam/ch/wwmm/opsin/NameToStructure.java
++++ b/opsin-core/src/main/java/uk/ac/cam/ch/wwmm/opsin/NameToStructure.java
+@@ -129,7 +129,8 @@
+ 		if (name == null){
+ 			throw new IllegalArgumentException("String given for name was null");
+ 		}
+-		n2sConfig = n2sConfig.clone();//avoid n2sconfig being modified mid name processing
++		TraceProbe.reset(name);
++        n2sConfig = n2sConfig.clone();//avoid n2sconfig being modified mid name processing
+ 
+ 		List<Element> parses;
+ 		try {
+@@ -147,7 +148,9 @@
+ 		String reasonForFailure = "";
+ 		Fragment fragGeneratedWithWarning = null;
+ 		List<OpsinWarning> warnings = Collections.emptyList();
+-		for(Element parse : parses) {
++		TraceProbe.parses(parses);
++        for(Element parse : parses) {
++            TraceProbe.attempt();
+ 			try {
+ 				if (LOG.isDebugEnabled()) {
+ 					LOG.debug(parse.toXML());
+@@ -169,7 +172,8 @@
+ 					LOG.debug(parse.toXML());
+ 				}
+ 				if (state.getWarnings().isEmpty()) {
+-					return new OpsinResult(frag, OPSIN_RESULT_STATUS.SUCCESS, "", name);
++					TraceProbe.selected = true;
++                    return new OpsinResult(frag, OPSIN_RESULT_STATUS.SUCCESS, "", name);
+ 				}
+ 				if (fragGeneratedWithWarning == null) {
+ 					//record first frag that had a warning but try other parses as they may work without a warning
+--- a/opsin-core/src/main/java/uk/ac/cam/ch/wwmm/opsin/Parser.java
++++ b/opsin-core/src/main/java/uk/ac/cam/ch/wwmm/opsin/Parser.java
+@@ -291,7 +291,9 @@
+ 	 * @throws ParsingException
+ 	 */
+ 	void writeWordXML(Element wordEl, List<String> tokens, List<List<Character>> annotations) throws ParsingException {
+-		int annotNumber = 0;
++		int traceOffset = 0;
++        String traceTokens = StringTools.stringListToString(tokens, "");
++        int annotNumber = 0;
+ 		int annotPos = 0;
+ 		Element chunk = new GroupingEl(SUBSTITUENT_EL);
+ 		wordEl.addChild(chunk);
+@@ -307,6 +309,7 @@
+             Element tokenElement = resourceManager.makeTokenElement(token,
+                     annotations.get(annotNumber).get(annotPos));
+             if (tokenElement != null) {//null for tokens that have ignoreWhenWritingXML set
++                TraceProbe.token(tokenElement, wordEl.getAttributeValue(VALUE_ATR), traceTokens, traceOffset, token);
+                 chunk.addChild(tokenElement);
+                 lastTokenElement = tokenElement;
+             }
+@@ -318,6 +321,7 @@
+             		lastTokenElement.addAttribute(new Attribute(SUBSEQUENTUNSEMANTICTOKEN_ATR, token));
+             	}
+             }
++            traceOffset += token.length();
+             annotPos++;
+         }
+         WordType wordType = WordType.valueOf(wordEl.getAttributeValue(TYPE_ATR));
+--- a/opsin-core/src/main/java/uk/ac/cam/ch/wwmm/opsin/StructureBuildingMethods.java
++++ b/opsin-core/src/main/java/uk/ac/cam/ch/wwmm/opsin/StructureBuildingMethods.java
+@@ -614,6 +614,7 @@
+ 			String locant = hydrogen.getAttributeValue(LOCANT_ATR);
+ 			if(locant != null) {
+ 				Atom a =thisFrag.getAtomByLocantOrThrow(locant);
++                TraceProbe.applied(hydrogen, group, thisFrag, a, locant);
+ 				if (a.hasSpareValency()){
+ 					a.setSpareValency(false);
+ 				}
+--- a/opsin-core/src/main/java/uk/ac/cam/ch/wwmm/opsin/TokenEl.java
++++ b/opsin-core/src/main/java/uk/ac/cam/ch/wwmm/opsin/TokenEl.java
+@@ -30,7 +30,8 @@
+ 			Attribute atr = this.attributes.get(i);
+ 			copy.addAttribute(new Attribute(atr));
+ 		}
+-		return copy;
++		TraceProbe.copy(this, copy);
++        return copy;
+ 	}
+ 	
+ 	/**
+@@ -45,7 +46,8 @@
+ 			Attribute atr = this.attributes.get(i);
+ 			copy.addAttribute(new Attribute(atr));
+ 		}
+-		return copy;
++		TraceProbe.copy(this, copy);
++        return copy;
+ 	}
+ 	
+ 	@Override
+--- /dev/null
++++ b/opsin-core/src/main/java/uk/ac/cam/ch/wwmm/opsin/TraceProbe.java
+@@ -0,0 +1,34 @@
++package uk.ac.cam.ch.wwmm.opsin;
++import java.util.*;
++class TraceProbe {
++ static String raw;
++ static boolean selected, cloned;
++ static int attempts;
++ static List<String> parseXml;
++ static void parses(List<Element> ps){parseXml=new ArrayList<>();for(Element e:ps)parseXml.add(e.toXML());}
++ static IdentityHashMap<Element,Origin> origins;
++ static List<Event> events;
++ static class Origin {int start,end; String text; Origin(int s,int e,String t){start=s;end=e;text=t;}}
++ static class Event {Origin o; String kind,locant,owner; Atom a; boolean spare; int fragment;
++  Event(Element node,Element group,Fragment f,Atom atom,String loc){o=origins.get(node);kind=node.getName();owner=group.getValue();locant=loc;a=atom;spare=atom.hasSpareValency();fragment=System.identityHashCode(f);}}
++ static void reset(String s){raw=s;selected=false;cloned=false;attempts=0;parseXml=null;origins=new IdentityHashMap<>();events=new ArrayList<>();}
++ static void attempt(){attempts++;events.clear();selected=false;cloned=false;}
++ static void token(Element el,String word,String tokens,int offset,String token){
++  if(raw==null || !word.equalsIgnoreCase(tokens))return;
++  // Only exact, unique word occurrences: no substring-offset guess after normalization.
++  int base=raw.indexOf(word);
++  if(base<0 || raw.indexOf(word,base+1)>=0)return;
++  int s=base+offset,e=s+token.length();
++  if(e<=raw.length() && raw.substring(s,e).equalsIgnoreCase(token))origins.put(el,new Origin(s,e,raw.substring(s,e)));
++ }
++ static void copy(Element from,Element to){if(origins==null)return;Origin o=origins.get(from);if(o!=null)origins.put(to,o);}
++ static void applied(Element node,Element group,Fragment f,Atom atom,String loc){if((node.getName().equals("indicatedHydrogen") || node.getName().equals("addedHydrogen")))events.add(new Event(node,group,f,atom,loc));}
++ static String b64(String s){return s==null?"":Base64.getEncoder().encodeToString(s.getBytes(java.nio.charset.StandardCharsets.UTF_8));}
++ static void dump(OpsinResult r){
++  if(parseXml!=null){for(int i=0;i<parseXml.size();i++)System.out.println("P\t"+(i+1)+"\t"+(selected && attempts==i+1)+"\t"+b64(parseXml.get(i)));}
++  if(!selected || !r.getStatus().toString().equals("SUCCESS"))return;
++  for(Event e:events){Origin o=e.o; boolean exists=r.getStructure().getAtomList().contains(e.a);
++   System.out.println("E\t"+(o==null?-1:o.start)+"\t"+(o==null?-1:o.end)+"\t"+b64(o==null?null:o.text)+"\t"+b64(e.kind)+"\t"+b64(e.locant)+"\t"+b64(e.owner)+"\t"+e.a.getID()+"\t"+e.a.getElement()+"\t"+e.a.getCharge()+"\t"+e.spare+"\t"+exists+"\t"+cloned+"\t"+attempts+"\t"+e.fragment);
++  }
++ }
++}

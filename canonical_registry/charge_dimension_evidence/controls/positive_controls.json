@@ -1,0 +1,34 @@
+[
+  {
+    "id": "P1",
+    "source_name": "1-chloro-2-nitrobenzene",
+    "candidate": "Clc1ccccc1[N+](=O)[O-]",
+    "aliases": [],
+    "expected_operation": "SUPPORTED",
+    "expected_dimension": "SUPPORTED",
+    "justification": "Whole NSC-002 source and candidate context comprises benzene, halo and N-attached nitro only.",
+    "review": "CHEMICAL_REVIEW_PENDING",
+    "references": [
+      "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+      "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+      "https://iupac.qmul.ac.uk/BlueBook/P5.html"
+    ]
+  },
+  {
+    "id": "P2",
+    "source_name": "1-chloro-2-nitrobenzene",
+    "candidate": "ClC1=CC=CC=C1[N+]([O-])=O",
+    "aliases": [
+      "1-CHLORO-2-NITROBENZENE"
+    ],
+    "expected_operation": "SUPPORTED",
+    "expected_dimension": "SUPPORTED",
+    "justification": "Equivalent nitro oxygen ordering and Kekule depiction; all aliases independently in scope.",
+    "review": "CHEMICAL_REVIEW_PENDING",
+    "references": [
+      "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+      "https://iupac.qmul.ac.uk/BlueBook/P7.html",
+      "https://iupac.qmul.ac.uk/BlueBook/P5.html"
+    ]
+  }
+]

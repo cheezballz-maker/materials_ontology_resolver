@@ -1,0 +1,13 @@
+{
+  "initial_capture": {
+    "harness_sha256": "b55c26c2c31a02d097db3078e2a81e2a9136813eeaa1b1fe7045d40b460bdb3c",
+    "seed_controls": {
+      "development_controls.json": "ed697cd9ecfe84d4ba9a2248e2409cf29506cc611c6c82a8a95cb6248c93d9ef",
+      "heldout_controls.json": "e627403f64c2d905ba165b90752f74e1784bba33c7b213d61d3f919d54074c30"
+    },
+    "note": "Scenario outcomes frozen before implementation; graphs reused from previous frozen CUMA-independent controls. Final executable harness hashes captured separately after development, not a blind benchmark."
+  },
+  "final_harness_sha256": "cbcb13f23c309f8188d6a088fd39e1eb86558be4db7ff293206a5a68f1f4c074",
+  "expectations_changed": false,
+  "changes": "Supplemental referent-scope, same-source-version supporting evidence and audit guards; all 25 original expected outcomes preserved."
+}

@@ -1,0 +1,8 @@
+{
+  "version": "1.0",
+  "stage": "BEFORE_IMPLEMENTATION",
+  "sha256": {
+    "development_controls.json": "790d0c76125059067de5503574d3338eb0f62f899a9eab0ce79a953873affe65",
+    "heldout_controls.json": "821adfac1ec434dd40802e05b8a647f29b4221531622d28d02c3438f706faf35"
+  }
+}

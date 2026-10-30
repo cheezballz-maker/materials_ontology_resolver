@@ -1,0 +1,423 @@
+@prefix : <urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO_> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#> .
+
+<urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9> rdf:type owl:Ontology ;
+                                                                owl:imports <http://purl.obolibrary.org/obo/bfo/2020/bfo-core.owl> ;
+                                                                rdfs:comment "Domain-agnostic Substance Ontology aligned with BFO 2020. This version defines the canonical Substance identity framework, molecular Substance hierarchy, core Alias/Identifier/Structure semantics, selected identifier systems, material properties, and application-domain ingredient concepts."@en ;
+                                                                rdfs:label "Substance Ontology"@en ;
+                                                                owl:versionInfo "0.2.0" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#alias_of
+:alias_of rdf:type owl:ObjectProperty ;
+          owl:inverseOf :has_alias ;
+          rdfs:domain :Alias ;
+          rdfs:range :Substance ;
+          rdfs:comment "Relates an Alias to the canonical Substance identity to which it refers."@en ;
+          rdfs:label "Alias of"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#has_alias
+:has_alias rdf:type owl:ObjectProperty ;
+           rdfs:domain :Substance ;
+           rdfs:range :Alias ;
+           rdfs:comment "Relates a canonical Substance to a lexical expression that refers to the same Substance identity."@en ;
+           rdfs:label "Has alias"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#has_identifier
+:has_identifier rdf:type owl:ObjectProperty ;
+                owl:inverseOf :identifier_of ;
+                rdfs:domain :Substance ;
+                rdfs:range :Identifier ;
+                rdfs:comment "Relates a canonical Substance to an Identifier whose referent has been validated to correspond to that same Substance identity at the appropriate semantic scope."@en ;
+                rdfs:label "Has identifier"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#has_ingredient_function
+:has_ingredient_function rdf:type owl:ObjectProperty ;
+                         rdfs:domain :IngredientConcept ;
+                         rdfs:range :IngredientFunction ;
+                         rdfs:comment "Relates an IngredientConcept to a function assigned to that ingredient within an application context."@en ;
+                         rdfs:label "Has ingredient function"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#has_property
+:has_property rdf:type owl:ObjectProperty ;
+              owl:inverseOf :property_of ;
+              rdfs:domain :Substance ;
+              rdfs:range :Property ;
+              rdfs:comment "Relates a Substance to a measurable Property applicable to or asserted for that Substance."@en ;
+              rdfs:label "Has property"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#has_structure
+:has_structure rdf:type owl:ObjectProperty ;
+               owl:inverseOf :structure_of ;
+               rdfs:domain :Substance ;
+               rdfs:range :Structure ;
+               rdfs:comment "Relates a canonical Substance to a structural representation accepted, following identity validation, as representing that canonical Substance identity."@en ;
+               rdfs:label "Has structure"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#identifier_of
+:identifier_of rdf:type owl:ObjectProperty ;
+               rdfs:domain :Identifier ;
+               rdfs:range :Substance ;
+               rdfs:comment "Relates an Identifier to the canonical Substance identity that it has been validated to identify."@en ;
+               rdfs:label "Identifier of"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#property_of
+:property_of rdf:type owl:ObjectProperty ;
+             rdfs:domain :Property ;
+             rdfs:range :Substance ;
+             rdfs:comment "Relates a Property to a Substance for which the Property is applicable or asserted."@en ;
+             rdfs:label "Property of"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#structure_of
+:structure_of rdf:type owl:ObjectProperty ;
+              rdfs:domain :Structure ;
+              rdfs:range :Substance ;
+              rdfs:comment "Relates a Structure to the canonical Substance identity that it has been accepted, following identity validation, as representing."@en ;
+              rdfs:label "Structure of"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#used_in_application
+:used_in_application rdf:type owl:ObjectProperty ;
+                     rdfs:domain :IngredientConcept ;
+                     rdfs:range :Application ;
+                     rdfs:comment "Relates an IngredientConcept to an application domain in which that ingredient concept is defined or used."@en ;
+                     rdfs:label "Used in application"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#alias_value
+:alias_value rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Alias ;
+             rdfs:range xsd:string ;
+             rdfs:comment "The lexical string used as an alternative name for a Substance."@en ;
+             rdfs:label "Alias value"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#canonicalIdentifier
+:canonicalIdentifier rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Substance ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Stable internal canonical identifier used to reference a Substance across the knowledge system."@en ;
+                     rdfs:label "Canonical identifier"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#identifier_type
+:identifier_type rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Identifier ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "The controlled identifier system or scheme under which the identifier value is defined. Explicit Identifier subclasses, such as InChIKey or CASRegistryNumber, provide the preferred ontology-level typing where available. This property is retained for backward compatibility and for unmapped or dynamically configured identifier systems without explicit subclasses; its value should not contradict the RDF class of the Identifier."@en ;
+                 rdfs:label "Identifier type"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#identifier_value
+:identifier_value rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Identifier ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "The lexical value assigned to an Identifier under its identification system."@en ;
+                  rdfs:label "Identifier value"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#inci
+:inci rdf:type owl:DatatypeProperty ,
+               owl:FunctionalProperty ;
+      rdfs:domain :CosmeticsIngredientConcept ;
+      rdfs:range xsd:string ;
+      rdfs:comment "The official INCI designation associated with a CosmeticsIngredientConcept."@en ;
+      rdfs:label "INCI"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#preferredName
+:preferredName rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Substance ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Preferred human-readable name used to display a Substance. This is not the canonical database identifier."@en ;
+               rdfs:label "Preferred name"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#status
+:status rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Substance ;
+        rdfs:range xsd:string ;
+        rdfs:comment "Internal lifecycle or resolution status of a canonical Substance identity."@en ;
+        rdfs:label "Status"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#structure_type
+:structure_type rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Structure ;
+                rdfs:range xsd:string ;
+                rdfs:comment "The controlled type of structural representation."@en ;
+                rdfs:label "Structure type"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#structure_value
+:structure_value rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Structure ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "The value or serialized representation of the Structure."@en ;
+                 rdfs:label "Structure value"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#Alias
+:Alias rdf:type owl:Class ;
+       rdfs:comment "A lexical expression that refers to the same canonical Substance identity as its preferred name."@en ;
+       rdfs:label "Alias"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#Application
+:Application rdf:type owl:Class ;
+             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> ;
+             rdfs:comment "An information concept representing a domain of application in which materials, ingredients, functions, products, or related information are used or interpreted."@en ;
+             rdfs:label "Application"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#BoilingPoint
+:BoilingPoint rdf:type owl:Class ;
+              rdfs:subClassOf :ThermalProperty ;
+              rdfs:comment "Temperature at which the vapor pressure of a liquid equals the surrounding pressure under specified conditions."@en ;
+              rdfs:label "Boiling point"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#Cosmetics
+:Cosmetics rdf:type owl:Class ;
+           rdfs:subClassOf :Application ;
+           rdfs:comment "An application domain concerned with cosmetic ingredients, formulations, and products."@en ;
+           rdfs:label "Cosmetics"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#CosmeticsIngredientConcept
+:CosmeticsIngredientConcept rdf:type owl:Class ;
+                            rdfs:subClassOf :IngredientConcept ;
+                            rdfs:comment "An IngredientConcept representing a canonical ingredient identity within the cosmetics domain."@en ;
+                            rdfs:label "Cosmetics ingredient concept"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#Density
+:Density rdf:type owl:Class ;
+         rdfs:subClassOf :PhysicalProperty ;
+         rdfs:comment "Mass per unit volume of a Substance or material under specified conditions."@en ;
+         rdfs:label "Density"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#ElectricalProperty
+:ElectricalProperty rdf:type owl:Class ;
+                    rdfs:subClassOf :Property ;
+                    rdfs:comment "A measurable Property describing the interaction of a Substance or material to an electric field, current flow, charge storage, or voltage stress."@en ;
+                    rdfs:label "Electrical property"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#Evidence
+:Evidence rdf:type owl:Class ;
+          rdfs:comment "Information supporting an assertion in the knowledge system."@en ;
+          rdfs:label "Evidence"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#Identifier
+:Identifier rdf:type owl:Class ;
+            rdfs:comment "An information artifact assigned according to a defined identification system or scheme to identify an entity at the semantic scope defined by that system."@en ;
+            rdfs:label "Identifier"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#IngredientConcept
+:IngredientConcept rdf:type owl:Class ;
+                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> ;
+                   rdfs:comment "A domain-scoped information concept representing a canonical ingredient identity within an application domain."@en ;
+                   rdfs:label "Ingredient concept"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#IngredientFunction
+:IngredientFunction rdf:type owl:Class ;
+                    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> ;
+                    rdfs:comment "An information concept representing a function assigned to an ingredient within an application context."@en ;
+                    rdfs:label "Ingredient function"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#IngredientRole
+:IngredientRole rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
+                rdfs:comment "A role borne by a material when it is intentionally used as an ingredient of a formulation or product."@en ;
+                rdfs:label "Ingredient role"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#InorganicMolecularSubstance
+:InorganicMolecularSubstance rdf:type owl:Class ;
+                             rdfs:subClassOf :MolecularSubstance ;
+                             rdfs:comment "A molecular substance classified as inorganic according to the applicable chemical classification framework."@en ;
+                             rdfs:label "Inorganic molecular substance"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#Material
+:Material rdf:type owl:Class ;
+          rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ;
+          rdfs:comment "A material entity represented within the materials/substance knowledge model."@en ;
+          rdfs:label "Material"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#Measurement
+:Measurement rdf:type owl:Class ;
+             rdfs:comment "A value or observation associated with a property, potentially under specified conditions."@en ;
+             rdfs:label "Measurement"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#MeltingPoint
+:MeltingPoint rdf:type owl:Class ;
+              rdfs:subClassOf :ThermalProperty ;
+              rdfs:comment "Temperature or temperature range at which a material undergoes transition from a solid state toward a liquid state under specified conditions."@en ;
+              rdfs:label "Melting point"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#MolecularSubstance
+:MolecularSubstance rdf:type owl:Class ;
+                    rdfs:subClassOf :Substance ;
+                    rdfs:comment "A substance whose material identity is primarily represented by a discrete chemically bonded molecular structure."@en ;
+                    rdfs:label "Molecular substance"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#OpticalProperty
+:OpticalProperty rdf:type owl:Class ;
+                 rdfs:subClassOf :Property ;
+                 rdfs:comment "A measurable Property describing the interaction of a Substance or material with electromagnetic radiation in the optical regime."@en ;
+                 rdfs:label "Optical property"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#OrganicMolecularSubstance
+:OrganicMolecularSubstance rdf:type owl:Class ;
+                           rdfs:subClassOf :MolecularSubstance ;
+                           rdfs:comment "A molecular substance classified as organic according to the applicable chemical classification framework."@en ;
+                           rdfs:label "Organic molecular substance"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#PhysicalProperty
+:PhysicalProperty rdf:type owl:Class ;
+                  rdfs:subClassOf :Property ;
+                  rdfs:comment "A measurable Property describing the physical behavior or state-dependent characteristics of a Substance or material."@en ;
+                  rdfs:label "Physical property"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#Property
+:Property rdf:type owl:Class ;
+          rdfs:comment "A physically measurable characteristic of a Substance or material that is relevant to its behavior, performance, or application."@en ;
+          rdfs:label "Property"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#RefractiveIndex
+:RefractiveIndex rdf:type owl:Class ;
+                 rdfs:subClassOf :OpticalProperty ;
+                 rdfs:comment "Ratio describing the propagation of light through a material relative to a reference medium under specified conditions."@en ;
+                 rdfs:label "Refractive index"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#Solubility
+:Solubility rdf:type owl:Class ;
+            rdfs:subClassOf :PhysicalProperty ;
+            rdfs:comment "Extent to which a Substance dissolves in a specified medium under specified conditions."@en ;
+            rdfs:label "Solubility"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#Structure
+:Structure rdf:type owl:Class ;
+           rdfs:comment "A machine-readable or otherwise formally specified representation of the structural organization of a canonical Substance."@en ;
+           rdfs:label "Structure"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#Substance
+:Substance rdf:type owl:Class ;
+           rdfs:subClassOf :Material ;
+           rdfs:comment "A canonical, reusable material identity that can be referred to independently across sources and is not dependent on a particular supplier, commercial product, application, batch, sample, formulation, or source document. Chemically or materially distinct recognized forms may constitute distinct Substance identities when the distinction is significant to the identity being represented."@en ;
+           rdfs:label "Substance"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#ThermalConductivity
+:ThermalConductivity rdf:type owl:Class ;
+                     rdfs:subClassOf :ThermalProperty ;
+                     rdfs:comment "Intrinsic ability to transfer or conduct heat energy."@en ;
+                     rdfs:label "Thermal conductivity"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#ThermalProperty
+:ThermalProperty rdf:type owl:Class ;
+                 rdfs:subClassOf :Property ;
+                 rdfs:comment "A measurable Property describing the response or behavior of a Substance or material with respect to temperature or thermal processes."@en ;
+                 rdfs:label "Thermal property"@en .
+
+
+###  urn:webprotege:ontology:2f93bcd3-5905-4dd8-9df9-3d50544f97f9#Viscosity
+:Viscosity rdf:type owl:Class ;
+           rdfs:subClassOf :PhysicalProperty ;
+           rdfs:comment "Resistance of a fluid material to flow under specified conditions."@en ;
+           rdfs:label "Viscosity"@en .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
+
+# Identity-policy clarifications and selected identifier systems (0.2.0).
+
+:Substance rdfs:comment "Identity-significant distinctions may include, where applicable: constitutional isomers; stereoisomers, including enantiomers and diastereomers; specified versus unspecified stereochemical forms; isotopic and isotopically labelled forms; protonation states; zwitterionic forms; salts and counterion forms; hydrates; solvates; tautomers; oxidation-state variants; coordination/complexed forms; radical or explicitly charged forms; multicomponent/adduct forms; and polymorphs or crystal phases where the material identity requires the distinction. These distinctions do not automatically require separate Substance identities in every context; they must be preserved and evaluated according to the applicable identity policy rather than silently normalized away."@en .
+
+:Substance rdfs:comment "Mere alternative representations do not by themselves create different Substance identities. Examples include different SMILES traversal/order, equivalent canonical versus noncanonical serialization, resonance/Kekulé representations, ordinary molecular conformers, and other representational differences that do not establish a different chemical/material identity."@en .
+
+:Alias rdfs:comment "A source synonym, related chemical name, broader class term, narrower form, salt/parent name, commercial product name, or otherwise associated lexical expression is not automatically an Alias. Alias status requires validation that the lexical expression denotes the same canonical Substance identity. Raw aliases remain candidate evidence until validated."@en .
+
+:Structure rdfs:comment "A candidate structure returned by OPSIN, PubChem, RDKit parsing, or another resolver must not automatically be asserted through has_structure until identity validation has occurred. Candidate evidence belongs in the resolver/evidence layer."@en .
+
+:Identifier rdfs:comment "Identification systems may identify entities at different semantic scopes or granularities, including a canonical Substance, a database chemical-structure record, a regulatory inventory entity, a domain-specific ingredient concept, or another defined information or material entity. An identifier encountered in a source is not automatically a Substance identifier. Association through has_identifier or identifier_of requires validation that its referent corresponds to the same canonical Substance identity at an appropriate granularity. Semantic scope is established through the identifier system, Identifier class, related entity, and future domain-specific modeling where justified."@en .
+
+:CASRegistryNumber a owl:Class ;
+    rdfs:subClassOf :Identifier ;
+    rdfs:label "CAS Registry Number"@en ;
+    rdfs:comment "An Identifier assigned within the CAS Registry system to a registered chemical substance or material entity."@en ,
+        "A CAS Registry Number does not necessarily map one-to-one to this ontology's canonical Substance. Semantic granularity must be validated before asserting identifier_of."@en .
+
+:ECNumber a owl:Class ;
+    rdfs:subClassOf :Identifier ;
+    rdfs:label "EC Number"@en ;
+    rdfs:comment "An Identifier used for chemical substances within European Community chemical inventory systems."@en ,
+        "An EC Number in source data does not automatically establish a canonical Substance mapping; the referent and semantic granularity require validation."@en .
+
+:InChI a owl:Class ;
+    rdfs:subClassOf :Identifier ;
+    rdfs:label "InChI"@en ;
+    rdfs:comment "An International Chemical Identifier representing chemical structural information according to the InChI standard."@en ,
+        "InChI is an Identifier, not a Structure subclass. Its lexical value is stored through identifier_value."@en .
+
+:InChIKey a owl:Class ;
+    rdfs:subClassOf :Identifier ;
+    rdfs:label "InChIKey"@en ;
+    rdfs:comment "A fixed-length hashed identifier derived from an InChI representation according to the InChI standard."@en ,
+        "An InChIKey is not itself the canonical Substance identifier. Different Substance identity policies may require distinctions not adequately represented by using an InChIKey alone."@en .
+
+:PubChemCID a owl:Class ;
+    rdfs:subClassOf :Identifier ;
+    rdfs:label "PubChem CID"@en ;
+    rdfs:comment "An Identifier assigned by PubChem to a PubChem Compound record."@en ,
+        "A PubChem CID is not automatically equivalent to this ontology's canonical Substance identity. Mapping its referent to a canonical Substance requires validation."@en .
+
+:ChEBIID a owl:Class ;
+    rdfs:subClassOf :Identifier ;
+    rdfs:label "ChEBI ID"@en ;
+    rdfs:comment "An Identifier assigned within the Chemical Entities of Biological Interest (ChEBI) resource to a ChEBI entity."@en ,
+        "Mapping a ChEBI entity to a canonical Substance requires validation of the referent and semantic granularity."@en .

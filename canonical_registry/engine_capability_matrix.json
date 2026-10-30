@@ -1,0 +1,202 @@
+[
+  {
+    "engine": "OPSIN",
+    "local_availability": "available for OPSIN",
+    "capabilities": {
+      "name_to_structure": {
+        "evidence": "DEMONSTRATED_LOCALLY",
+        "detail": "26 public local name probes"
+      },
+      "parsed_nomenclature": {
+        "evidence": "VERIFIED_IN_SOURCE_CODE",
+        "detail": "internal parser tree exists; no stable public provenance tree established"
+      },
+      "descriptor_ownership": {
+        "evidence": "VERIFIED_IN_SOURCE_CODE",
+        "detail": "private stereo application trace previously demonstrated only selected examples; no source spans or clone lineage"
+      },
+      "locant_to_atom": {
+        "evidence": "DEMONSTRATED_LOCALLY",
+        "detail": "CML and CX atom values, repeated and generated locants lack source ownership"
+      },
+      "source_span": {
+        "evidence": "NOT_ESTABLISHED",
+        "detail": "raw offsets not exposed in prior traces"
+      },
+      "source_specificity": {
+        "evidence": "NOT_ESTABLISHED",
+        "detail": "output does not certify explicit versus default choices"
+      },
+      "tautomer_representation": {
+        "evidence": "DEMONSTRATED_LOCALLY",
+        "detail": "pyridone/pyridinol FixedH differs, StdInChI equal; no source provenance"
+      },
+      "charge_protonation": {
+        "evidence": "DEMONSTRATED_LOCALLY",
+        "detail": "candidate ionic graph observed, not source charge assignment"
+      },
+      "components_stoichiometry": {
+        "evidence": "DEMONSTRATED_LOCALLY",
+        "detail": "components output, not complete component source trace"
+      },
+      "warnings": {
+        "evidence": "DEMONSTRATED_LOCALLY",
+        "detail": "public warning and ambiguity APIs observed; false is not proof unambiguous"
+      },
+      "programmatic_access": {
+        "evidence": "DEMONSTRATED_LOCALLY",
+        "detail": "Java API and CLI; private hooks need instrumentation"
+      }
+    }
+  },
+  {
+    "engine": "ACD/Labs Name",
+    "local_availability": "not established; no executable or Python module found in bounded check",
+    "capabilities": {
+      "name_to_structure": {
+        "evidence": "VENDOR_CLAIM_ONLY",
+        "detail": "name-to-structure product claim; locally unavailable"
+      },
+      "parsed_nomenclature": {
+        "evidence": "NOT_ESTABLISHED",
+        "detail": "name-to-structure parse tree not established"
+      },
+      "descriptor_ownership": {
+        "evidence": "NOT_ESTABLISHED",
+        "detail": "structure-to-name GUI highlighting is not input ownership"
+      },
+      "locant_to_atom": {
+        "evidence": "DOCUMENTED_GUI_ONLY",
+        "detail": "GUI generated numbering; input-name mapping not established"
+      },
+      "source_span": {
+        "evidence": "NOT_ESTABLISHED",
+        "detail": "no name input span API identified"
+      },
+      "source_specificity": {
+        "evidence": "NOT_ESTABLISHED",
+        "detail": "no explicit/default metadata identified"
+      },
+      "tautomer_representation": {
+        "evidence": "VENDOR_CLAIM_ONLY",
+        "detail": "vendor claims names and structures support; no local verification"
+      },
+      "charge_protonation": {
+        "evidence": "NOT_ESTABLISHED",
+        "detail": "source-to-atom ionic semantics not established"
+      },
+      "components_stoichiometry": {
+        "evidence": "NOT_ESTABLISHED",
+        "detail": "source component and stoichiometry trace not established"
+      },
+      "warnings": {
+        "evidence": "VENDOR_CLAIM_ONLY",
+        "detail": "vendor says ambiguous names may warn or offer alternatives; programmatic details unknown"
+      },
+      "programmatic_access": {
+        "evidence": "DOCUMENTED_PROGRAMMATIC_CAPABILITY",
+        "detail": "batch Windows/Linux documented; name-input semantic API not established"
+      }
+    }
+  },
+  {
+    "engine": "ChemAxon Name to Structure",
+    "local_availability": "not established; no executable or Python module found in bounded check",
+    "capabilities": {
+      "name_to_structure": {
+        "evidence": "DOCUMENTED_PROGRAMMATIC_CAPABILITY",
+        "detail": "MolImporter.importMol(name,\"name\") developer guide"
+      },
+      "parsed_nomenclature": {
+        "evidence": "NOT_ESTABLISHED",
+        "detail": "public grammar/parse tree not established"
+      },
+      "descriptor_ownership": {
+        "evidence": "NOT_ESTABLISHED",
+        "detail": "input descriptor ownership not established"
+      },
+      "locant_to_atom": {
+        "evidence": "NOT_ESTABLISHED",
+        "detail": "GUI IUPAC numbering is not evidence of mapping original name"
+      },
+      "source_span": {
+        "evidence": "NOT_ESTABLISHED",
+        "detail": "source-span provenance not established"
+      },
+      "source_specificity": {
+        "evidence": "NOT_ESTABLISHED",
+        "detail": "input-default metadata not established"
+      },
+      "tautomer_representation": {
+        "evidence": "NOT_ESTABLISHED",
+        "detail": "source-level tautomer preservation not established"
+      },
+      "charge_protonation": {
+        "evidence": "NOT_ESTABLISHED",
+        "detail": "source ionic atom mapping not established"
+      },
+      "components_stoichiometry": {
+        "evidence": "NOT_ESTABLISHED",
+        "detail": "component provenance not established"
+      },
+      "warnings": {
+        "evidence": "NOT_ESTABLISHED",
+        "detail": "API warning/completeness semantics not established"
+      },
+      "programmatic_access": {
+        "evidence": "DOCUMENTED_PROGRAMMATIC_CAPABILITY",
+        "detail": "Java API and CLI/microservices; naming license required"
+      }
+    }
+  },
+  {
+    "engine": "OpenEye Lexichem",
+    "local_availability": "not established; no executable or Python module found in bounded check",
+    "capabilities": {
+      "name_to_structure": {
+        "evidence": "DOCUMENTED_PROGRAMMATIC_CAPABILITY",
+        "detail": "OEParseIUPACName; boolean failure may yield partial molecule"
+      },
+      "parsed_nomenclature": {
+        "evidence": "NOT_ESTABLISHED",
+        "detail": "public parse tree not established"
+      },
+      "descriptor_ownership": {
+        "evidence": "NOT_ESTABLISHED",
+        "detail": "locant field does not itself establish descriptor or fragment ownership"
+      },
+      "locant_to_atom": {
+        "evidence": "DOCUMENTED_PROGRAMMATIC_CAPABILITY",
+        "detail": "OENameLocant / GetIntType document locant index on parsed atoms; source occurrence correspondence unestablished"
+      },
+      "source_span": {
+        "evidence": "NOT_ESTABLISHED",
+        "detail": "input character spans not established"
+      },
+      "source_specificity": {
+        "evidence": "NOT_ESTABLISHED",
+        "detail": "defaults vs explicit token metadata not established"
+      },
+      "tautomer_representation": {
+        "evidence": "NOT_ESTABLISHED",
+        "detail": "named tautomer provenance not established"
+      },
+      "charge_protonation": {
+        "evidence": "NOT_ESTABLISHED",
+        "detail": "name-to-ionic-site trace not established"
+      },
+      "components_stoichiometry": {
+        "evidence": "NOT_ESTABLISHED",
+        "detail": "component/stoichiometry source trace not established"
+      },
+      "warnings": {
+        "evidence": "NOT_ESTABLISHED",
+        "detail": "documented parse return boolean; complete ambiguity and warning behavior not established"
+      },
+      "programmatic_access": {
+        "evidence": "DOCUMENTED_PROGRAMMATIC_CAPABILITY",
+        "detail": "Python/Java/C++ SDK; license required"
+      }
+    }
+  }
+]

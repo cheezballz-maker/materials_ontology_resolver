@@ -1,0 +1,18 @@
+{
+  "external_contract_hashes": {
+    "opsin_jar": true,
+    "ontology": true,
+    "framework": true,
+    "schema": true,
+    "nonsecret_config": true,
+    "requirements": true
+  },
+  "unexpected_original_frozen_code_changes": [],
+  "frozen_input_hashes_unchanged": true,
+  "frozen_provider_cache_unchanged": true,
+  "case_specific_runtime_tokens": [],
+  "credential_leak_files": [],
+  "credential_scan": "PASS",
+  "note": "Resolver changed only to add the explicitly optional diagnostic hook; provider and schema source hashes remain unchanged.",
+  "pass": true
+}

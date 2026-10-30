@@ -1,0 +1,26 @@
+"""Assemble reported results without changing the frozen controls or implementations."""
+import hashlib,json,platform,subprocess
+from pathlib import Path
+from rdkit import rdBase
+H=Path(__file__).resolve().parent;ROOT=H.parent
+def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
+def write(n,x):(H/'evaluation'/n).write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf8')
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+dev=read(H/'evaluation/development_results.json');held=read(H/'evaluation/heldout_results.json');rows=dev['cases']+held['cases']
+dis=[]
+for row in rows:
+ if not row['agreement']:
+  dis.append({'id':row['id'],'source_name':row['source_name'],'expected':row['expected_result'],'architecture_A':row['A']['result'],'architecture_B':row['B']['result'],'cause':'A lacks proven final-operation closure; B uses source-derived bounded parent and alkyl templates with validated candidate comparison.','A_reason':row['A']['reason_codes'],'B_reason':row['B']['reason_codes']})
+write('disagreements.json',{'total':len(dis),'cases':dis})
+write('architecture_comparison.json',{'review_status':'CHEMICAL_REVIEW_PENDING','development':dev['counts'],'public_frozen_holdout':held['counts'],'genuinely_blinded':'NOT_RUN','disagreements':len(dis),'provisional_decision':'BENCHMARK_NOT_READY_FOR_DECISION','limitations':['Small non-blind controls, no qualified human review.','Architecture A abstains because operation closure is not proven.','Comparator-level graph tests do not establish all chemical semantics.','NSC-001 grammar matched zero of 81 historical withheld records.']})
+ext=[('additional heterocycles','A: new source-ownership and template validation','B: reviewed numbered templates and semantics'),('longer or branched alkyl','A: provenance and branch interpretation','B: generalized alkyl grammar and graph construction'),('multiple substituents','A: ownership/multiplication and closure','B: multiple ordered operations, locant scope and symmetry'),('added-H and suffixes','A: suffix-application provenance and resulting state','B: suffix grammar, transformations and mobile-H rules'),('charge and protonation','A: source-associated ionic claims','B: charged-state grammar and valence model'),('multicomponent','A: word rules, cloning and stoichiometry','B: component grammar, multiplicity and component comparison'),('stereo and isotope','A: descriptor ownership and stereo mapping','B: explicit descriptor grammar and symmetry-aware stereo/isotope mapping')]
+write('extensibility_assessment.json',{'status':'ESTIMATE_NOT_IMPLEMENTED','items':[{'extension':x,'architecture_A':a,'architecture_B':b} for x,a,b in ext],'recommended_next':'A separately grounded and frozen suffix / added-H contract for a narrowly defined monocyclic lactam/lactim class, with multiple independent parent families and explicit mobile-H boundaries; first quantify applicability without changing the grammar.'})
+write('test_results.json',{'run_status':'EXECUTED','tests':[{'suite':'Pinned OPSIN 2.9.0 baseline core','passed':680,'failed':0,'skipped':2},{'suite':'Source-aware instrumented OPSIN core','passed':680,'failed':0,'skipped':2},{'suite':'Prior indicated-H source provenance','passed':14,'failed':0,'skipped':0},{'suite':'Prior graph and operation controls','passed':11,'failed':0,'skipped':0},{'suite':'Prior common-parent and source-aware controls','passed':11,'failed':0,'skipped':0},{'suite':'Prior adapter and concurrency','passed':8,'failed':0,'skipped':0},{'suite':'New shared comparator, interface, A and B tests','passed':13,'failed':0,'skipped':0},{'suite':'Retained top-level resolver tests','passed':201,'failed':0,'skipped':0}], 'initial_development_failure':'One initial test run failed due to an explicit parent N hydrogen retained during substitution; corrected before development freeze and rerun.', 'safety':read(ROOT/'source_aware_substitution_poc/safety_results.json'), 'python':platform.python_version(),'rdkit':rdBase.rdkitVersion,'java_version':subprocess.run(['java','-version'],capture_output=True,text=True).stderr.splitlines()[0]})
+pre=read(H/'evaluation/pre_implementation_hashes.json')['files'];prod={n:sha(ROOT/n)==v for n,v in pre.items()}
+bench=read(H/'NSC-001/benchmark_freeze.json')['sha256'];controls={n:sha(H/n)==v for n,v in bench.items()}
+freeze=read(H/'evaluation/implementation_freeze.json')['sha256'];impl={n:sha(H/n)==v for n,v in freeze.items()}
+historical=read(ROOT/'source_aware_substitution_poc/completion_integrity.json')
+integrity={'selected_production_files_unchanged':prod,'benchmark_freeze_unchanged':controls,'implementation_unchanged_since_development_freeze':impl,'historical_contract_checks':historical,'registry_snapshot':'NOT_TAKEN: no registry writes issued; no full registry before/after digest claimed','provider_network_calls':'No resolver external-provider calls; chemistry authorities were consulted via public web during the task.','passed':all(prod.values()) and all(controls.values()) and all(impl.values()) and historical['pass']}
+write('integrity_report.json',integrity)
+assert integrity['passed']
+print(json.dumps({'integrity':'PASS','development':dev['counts'],'heldout':held['counts'],'disagreements':len(dis)},indent=2))

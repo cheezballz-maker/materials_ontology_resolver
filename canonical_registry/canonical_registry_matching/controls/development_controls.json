@@ -1,0 +1,524 @@
+{
+  "cases": [
+    {
+      "id": "D01",
+      "issue": "One equivalent among constitutionally different entries",
+      "source_graph": "CCO",
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "OCC"
+        },
+        {
+          "id": "FIX_2",
+          "graph": "COC"
+        },
+        {
+          "id": "FIX_3",
+          "graph": "c1ccccc1"
+        }
+      ],
+      "expected_status": "UNIQUE_CANONICAL_MATCH",
+      "source_category": "EXPLICIT",
+      "expected_ids": [
+        "FIX_1"
+      ],
+      "expected_admission": "AUTO_ACCEPT"
+    },
+    {
+      "id": "D02",
+      "issue": "Opposite enantiomer only",
+      "source_graph": "CC[C@@H](C)O",
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "CC[C@H](C)O"
+        }
+      ],
+      "expected_status": "NO_MATCH_IN_SEARCHED_REGISTRY",
+      "source_category": "EXPLICIT"
+    },
+    {
+      "id": "D03",
+      "issue": "Complete same stereo, reordered traversal",
+      "source_graph": "N[C@@H](C)C(=O)O",
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "C[C@H](N)C(O)=O"
+        }
+      ],
+      "expected_status": "UNIQUE_CANONICAL_MATCH",
+      "source_category": "EXPLICIT",
+      "expected_ids": [
+        "FIX_1"
+      ]
+    },
+    {
+      "id": "D04",
+      "issue": "Partial compatible cannot select exact",
+      "source_graph": "F[C@H](Cl)C(Br)I",
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "F[C@H](Cl)[C@H](Br)I"
+        }
+      ],
+      "expected_status": "MATCH_UNRESOLVED",
+      "source_category": "EXPLICIT"
+    },
+    {
+      "id": "D05",
+      "issue": "Partial known contradiction retained but source incomplete",
+      "source_graph": "F[C@H](Cl)C(Br)I",
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "F[C@@H](Cl)[C@H](Br)I"
+        }
+      ],
+      "expected_status": "MATCH_UNRESOLVED",
+      "source_category": "EXPLICIT",
+      "expected_chemical": [
+        "CHEMICALLY_DIFFERENT"
+      ]
+    },
+    {
+      "id": "D06",
+      "issue": "Tautomers share Standard InChI projection",
+      "source_graph": "O=c1cccc[nH]1",
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "Oc1ccccn1"
+        }
+      ],
+      "expected_status": "NO_MATCH_IN_SEARCHED_REGISTRY",
+      "source_category": "EXPLICIT"
+    },
+    {
+      "id": "D07",
+      "issue": "Heavy water versus water",
+      "source_graph": "[2H]O[2H]",
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "O"
+        }
+      ],
+      "expected_status": "NO_MATCH_IN_SEARCHED_REGISTRY",
+      "source_category": "EXPLICIT"
+    },
+    {
+      "id": "D08",
+      "issue": "Isotope position differs",
+      "source_graph": "[13CH3]CO",
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "C[13CH2]O"
+        }
+      ],
+      "expected_status": "NO_MATCH_IN_SEARCHED_REGISTRY",
+      "source_category": "EXPLICIT"
+    },
+    {
+      "id": "D09",
+      "issue": "Acid versus conjugate base",
+      "source_graph": "CC(=O)O",
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "CC(=O)[O-]"
+        }
+      ],
+      "expected_status": "NO_MATCH_IN_SEARCHED_REGISTRY",
+      "source_category": "EXPLICIT"
+    },
+    {
+      "id": "D10",
+      "issue": "Explicit salt versus parent",
+      "source_graph": "C[NH3+].[Cl-]",
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "CN"
+        }
+      ],
+      "expected_status": "NO_MATCH_IN_SEARCHED_REGISTRY",
+      "source_category": "EXPLICIT"
+    },
+    {
+      "id": "D11",
+      "issue": "Explicit water component stoichiometry",
+      "source_graph": "CCO.O",
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "CCO.O.O"
+        }
+      ],
+      "expected_status": "NO_MATCH_IN_SEARCHED_REGISTRY",
+      "source_category": "EXPLICIT"
+    },
+    {
+      "id": "D12",
+      "issue": "Equivalent duplicate canonical entries",
+      "source_graph": "CCO",
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "OCC"
+        },
+        {
+          "id": "FIX_2",
+          "graph": "CCO"
+        }
+      ],
+      "expected_status": "MULTIPLE_CANONICAL_MATCHES",
+      "source_category": "EXPLICIT",
+      "expected_ids": [
+        "FIX_1",
+        "FIX_2"
+      ]
+    },
+    {
+      "id": "D13",
+      "issue": "Equivalent plus invalid possible record",
+      "source_graph": "CCO",
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "CCO"
+        },
+        {
+          "id": "FIX_2",
+          "graph": "invalid graph"
+        }
+      ],
+      "expected_status": "MATCH_UNRESOLVED",
+      "source_category": "EXPLICIT"
+    },
+    {
+      "id": "D14",
+      "issue": "Unverified name/alias points at multiple entries",
+      "source_graph": null,
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "CCO",
+          "aliases": [
+            "alcohol"
+          ]
+        },
+        {
+          "id": "FIX_2",
+          "graph": "CO",
+          "aliases": [
+            "alcohol"
+          ]
+        }
+      ],
+      "expected_status": "MATCH_UNRESOLVED",
+      "source_category": "EXPLICIT",
+      "category_override": "BROAD",
+      "source_name": "alcohol"
+    },
+    {
+      "id": "D15",
+      "issue": "Empty indexed-only retrieval is incomplete",
+      "source_graph": "C#N",
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "CCO"
+        }
+      ],
+      "expected_status": "MATCH_UNRESOLVED",
+      "source_category": "EXPLICIT",
+      "retrieval": {
+        "exhaustive": false
+      }
+    },
+    {
+      "id": "D16",
+      "issue": "Complete bounded negative",
+      "source_graph": "C#N",
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "CCO"
+        }
+      ],
+      "expected_status": "NO_MATCH_IN_SEARCHED_REGISTRY",
+      "source_category": "EXPLICIT"
+    },
+    {
+      "id": "D17",
+      "issue": "Two established conflicting source assertions",
+      "source_graph": "CCO",
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "CCO"
+        },
+        {
+          "id": "FIX_2",
+          "graph": "COC"
+        }
+      ],
+      "expected_status": "SOURCE_CONFLICT",
+      "source_category": "EXPLICIT",
+      "conflicting_graph": "COC"
+    },
+    {
+      "id": "D18",
+      "issue": "Qualified name interpretation retains external requirement",
+      "source_graph": "CCO",
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "OCC"
+        }
+      ],
+      "expected_status": "UNIQUE_CANONICAL_MATCH",
+      "source_category": "EXPLICIT",
+      "category_override": "QUALIFIED_NAME",
+      "source_name": "ethanol",
+      "expected_ids": [
+        "FIX_1"
+      ],
+      "expected_admission": "UNRESOLVED",
+      "expected_reason": "NO_QUALIFYING_CORROBORATION"
+    },
+    {
+      "id": "D19",
+      "issue": "Qualified external name correspondence",
+      "source_graph": "CCO",
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "OCC"
+        }
+      ],
+      "expected_status": "UNIQUE_CANONICAL_MATCH",
+      "source_category": "EXPLICIT",
+      "category_override": "QUALIFIED_NAME",
+      "source_name": "ethanol",
+      "external_fixture": "QUALIFIED",
+      "expected_ids": [
+        "FIX_1"
+      ],
+      "expected_admission": "AUTO_ACCEPT"
+    },
+    {
+      "id": "D20",
+      "issue": "Known-dependent provider cannot qualify name route",
+      "source_graph": "CCO",
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "CCO"
+        }
+      ],
+      "expected_status": "UNIQUE_CANONICAL_MATCH",
+      "source_category": "EXPLICIT",
+      "category_override": "QUALIFIED_NAME",
+      "source_name": "ethanol",
+      "external_fixture": "KNOWN_DEPENDENT",
+      "expected_ids": [
+        "FIX_1"
+      ],
+      "expected_admission": "UNRESOLVED"
+    },
+    {
+      "id": "D21",
+      "issue": "Unknown dependence is existing policy behavior, not audited independence",
+      "source_graph": "CCO",
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "CCO"
+        }
+      ],
+      "expected_status": "UNIQUE_CANONICAL_MATCH",
+      "source_category": "EXPLICIT",
+      "category_override": "QUALIFIED_NAME",
+      "source_name": "ethanol",
+      "external_fixture": "UNKNOWN_DEPENDENCE",
+      "expected_ids": [
+        "FIX_1"
+      ],
+      "expected_admission": "AUTO_ACCEPT"
+    },
+    {
+      "id": "D22",
+      "issue": "Verified contradictory provider blocks admission",
+      "source_graph": "CC[C@@H](C)O",
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "CC[C@@H](C)O"
+        }
+      ],
+      "expected_status": "UNIQUE_CANONICAL_MATCH",
+      "source_category": "EXPLICIT",
+      "category_override": "QUALIFIED_NAME",
+      "source_name": "(R)-butan-2-ol",
+      "external_fixture": "CONTRADICTORY",
+      "expected_ids": [
+        "FIX_1"
+      ],
+      "expected_admission": "CONFLICT"
+    },
+    {
+      "id": "D23",
+      "issue": "Unsupported provider remains unqualified",
+      "source_graph": "CCO",
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "CCO"
+        }
+      ],
+      "expected_status": "UNIQUE_CANONICAL_MATCH",
+      "source_category": "EXPLICIT",
+      "category_override": "QUALIFIED_NAME",
+      "source_name": "ethanol",
+      "external_fixture": "UNSUPPORTED",
+      "expected_ids": [
+        "FIX_1"
+      ],
+      "expected_admission": "UNRESOLVED"
+    },
+    {
+      "id": "D24",
+      "issue": "Missing required official validation",
+      "source_graph": "CCO",
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "CCO"
+        }
+      ],
+      "expected_status": "UNIQUE_CANONICAL_MATCH",
+      "source_category": "EXPLICIT",
+      "missing_official": true,
+      "expected_ids": [
+        "FIX_1"
+      ],
+      "expected_admission": "UNRESOLVED",
+      "expected_reason": "OFFICIAL_INCHI_NOT_CONFIRMED"
+    },
+    {
+      "id": "D25",
+      "issue": "Matching alias cannot override unlike graph",
+      "source_graph": "CCO",
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "COC",
+          "aliases": [
+            "ethanol"
+          ]
+        }
+      ],
+      "expected_status": "NO_MATCH_IN_SEARCHED_REGISTRY",
+      "source_category": "EXPLICIT",
+      "source_name": "ethanol"
+    },
+    {
+      "id": "D26",
+      "issue": "Budget truncation cannot prove unique",
+      "source_graph": "CCO",
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "CCO"
+        },
+        {
+          "id": "FIX_2",
+          "graph": "COC"
+        }
+      ],
+      "expected_status": "MATCH_UNRESOLVED",
+      "source_category": "EXPLICIT",
+      "retrieval": {
+        "max_candidates": 1
+      }
+    },
+    {
+      "id": "D27",
+      "issue": "Broad glutamic acid name retrieves specific stereoisomers",
+      "source_graph": null,
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "N[C@@H](CCC(=O)O)C(=O)O",
+          "name": "L-glutamic acid"
+        },
+        {
+          "id": "FIX_2",
+          "graph": "N[C@H](CCC(=O)O)C(=O)O",
+          "name": "D-glutamic acid"
+        }
+      ],
+      "expected_status": "MATCH_UNRESOLVED",
+      "source_category": "EXPLICIT",
+      "category_override": "BROAD",
+      "source_name": "glutamic acid"
+    },
+    {
+      "id": "D28",
+      "issue": "Missing graph cannot be silently omitted",
+      "source_graph": "CCO",
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "CCO"
+        },
+        {
+          "id": "FIX_2",
+          "graph": null
+        }
+      ],
+      "expected_status": "MATCH_UNRESOLVED",
+      "source_category": "EXPLICIT"
+    },
+    {
+      "id": "D29",
+      "issue": "OPSIN-like generated hypothesis is not source-supplied",
+      "source_graph": "CCO",
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "CCO"
+        }
+      ],
+      "expected_status": "MATCH_UNRESOLVED",
+      "source_category": "EXPLICIT",
+      "category_override": "UNQUALIFIED_NAME",
+      "source_name": "ethanol"
+    },
+    {
+      "id": "D30",
+      "issue": "Unverified source binding cannot get explicit exemption",
+      "source_graph": "CCO",
+      "entries": [
+        {
+          "id": "FIX_1",
+          "graph": "CCO"
+        }
+      ],
+      "expected_status": "MATCH_UNRESOLVED",
+      "source_category": "EXPLICIT",
+      "unbound": true,
+      "expected_admission": "UNRESOLVED"
+    }
+  ],
+  "grounding": "Explicit independently specified source and disposable registry graphs; chemical boundaries grounded in existing ontology/framework and prior documentary controls. Expectations declared before matching implementation, not generated by resolver.",
+  "blinding": "PUBLIC_FROZEN_NOT_BLINDED",
+  "qualified_expert_review": "NOT_PERFORMED",
+  "cuma_independent": true,
+  "external_fixture_origin": "EXPLICITLY_SYNTHETIC_POLICY_EVIDENCE_NOT_REAL_CORROBORATION"
+}

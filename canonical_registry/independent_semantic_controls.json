@@ -1,0 +1,228 @@
+{
+  "version": "1.0",
+  "status": "FROZEN_EXPECTATIONS_NOT_EXECUTED",
+  "semantics": "Results apply only to the named operation; source conflicts are separately evaluated.",
+  "cases": [
+    {
+      "id": "D01",
+      "input_name": "1-methyl-1H-pyrazole",
+      "candidate_structure": "CN1C=CC=N1",
+      "candidate_format": "SMILES",
+      "expected_grammar_classification": "IN_CONTRACT",
+      "expected_source_constraints": [
+        "1H-pyrazole parent",
+        "N1-methyl"
+      ],
+      "expected_comparison_result": "SUPPORTED",
+      "scientific_justification": "N1 methyl replaces the indicated parent N1 hydrogen.",
+      "references": [
+        "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+        "https://pubchem.ncbi.nlm.nih.gov/compound/70255"
+      ],
+      "evaluation_context": {}
+    },
+    {
+      "id": "D02",
+      "input_name": "1-methyl-1H-imidazole",
+      "candidate_structure": "CN1C=CN=C1",
+      "candidate_format": "SMILES",
+      "expected_grammar_classification": "IN_CONTRACT",
+      "expected_source_constraints": [
+        "1H-imidazole parent",
+        "N1-methyl"
+      ],
+      "expected_comparison_result": "SUPPORTED",
+      "scientific_justification": "N1 methyl on a differently numbered diazole parent.",
+      "references": [
+        "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+        "https://pubchem.ncbi.nlm.nih.gov/compound/MCTWTZJPVLRJOU-UHFFFAOYSA-N"
+      ],
+      "evaluation_context": {}
+    },
+    {
+      "id": "D03",
+      "input_name": "1-methyl-1H-pyrazole",
+      "candidate_structure": "CC1=CC=NN1",
+      "candidate_format": "SMILES",
+      "expected_grammar_classification": "IN_CONTRACT",
+      "expected_source_constraints": [
+        "1H-pyrazole parent",
+        "N1-methyl"
+      ],
+      "expected_comparison_result": "DIFFERENT",
+      "scientific_justification": "Candidate has carbon methyl and NH instead of N1 methyl; IUPAC locants and two independently documented structures establish the difference.",
+      "references": [
+        "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+        "https://pubchem.ncbi.nlm.nih.gov/compound/1453-58-3"
+      ],
+      "evaluation_context": {}
+    },
+    {
+      "id": "D04",
+      "input_name": "1-methyl-1H-pyrazole",
+      "candidate_structure": "C1=CC(N(N1)C)=C1",
+      "candidate_format": "SMILES",
+      "expected_grammar_classification": "IN_CONTRACT",
+      "expected_source_constraints": [
+        "1H-pyrazole parent",
+        "N1-methyl"
+      ],
+      "expected_comparison_result": "UNKNOWN",
+      "scientific_justification": "Malformed candidate must not be used to infer a chemical contradiction.",
+      "references": [
+        "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+        "https://pubchem.ncbi.nlm.nih.gov/compound/70255"
+      ],
+      "evaluation_context": {}
+    },
+    {
+      "id": "D05",
+      "input_name": "methyl-1H-pyrazole",
+      "candidate_structure": "CN1C=CC=N1",
+      "candidate_format": "SMILES",
+      "expected_grammar_classification": "OUT_OF_CONTRACT",
+      "expected_source_constraints": [],
+      "expected_comparison_result": "UNKNOWN",
+      "scientific_justification": "The pilot requires an explicit substituent locant; exclusion alone does not decide chemical ambiguity.",
+      "references": [
+        "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+        "https://pubchem.ncbi.nlm.nih.gov/compound/70255"
+      ],
+      "evaluation_context": {}
+    },
+    {
+      "id": "D06",
+      "input_name": "1-methyl-1H-pyrazole hydrochloride",
+      "candidate_structure": "CN1C=CC=N1.Cl",
+      "candidate_format": "SMILES",
+      "expected_grammar_classification": "OUT_OF_CONTRACT",
+      "expected_source_constraints": [],
+      "expected_comparison_result": "UNKNOWN",
+      "scientific_justification": "The source contains an unhandled salt construction.",
+      "references": [
+        "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+        "https://pubchem.ncbi.nlm.nih.gov/compound/70255"
+      ],
+      "evaluation_context": {}
+    },
+    {
+      "id": "D07",
+      "input_name": "1-methyl-1H-pyrazol-3-one",
+      "candidate_structure": "CN1C=CC=N1",
+      "candidate_format": "SMILES",
+      "expected_grammar_classification": "OUT_OF_CONTRACT",
+      "expected_source_constraints": [],
+      "expected_comparison_result": "UNKNOWN",
+      "scientific_justification": "Suffix operation and added-H rules are excluded.",
+      "references": [
+        "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+        "https://pubchem.ncbi.nlm.nih.gov/compound/70255"
+      ],
+      "evaluation_context": {}
+    },
+    {
+      "id": "D08",
+      "input_name": "1-methyl-1H-pyrazole",
+      "candidate_structure": "[2H]C1=CC=NN1C",
+      "candidate_format": "SMILES",
+      "expected_grammar_classification": "IN_CONTRACT",
+      "expected_source_constraints": [
+        "1H-pyrazole parent",
+        "N1-methyl"
+      ],
+      "expected_comparison_result": "UNKNOWN",
+      "scientific_justification": "Candidate has isotope specificity outside the comparison contract; do not silently discard it.",
+      "references": [
+        "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+        "https://pubchem.ncbi.nlm.nih.gov/compound/70255"
+      ],
+      "evaluation_context": {}
+    },
+    {
+      "id": "D09",
+      "input_name": "1-methyl-1H-pyrazole",
+      "candidate_structure": "CN1C=CC=N1",
+      "candidate_format": "SMILES",
+      "expected_grammar_classification": "IN_CONTRACT",
+      "expected_source_constraints": [
+        "1H-pyrazole parent",
+        "N1-methyl"
+      ],
+      "expected_comparison_result": "UNKNOWN",
+      "scientific_justification": "Missing candidate correspondence cannot establish an operation result.",
+      "references": [
+        "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+        "https://pubchem.ncbi.nlm.nih.gov/compound/70255"
+      ],
+      "evaluation_context": {
+        "correspondence": "UNAVAILABLE"
+      }
+    },
+    {
+      "id": "D10",
+      "input_name": "1-methyl-1H-pyrazole",
+      "candidate_structure": "CN1C=CC=N1",
+      "candidate_format": "SMILES",
+      "expected_grammar_classification": "IN_CONTRACT",
+      "expected_source_constraints": [
+        "1H-pyrazole parent",
+        "N1-methyl"
+      ],
+      "expected_comparison_result": "SUPPORTED",
+      "scientific_justification": "Equivalent alternative Kekule/traversal serialization; structural mapping rather than string comparison.",
+      "references": [
+        "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+        "https://pubchem.ncbi.nlm.nih.gov/compound/70255"
+      ],
+      "evaluation_context": {
+        "alternate_candidate": "CN1N=CC=C1"
+      }
+    },
+    {
+      "id": "D11",
+      "input_name": "1-methyl-1H-pyrazole",
+      "candidate_structure": "CN1C=CC=N1",
+      "candidate_format": "SMILES",
+      "expected_grammar_classification": "IN_CONTRACT",
+      "expected_source_constraints": [
+        "1H-pyrazole parent",
+        "N1-methyl"
+      ],
+      "expected_comparison_result": "SUPPORTED",
+      "scientific_justification": "The stated claim alone matches; separate record-level conflict prevents identity admission.",
+      "references": [
+        "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+        "https://pubchem.ncbi.nlm.nih.gov/compound/70255"
+      ],
+      "evaluation_context": {
+        "second_source_name": "1-methyl-1H-imidazole",
+        "expected_record_resolution": "CONFLICT",
+        "second_claim_comparison": "DIFFERENT"
+      }
+    },
+    {
+      "id": "D12",
+      "input_name": "1-methyl-1H-pyrazole",
+      "candidate_structure": "CN1C=CC=N1",
+      "candidate_format": "SMILES",
+      "expected_grammar_classification": "IN_CONTRACT",
+      "expected_source_constraints": [
+        "1H-pyrazole parent",
+        "N1-methyl"
+      ],
+      "expected_comparison_result": "UNKNOWN",
+      "scientific_justification": "If candidate provenance leaves different operation outcomes under admissible mappings, do not pick one.",
+      "references": [
+        "https://iupac.qmul.ac.uk/BlueBook/P1.html#P-13.1",
+        "https://pubchem.ncbi.nlm.nih.gov/compound/70255"
+      ],
+      "evaluation_context": {
+        "correspondence": "SIMULATED_UNRESOLVED_SYMMETRY",
+        "mapping_predicates": [
+          true,
+          false
+        ]
+      }
+    }
+  ]
+}

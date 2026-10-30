@@ -1,0 +1,71 @@
+--- upstream/NameToStructure.java
++++ diagnostic/NameToStructure.java
+@@ -148,6 +148,7 @@
+ 		Fragment fragGeneratedWithWarning = null;
+ 		List<OpsinWarning> warnings = Collections.emptyList();
+ 		for(Element parse : parses) {
++            System.err.println("TRACE_PARSE_BEGIN");
+ 			try {
+ 				if (LOG.isDebugEnabled()) {
+ 					LOG.debug(parse.toXML());
+@@ -169,7 +170,8 @@
+ 					LOG.debug(parse.toXML());
+ 				}
+ 				if (state.getWarnings().isEmpty()) {
+-					return new OpsinResult(frag, OPSIN_RESULT_STATUS.SUCCESS, "", name);
++					System.err.println("TRACE_PARSE_SUCCESS");
++                    return new OpsinResult(frag, OPSIN_RESULT_STATUS.SUCCESS, "", name);
+ 				}
+ 				if (fragGeneratedWithWarning == null) {
+ 					//record first frag that had a warning but try other parses as they may work without a warning
+@@ -177,6 +179,7 @@
+ 					warnings = state.getWarnings();
+ 				}
+ 			} catch (Exception e) {
++                System.err.println("TRACE_PARSE_FAIL " + e.getClass().getSimpleName());
+ 				if (reasonForFailure.length() == 0) {
+ 					reasonForFailure = e.getMessage() != null ? e.getMessage() : "exception with null message";
+ 				}
+--- upstream/StereochemistryHandler.java
++++ diagnostic/StereochemistryHandler.java
+@@ -298,6 +298,21 @@
+ 	 * @throws StructureBuildingException
+ 	 * @throws StereochemistryException 
+ 	 */
++	private void diagnostic(String event, Element stereo, Fragment frag, String locant) {
++        Atom selected = locant == null ? null : frag.getAtomByLocant(locant);
++        ArrayList<Integer> eligible = new ArrayList<>();
++        if (locant != null) for (Atom atom : atomStereoCentreMap.keySet())
++            if (atom.getLocants().contains(locant)) eligible.add(atom.getID());
++        Collections.sort(eligible);
++        Element token = frag.getTokenEl();
++        String v = event + "|descriptor=" + stereo.toXML() + "|scope=" + stereo.getParent().toXML()
++            + "|fragment=" + (token == null ? "null" : token.toXML())
++            + "|fragmentIdentity=" + System.identityHashCode(frag)
++            + "|locant=" + locant + "|selectedAtom=" + (selected == null ? "null" : selected.getID())
++            + "|eligibleInFragment=" + (selected != null && notExplicitlyDefinedStereoCentreMap.containsKey(selected))
++            + "|allPotentialAtomIdsWithLocant=" + eligible;
++        System.err.println("TRACE_STEREO " + java.util.Base64.getEncoder().encodeToString(v.getBytes(java.nio.charset.StandardCharsets.UTF_8)));
++    }
+ 	private void assignStereoCentre(Element stereoChemistryEl) throws StructureBuildingException, StereochemistryException {
+ 		//generally the LAST group in this list will be the appropriate group e.g. (5S)-5-ethyl-6-methylheptane where the heptane is the appropriate group
+ 		//we use the same algorithm as for unlocanted substitution so as to deprecate assignment into brackets
+@@ -311,8 +326,10 @@
+ 		String rOrS = stereoChemistryEl.getAttributeValue(VALUE_ATR);
+ 		String grpStr = stereoChemistryEl.getAttributeValue(STEREOGROUP_ATR);
+ 		StereoGroupType grpType = grpStr != null ? StereoGroupType.valueOf(grpStr) : StereoGroupType.Unk;
++		for (Fragment possible : possibleFragments) diagnostic("CONSIDER", stereoChemistryEl, possible, locant);
+ 		for (Fragment fragment : possibleFragments) {
+ 			if (attemptAssignmentOfStereoCentreToFragment(fragment, rOrS, locant, grpType)) {
++                diagnostic("SELECT", stereoChemistryEl, fragment, locant);
+ 				return;
+ 			}
+ 		}
+@@ -325,6 +342,7 @@
+ 				List<Element> possibleGroups = OpsinTools.getDescendantElementsWithTagName(word, GROUP_EL);
+ 				for (int i = possibleGroups.size()-1; i >=0; i--) {
+ 					if (attemptAssignmentOfStereoCentreToFragment(possibleGroups.get(i).getFrag(), rOrS, locant, grpType)) {
++                        diagnostic("SELECT_FALLBACK", stereoChemistryEl, possibleGroups.get(i).getFrag(), locant);
+ 						return;
+ 					}
+ 				}

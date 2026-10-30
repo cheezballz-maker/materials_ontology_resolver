@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "IdentityEvidence v1",
+  "type": "object",
+  "required": [
+    "evidence_id",
+    "source_id",
+    "source_record_id",
+    "claim_id",
+    "claim_role",
+    "evidence_type",
+    "referent_id",
+    "original_value",
+    "source_provenance",
+    "derivation_dependencies",
+    "unresolved_dependencies",
+    "dimension_assertions"
+  ],
+  "properties": {
+    "evidence_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_record_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "claim_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "claim_role": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "referent_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "original_value": {},
+    "source_provenance": {
+      "type": "object",
+      "required": [
+        "origin",
+        "role_established",
+        "interpretation_basis"
+      ],
+      "properties": {
+        "origin": {
+          "enum": [
+            "SOURCE_PROVIDED",
+            "DERIVED_SOURCE",
+            "CANDIDATE_DERIVED",
+            "EXTERNAL_REFERENCE"
+          ]
+        },
+        "role_established": {
+          "type": "boolean"
+        },
+        "interpretation_basis": {
+          "enum": [
+            "SOURCE_TYPED_STRUCTURE",
+            "RULE_ESTABLISHED",
+            "UNVERIFIED"
+          ]
+        }
+      }
+    },
+    "derivation_dependencies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "unresolved_dependencies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dimension_assertions": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "state",
+          "rule_id"
+        ],
+        "properties": {
+          "state": {
+            "enum": [
+              "EXACT",
+              "SET",
+              "UNSPECIFIED",
+              "UNKNOWN",
+              "NOT_APPLICABLE"
+            ]
+          },
+          "structures": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "framework": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "scope": {
+            "enum": [
+              "DEFINED_VALUES",
+              "ALL_WITHIN_FRAMEWORK"
+            ]
+          },
+          "rule_id": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false,
+  "description": "Interpretation basis is a provenance assertion from a trusted adapter, not a calculated confidence score. Schema validity is not scientific validation. Dependency and chemical-scope checks are enforced by runtime logic."
+}
