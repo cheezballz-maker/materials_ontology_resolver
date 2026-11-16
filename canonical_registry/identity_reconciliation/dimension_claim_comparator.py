@@ -1,12 +1,12 @@
 """Compare established dimension assertions, never derive name specificity."""
 from rdkit import Chem
-from chemistry import describe
+from chemistry import describe, hydrogen_comparison_smiles
 from form_characterizer import characterize
 from charge_comparison_attribution import compare as structural_compare
 KEYS={'constitution':'connectivity','stereochemistry':'stereochemistry','tautomer':'tautomeric_form','protonation_charge':'protonation_charge','isotope':'isotope_specification','components':'components','component_stoichiometry':'component_stoichiometry','hydration_solvation':'component_stoichiometry','electronic_state':'electronic_state'}
 
 def _frame(smiles,dimension):
-    m=Chem.MolFromSmiles(smiles)
+    m=Chem.MolFromSmiles(hydrogen_comparison_smiles(smiles))
     if m is None:raise ValueError('INVALID_FRAMEWORK')
     if dimension=='stereochemistry':Chem.RemoveStereochemistry(m)
     elif dimension=='isotope':
@@ -26,7 +26,9 @@ def _exact(a,b,dimension):
         # Single-component stoichiometry is still comparable when actual
         # source graphs are available; it does not mean arbitrary forms agree.
         if dimension in ('components','component_stoichiometry','hydration_solvation'):
-            return 'EQUIVALENT' if Chem.MolToSmiles(Chem.MolFromSmiles(a))==Chem.MolToSmiles(Chem.MolFromSmiles(b)) else 'UNKNOWN'
+            return 'EQUIVALENT' if x['smiles']==y['smiles'] or (
+                hydrogen_comparison_smiles(x['smiles']) == hydrogen_comparison_smiles(y['smiles'])
+            ) else 'UNKNOWN'
         return 'EQUIVALENT'
     return val
 

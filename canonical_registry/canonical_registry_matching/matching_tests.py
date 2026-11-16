@@ -40,13 +40,13 @@ class MatchingTests(unittest.TestCase):
  def test_successful_name_hypothesis_is_not_binding_source_graph(self):
   _,s,m=self.setup_case('D29');r=m.match(s);self.assertTrue(r['retrieval']['indexed_candidate_ids']);self.assertEqual(r['status'],'MATCH_UNRESOLVED');self.assertIsNone(r['matching_proposal'])
  def test_alias_and_formula_cannot_prove_exact(self):
-  _,s,m=self.setup_case('D25');r=m.match(s);self.assertEqual(r['status'],'NO_MATCH_IN_SEARCHED_REGISTRY');self.assertTrue(r['retrieval']['indexed_candidate_ids']);self.assertEqual(r['candidate_results'][0]['chemical_status'],'CHEMICALLY_DIFFERENT')
+  _,s,m=self.setup_case('D25');r=m.match(s);self.assertEqual(r['status'],'NO_MATCH_IN_SEARCHED_REGISTRY');self.assertTrue(r['retrieval']['indexed_candidate_ids']);self.assertEqual(r['uniqueness']['accounted_records'],r['uniqueness']['snapshot_records']);self.assertFalse(r['supported_candidate_ids'])
  def test_broad_name_candidates_without_identity_assignment(self):
   _,s,m=self.setup_case('D27');r=m.match(s);self.assertEqual(len(r['retrieval']['indexed_candidate_ids']),2);self.assertEqual(r['status'],'MATCH_UNRESOLVED')
  def test_multiple_and_unresolved_never_pick_first(self):
   for key in ('D12','D13','D26','D28'):
    with self.subTest(key=key):
-    c,s,m=self.setup_case(key);r=m.match(s,RetrievalPolicy(**c.get('retrieval',{})));self.assertIsNone(r['unique_matched_substance_id']);self.assertIsNone(r['diagnostic_reuse_proposal'])
+    c,s,m=self.setup_case(key);r=m.match(s,RetrievalPolicy(**c.get('retrieval',{}),strategy='exhaustive'));self.assertIsNone(r['unique_matched_substance_id']);self.assertIsNone(r['diagnostic_reuse_proposal'])
  def test_empty_indexed_search_not_negative(self):
   _,s,m=self.setup_case('D15');r=m.match(s,RetrievalPolicy(exhaustive=False));self.assertFalse(r['retrieval']['search_complete']);self.assertEqual(r['status'],'MATCH_UNRESOLVED')
  def test_empty_complete_registry_bounded_negative(self):

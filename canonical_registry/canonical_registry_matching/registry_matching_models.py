@@ -8,9 +8,15 @@ class RetrievalPolicy:
  exhaustive:bool=True
  max_candidates:int|None=None
  allow_exploratory_names:bool=True
+ strategy:str="indexed"
  def validate(self):
+  if self.strategy not in ('indexed','exhaustive'):raise ValueError('INVALID_RETRIEVAL_STRATEGY')
   if self.max_candidates is not None and self.max_candidates<1:raise ValueError('INVALID_CANDIDATE_LIMIT')
   return self
+ def identity_policy(self):
+  """Retrieval implementation is not a change to the persisted chemical request."""
+  return dict(exhaustive=self.exhaustive,max_candidates=self.max_candidates,
+              allow_exploratory_names=self.allow_exploratory_names)
 
 @dataclass
 class MatchingInput:
@@ -34,6 +40,8 @@ class CandidateRetrievalResult:
  exhaustive_requested:bool
  truncated:bool
  records_without_valid_single_graph:list
+ excluded_candidate_ids:list=field(default_factory=list)
+ completeness_basis:str='EXHAUSTIVE_COMPARISON'
  qualification_note:str='All routes generate candidates only; no route establishes equivalence.'
  def to_dict(self):return asdict(self)
 

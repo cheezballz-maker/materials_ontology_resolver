@@ -5,6 +5,32 @@ from rdkit import Chem
 from rdkit.Chem import rdMolDescriptors, inchi
 from rdkit.Chem.MolStandardize import rdMolStandardize as ms
 
+class ChemicalValidationError(ValueError):
+    """A known failure at a particular chemical validation step."""
+
+    def __init__(self, code, operation, message):
+        super().__init__(message)
+        self.code = code
+        self.operation = operation
+
+
+def hydrogen_comparison_graph(mol):
+    """Expand only the isolated neutral protium H-count spelling of H2."""
+    indices = [
+        atom.GetIdx() for atom in mol.GetAtoms()
+        if atom.GetAtomicNum() == 1 and atom.GetDegree() == 0
+        and atom.GetTotalNumHs() == 1 and atom.GetIsotope() == 0
+        and atom.GetFormalCharge() == 0 and atom.GetNumRadicalElectrons() == 0
+    ]
+    return Chem.AddHs(mol, onlyOnAtoms=indices) if indices else mol
+
+
+def hydrogen_comparison_smiles(smiles):
+    if '[HH]' not in smiles:
+        return smiles
+    return Chem.MolToSmiles(hydrogen_comparison_graph(parse(smiles)), isomericSmiles=True)
+
+
 def normalize_name(value):
     return ' '.join(unicodedata.normalize('NFC', value).split())
 
@@ -30,14 +56,24 @@ def parse(value, kind='smiles'):
     Chem.SanitizeMol(m)
     return m
 
+def _inchi_projection(mol, operation, options=''):
+    from rdkit.Chem import rdinchi
+    try:
+        value, code, message, _, _ = rdinchi.MolToInchi(mol, options)
+    except (ValueError, RuntimeError) as exc:
+        raise ChemicalValidationError('INCHI_GENERATION_FAILED', operation, 'InChI generation failed: ' + str(exc)) from exc
+    if code > 1 or not value:
+        raise ChemicalValidationError('INCHI_GENERATION_FAILED', operation, 'InChI generation failed: ' + (message or 'No InChI returned'))
+    return value, message
+
+
 def describe(value,kind='smiles'):
     m=parse(value,kind)
-    from rdkit.Chem import rdinchi
-    std,code,message,log,aux=rdinchi.MolToInchi(m)
-    if code>1 or not std: raise ValueError('InChI generation failed: '+message)
+    std,message=_inchi_projection(m,'STANDARD_INCHI')
+    fixed,_=_inchi_projection(m,'FIXED_H_INCHI','/FixedH')
     return dict(original_input=value,input_type=kind,smiles=Chem.MolToSmiles(m,canonical=True,isomericSmiles=True),
         canonical_smiles=Chem.MolToSmiles(m,canonical=True,isomericSmiles=False),
-        inchi=std,inchikey=Chem.InchiToInchiKey(std),fixed_h_inchi=Chem.MolToInchi(m,options='/FixedH'),
+        inchi=std,inchikey=Chem.InchiToInchiKey(std),fixed_h_inchi=fixed,
         formula=rdMolDescriptors.CalcMolFormula(m),charge=Chem.GetFormalCharge(m),
         components=len(Chem.GetMolFrags(m)),atoms=m.GetNumHeavyAtoms(),
         isotopes=[(a.GetIdx(),a.GetIsotope()) for a in m.GetAtoms() if a.GetIsotope()],

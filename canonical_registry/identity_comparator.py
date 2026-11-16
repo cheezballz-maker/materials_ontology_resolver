@@ -1,11 +1,15 @@
 """Dimension-wise structural identity contract; no name/provider/registry policy."""
-from chemistry import comparison_views
+from chemistry import comparison_views, hydrogen_comparison_smiles
 from form_characterizer import characterize,SOLVENTS
 
 E='EQUIVALENT';D='DIFFERENT';U='UNKNOWN';N='NOT_APPLICABLE'
 
 def compare(a,b):
-    x,y=characterize(a),characterize(b)
+    # Only the temporary comparison descriptors use explicit H2 bonds.
+    left, right = hydrogen_comparison_smiles(a['smiles']), hydrogen_comparison_smiles(b['smiles'])
+    a_view = {**a, 'smiles': left} if left != a['smiles'] else a
+    b_view = {**b, 'smiles': right} if right != b['smiles'] else b
+    x,y=characterize(a_view),characterize(b_view)
     same_graph=bool(set(x['resonance_forms']) & set(y['resonance_forms']))
     achiral_same=bool(set(x['resonance_without_stereo_isotope']) & set(y['resonance_without_stereo_isotope']))
     skeleton=x['connectivity']==y['connectivity']
@@ -29,7 +33,7 @@ def compare(a,b):
     if same_graph or achiral_same:dims['tautomeric_form']=E
     elif not skeleton:dims['tautomeric_form']=U
     elif complete:
-        av,bv=comparison_views(a),comparison_views(b)
+        av,bv=comparison_views(a_view),comparison_views(b_view)
         if isinstance(av.get('tautomer'),str) and av['tautomer']==bv.get('tautomer'):
             dims['tautomeric_form']=D;codes.append('TAUTOMER_DIFFERENT');relations.append('TAUTOMER_RELATED')
         else:

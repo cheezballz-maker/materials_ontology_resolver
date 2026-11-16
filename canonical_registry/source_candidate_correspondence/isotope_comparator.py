@@ -8,7 +8,7 @@ from collections import Counter
 from types import FunctionType
 import bootstrap
 from rdkit import Chem
-from chemistry import parse,describe
+from chemistry import parse,describe,hydrogen_comparison_graph
 import dimension_claim_comparator as legacy
 import source_claim_reconciler as core
 
@@ -17,7 +17,7 @@ def isotope_inventory(text):
 
 def framework(text,dimension='isotope'):
  if dimension!='isotope':return legacy._frame(text,dimension)
- m=Chem.Mol(parse(text))
+ m=Chem.Mol(hydrogen_comparison_graph(parse(text)))
  for atom in m.GetAtoms():atom.SetIsotope(0)
  # Previously labelled H nodes are now ordinary H and can be represented by
  # H counts. Never perform this on the original isotope-bearing graph.

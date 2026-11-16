@@ -16,10 +16,12 @@ ROOT=Path(__file__).resolve().parent
 DEFAULT_JAR=ROOT.parent/'opsin-master/opsin-cli/target/opsin-cli-3.0-SNAPSHOT-jar-with-dependencies.jar'
 
 class Bridge:
-    def __init__(self,jar=DEFAULT_JAR,timeout=10):
+    def __init__(self,jar=DEFAULT_JAR,timeout=10,*,build_directory=None):
         self.jar=Path(jar); self.timeout=timeout; self.p=None
+        self.build_directory=Path(build_directory) if build_directory is not None else ROOT
         self.digest=hashlib.sha256(self.jar.read_bytes()).hexdigest()
-        subprocess.run(['javac','-cp',str(self.jar),str(ROOT/'RegistryBridge.java')],check=True,capture_output=True,timeout=30)
+        subprocess.run(['javac','-cp',str(self.jar),'-d',str(self.build_directory),str(ROOT/'RegistryBridge.java')],
+                       check=True,capture_output=True,timeout=30)
     def close(self):
         if self.p:
             self.p.kill(); self.p.wait()
@@ -28,7 +30,7 @@ class Bridge:
     def request(self,kind,value):
         if self.p is None:
             self.q=queue.Queue()
-            self.p=subprocess.Popen(['java','-Xmx512m','-cp',str(ROOT)+';'+str(self.jar),'RegistryBridge'],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,encoding='utf-8')
+            self.p=subprocess.Popen(['java','-Xmx512m','-cp',str(self.build_directory)+';'+str(self.jar),'RegistryBridge'],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,encoding='utf-8')
             p,q=self.p,self.q
             threading.Thread(target=lambda: [q.put(x.rstrip('\n')) for x in p.stdout],daemon=True).start()
             # Drain stderr to prevent a blocked JVM, retaining transport diagnostics.

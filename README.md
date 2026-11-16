@@ -5,13 +5,14 @@ Canonical molecular Substance resolution, read-only registry matching, and contr
 Start with:
 
 - [Controlled identity reuse](canonical_registry/CONTROLLED_CANONICAL_IDENTITY_REUSE_V1_REPORT.md)
+- [Stage C v5 monitored evaluation](canonical_registry/STAGE_C_V5_EVIDENCE_COVERAGE_AND_MONITORED_EXPANSION_REPORT.md)
 - [Read-only canonical matching](canonical_registry/CANONICAL_REGISTRY_MATCHING_V1_REPORT.md)
 - [Chemical correspondence hardening](canonical_registry/CHEMICAL_CORRESPONDENCE_HARDENING_AND_VALIDATION_V1_REPORT.md)
 - [Resolver setup](canonical_registry/README.md)
 - [Ontology](ontology/substance_ontology.ttl)
 - [Publication and local-data notes](PUBLICATION_NOTES.md)
 
-The latest association implementation is fixture-only. It does not authorize production writes or create canonical Substance identities.
+Stage C evaluation creates Substance identities in isolated SQLite fixtures. The v5 report documents the phase 2 stop and the quarantined mapping.
 
 ## Local setup
 

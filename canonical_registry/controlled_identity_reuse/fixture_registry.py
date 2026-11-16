@@ -32,6 +32,9 @@ def connect(permit):
   row=db.execute('SELECT token_hash FROM fixture_authorization WHERE fixture_id=?',(permit.fixture_id,)).fetchone()
   if not row or row[0]!=hashlib.sha256(permit.token.encode()).hexdigest():raise PermissionError('FIXTURE_AUTHORIZATION_REQUIRED')
   db.execute('PRAGMA foreign_keys=ON')
+  if os.environ.get('RESOLVER_POC_SQLITE_READ_CACHE')=='1':
+   db.execute('PRAGMA cache_size=-65536')
+   db.execute('PRAGMA mmap_size=2147418112')
   def authorize(action,arg1,arg2,dbname,trigger):
    if action in (sqlite3.SQLITE_INSERT,sqlite3.SQLITE_UPDATE,sqlite3.SQLITE_DELETE) and arg1 in CANONICAL:return sqlite3.SQLITE_DENY
    if action in (sqlite3.SQLITE_ATTACH,sqlite3.SQLITE_DETACH,sqlite3.SQLITE_DROP_TABLE,sqlite3.SQLITE_ALTER_TABLE):return sqlite3.SQLITE_DENY

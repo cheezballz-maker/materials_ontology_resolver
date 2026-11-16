@@ -1,5 +1,9 @@
 """No voting, IDs, provider calls or alias writes; partial evidence combines by dimension."""
 from dimension_claim_comparator import compare_assertions
+
+def _validate_claim(claim):
+    claim.validate()
+
 def reconcile(claims,candidate_assertions,required_dimensions,referent_id):
     byid={c.evidence_id:c for c in claims};obligations=[];comparisons=[];roots={};support={d:[] for d in required_dimensions};incompatible=[];broad=[];usable=[];pairwise=[]
     if len(byid)!=len(claims):raise ValueError('DUPLICATE_EVIDENCE_ID')
@@ -12,7 +16,7 @@ def reconcile(claims,candidate_assertions,required_dimensions,referent_id):
         if not c.derivation_dependencies:return {cid}
         return set().union(*(lineage(d,path+(cid,)) for d in c.derivation_dependencies))
     for c in claims:
-        c.validate();p=c.source_provenance;role=c.claim_role;established=p.get('role_established') is True
+        _validate_claim(c);p=c.source_provenance;role=c.claim_role;established=p.get('role_established') is True
         dims=set(c.dimension_assertions) or set(required_dimensions)
         if c.referent_id!=referent_id:raise ValueError('REFERENT_LINK_NOT_ESTABLISHED')
         if p.get('origin')=='CANDIDATE_DERIVED':

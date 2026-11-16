@@ -7,7 +7,7 @@ from dataclasses import dataclass,field
 import bootstrap
 from identity_evidence_models import IdentityEvidence,DIMENSIONS
 from evidence_adapters import assertion,candidate_assertions
-from chemistry import describe
+from chemistry import ChemicalValidationError, describe
 
 VERSION='1.0'
 SCOPES=('RECORD_STRUCTURE','TERMINOLOGY','INCOMING_CONCEPT')
@@ -39,12 +39,21 @@ def evidence(pkg,key,role,value,path,*,binding='ACTIVE_UNRESOLVED_CLAIM',basis='
 def structural_field(pkg,key,value,path,*,qualified=True,dependencies=(),representation='EXPLICIT_SOURCE_GRAPH',limited=False):
  c=evidence(pkg,key,'STRUCTURAL_IDENTITY_ASSERTION' if qualified else 'UNKNOWN_ROLE',value,path,binding='BINDING_IDENTITY_ASSERTION' if qualified else 'ACTIVE_UNRESOLVED_CLAIM',basis='SOURCE_TYPED_STRUCTURE' if qualified else 'UNVERIFIED',established=qualified,dependencies=dependencies,extra={'representation':representation,'assertion_scope':'REPRESENTED_GRAPH_ONLY','solid_phase':'NOT_ESTABLISHED','original_form_preservation':'NOT_ESTABLISHED'})
  if qualified:
+  d=None
   try:
    d=describe(value);c.dimension_assertions=candidate_assertions(value)
    if limited:
     c.dimension_assertions={k:v for k,v in c.dimension_assertions.items() if k in ('constitution','components','component_stoichiometry')}
    pkg.observations.append(dict(evidence_id=c.evidence_id,kind='VALIDATED_GRAPH_ATTRIBUTES',attributes=d,identity_scope='Explicit graph, not source name specificity, original SID form, or solid phase'))
-  except Exception as exc:c.unresolved_dependencies=['STRUCTURE_INVALID_OR_UNSUPPORTED:'+str(exc)]
+  except ChemicalValidationError as exc:
+   c.unresolved_dependencies=['STRUCTURE_INVALID_OR_UNSUPPORTED:'+exc.code+':'+str(exc)]
+   failure=dict(kind='STRUCTURE_VALIDATION_FAILURE',evidence_id=c.evidence_id,code=exc.code,
+                operation=exc.operation,message=str(exc))
+   if d is not None:
+    failure['partial_descriptor']=d
+   pkg.observations.append(failure)
+  except (ValueError, RuntimeError) as exc:
+   c.unresolved_dependencies=['STRUCTURE_INVALID_OR_UNSUPPORTED:'+str(exc)]
  else:c.unresolved_dependencies=['FIELD_PROVENANCE_UNESTABLISHED']
  return pkg.add(c,ALL)
 

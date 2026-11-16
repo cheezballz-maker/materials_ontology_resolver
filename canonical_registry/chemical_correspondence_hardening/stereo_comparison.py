@@ -6,7 +6,7 @@ Unsupported stereo and truncated symmetry enumeration always abstain.
 """
 import bootstrap
 from rdkit import Chem
-from chemistry import parse
+from chemistry import hydrogen_comparison_graph, parse
 import isotope_comparator as previous
 
 LIMIT=4096
@@ -18,12 +18,32 @@ def _atom(a):
 
 def _bond(b):return (str(b.GetBondType()),b.GetIsAromatic())
 
-def _supported(m):
+def _supported(m, potential):
  if m.GetStereoGroups():return False
  if any(a.GetChiralTag() not in (Chem.ChiralType.CHI_UNSPECIFIED,CW,CCW) for a in m.GetAtoms()):return False
  ordinary=(Chem.BondStereo.STEREONONE,Chem.BondStereo.STEREOE,Chem.BondStereo.STEREOZ,Chem.BondStereo.STEREOCIS,Chem.BondStereo.STEREOTRANS)
  if any(b.GetStereo() not in ordinary for b in m.GetBonds()):return False
- return all(str(s.type) in ('Atom_Tetrahedral','Bond_Double') for s in Chem.FindPotentialStereo(m))
+ return all(str(s.type) in ('Atom_Tetrahedral','Bond_Double') for s in potential)
+
+def _exact_mapping(a, b, mapping):
+ return (len(mapping) == a.GetNumAtoms() == b.GetNumAtoms()
+         and a.GetNumBonds() == b.GetNumBonds()
+         and all(_atom(atom) == _atom(b.GetAtomWithIdx(mapping[atom.GetIdx()])) for atom in a.GetAtoms())
+         and all(_bond(bond) == _bond(b.GetBondBetweenAtoms(
+             mapping[bond.GetBeginAtomIdx()], mapping[bond.GetEndAtomIdx()])) for bond in a.GetBonds()))
+
+def _ordinary_unmarked_graph(mol, text):
+ # Bound the shortcut to an unmarked, neutral, closed-shell organic graph.
+ # The original input is checked because parsing can discard invalid markers.
+ return (not any(mark in text for mark in ('@', '/', '\\'))
+         and len(Chem.GetMolFrags(mol)) == 1
+         and all(a.GetAtomicNum() in (1, 6, 7, 8, 9, 17, 35, 53)
+                 and not a.GetFormalCharge() and not a.GetNumRadicalElectrons()
+                 and a.GetChiralTag() == Chem.ChiralType.CHI_UNSPECIFIED for a in mol.GetAtoms())
+         and all(b.GetStereo() == Chem.BondStereo.STEREONONE and b.GetBondDir() == Chem.BondDir.NONE
+                 and b.GetBondType() in (Chem.BondType.SINGLE, Chem.BondType.DOUBLE,
+                                        Chem.BondType.TRIPLE, Chem.BondType.AROMATIC)
+                 for b in mol.GetBonds()))
 
 def _parity(sequence):
  return sum(sequence[i]>sequence[j] for i in range(len(sequence)) for j in range(i+1,len(sequence)))%2
@@ -55,26 +75,32 @@ def _contradictions(a,b,mapping):
  return differences,shared
 
 def compare(left,right,*,mapping_limit=LIMIT):
- try:a,b=parse(left),parse(right)
+ try:a,b=(hydrogen_comparison_graph(parse(text)) for text in (left,right))
  except Exception as e:return dict(result='UNKNOWN',reason='STEREO_INPUT_INVALID',error=str(e))
- if not _supported(a) or not _supported(b):return dict(result='UNKNOWN',reason='UNSUPPORTED_STEREO_CLASS')
+ stereo=[list(Chem.FindPotentialStereo(m)) for m in (a,b)]
+ if not _supported(a,stereo[0]) or not _supported(b,stereo[1]):return dict(result='UNKNOWN',reason='UNSUPPORTED_STEREO_CLASS')
  aa,bb=Chem.Mol(a),Chem.Mol(b);Chem.RemoveStereochemistry(aa);Chem.RemoveStereochemistry(bb)
  if Chem.MolToSmiles(aa)!=Chem.MolToSmiles(bb):return dict(result='UNKNOWN',reason='STEREO_FRAMEWORK_DIFFERENT')
+ scope='ORDINARY_TETRAHEDRAL_AND_DOUBLE_BOND_STEREO'
+ if not any(stereo) and _ordinary_unmarked_graph(a,left) and _ordinary_unmarked_graph(b,right):
+  mapping=bb.GetSubstructMatch(aa,useChirality=False)
+  if mapping and _exact_mapping(a,b,mapping):
+   return dict(result='NOT_APPLICABLE',reason='STEREO_NOT_APPLICABLE',valid_mapping_count=1,
+               mappings=[dict(mapping=list(mapping),contradictions=[],shared_specified_elements=0)],
+               potential_elements=[0,0],incomplete=False,scope=scope,mapping_enumeration='SINGLE_EXACT_WITNESS')
  mappings=bb.GetSubstructMatches(aa,uniquify=False,useChirality=False,maxMatches=mapping_limit+1)
  if len(mappings)>mapping_limit:return dict(result='UNKNOWN',reason='SYMMETRY_ENUMERATION_LIMIT',mapping_limit=mapping_limit)
  valid=[]
  for mapping in mappings:
-  if len(mapping)!=b.GetNumAtoms() or any(_atom(x)!=_atom(b.GetAtomWithIdx(mapping[x.GetIdx()])) for x in a.GetAtoms()):continue
-  if any(_bond(x)!=_bond(b.GetBondBetweenAtoms(mapping[x.GetBeginAtomIdx()],mapping[x.GetEndAtomIdx()])) for x in a.GetBonds()):continue
+  if not _exact_mapping(a,b,mapping):continue
   diffs,shared=_contradictions(a,b,mapping);valid.append(dict(mapping=list(mapping),contradictions=diffs,shared_specified_elements=shared))
  if not valid:return dict(result='UNKNOWN',reason='NO_VALIDATED_GRAPH_MAPPING')
- stereo=[list(Chem.FindPotentialStereo(m)) for m in (a,b)]
  partial=any(str(s.specified)!='Specified' for elements in stereo for s in elements)
  if all(v['contradictions'] for v in valid):result,reason='DIFFERENT','ESTABLISHED_STEREO_DIFFERENCE'
  elif partial:result,reason='UNKNOWN','STEREO_SPECIFICITY_UNKNOWN'
  elif not any(stereo):result,reason='NOT_APPLICABLE','STEREO_NOT_APPLICABLE'
  else:result,reason='EQUIVALENT','ALL_RELEVANT_STEREO_SUPPORTED'
- return dict(result=result,reason=reason,valid_mapping_count=len(valid),mappings=valid,potential_elements=[len(s) for s in stereo],incomplete=partial,scope='ORDINARY_TETRAHEDRAL_AND_DOUBLE_BOND_STEREO')
+ return dict(result=result,reason=reason,valid_mapping_count=len(valid),mappings=valid,potential_elements=[len(s) for s in stereo],incomplete=partial,scope=scope)
 
 def _values(assertion):
  if assertion.get('state')=='UNSPECIFIED':

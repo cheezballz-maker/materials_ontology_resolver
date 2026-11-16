@@ -7,7 +7,7 @@ from collections import Counter
 from functools import lru_cache
 import re
 from rdkit import Chem
-from chemistry import parse
+from chemistry import ChemicalValidationError, parse
 
 SOLVENTS={'water':'O','DMSO':'CS(C)=O','methanol':'CO','ethanol':'CCO','acetonitrile':'CC#N'}
 COUNTS={'mono':1,'di':2,'tri':3,'tetra':4,'penta':5,'hexa':6,'hepta':7,'octa':8,'nona':9,'deca':10}
@@ -51,11 +51,22 @@ def _features(smiles):
     component_rows=[dict(smiles=s,count=n,charge=Chem.GetFormalCharge(parse(s))) for s,n in sorted(components.items())]
     # Enumerate only ordinary valid resonance contributors. Fixed atom H, isotope,
     # stereo and radical state are retained; this is not proton/tautomer movement.
-    supplier=Chem.ResonanceMolSupplier(m,0,65)
     resonance=[]
-    for r in supplier:
-        Chem.SanitizeMol(r)
-        resonance.append(r)
+    try:
+        for index, contributor in enumerate(Chem.ResonanceMolSupplier(m,0,65), start=1):
+            if contributor is None:
+                raise ChemicalValidationError('RESONANCE_VALIDATION_FAILED', 'RESONANCE_CONTRIBUTOR',
+                                              f'Contributor {index} is unavailable')
+            try:
+                Chem.SanitizeMol(contributor)
+            except (ValueError, RuntimeError) as exc:
+                raise ChemicalValidationError('RESONANCE_VALIDATION_FAILED', 'RESONANCE_CONTRIBUTOR',
+                                              f'Contributor {index}: {exc}') from exc
+            resonance.append(contributor)
+    except ChemicalValidationError:
+        raise
+    except (ValueError, RuntimeError) as exc:
+        raise ChemicalValidationError('RESONANCE_VALIDATION_FAILED', 'RESONANCE_ENUMERATION', str(exc)) from exc
     if not resonance:resonance=[m]
     from rdkit.Chem.MolStandardize import rdMolStandardize as ms
     enumerator=ms.TautomerEnumerator();enumerator.SetMaxTautomers(64);enumerator.SetMaxTransforms(256)

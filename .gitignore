@@ -22,3 +22,7 @@ __pycache__/
 **/retained_matching/
 **/run/
 **/runs/
+/canonical_registry/stage_c/data/
+/canonical_registry/authoritative_lookup/data/
+/canonical_registry/identity_sufficiency/data/
+/canonical_registry/enrichment/local/
